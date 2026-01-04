@@ -32,7 +32,7 @@ const ServiceContactForm: React.FC<ServiceContactFormProps> = ({
             start: "top 60%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       gsap.fromTo(
@@ -49,7 +49,7 @@ const ServiceContactForm: React.FC<ServiceContactFormProps> = ({
             start: "top 60%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
     });
 
