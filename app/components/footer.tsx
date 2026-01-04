@@ -6,7 +6,7 @@ import { navigationData } from "../utils/data/navigation";
 const Footer = () => {
   return (
     <footer className="bg-[#0f0909] text-white">
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo and Description */}
           <div className="lg:col-span-1">

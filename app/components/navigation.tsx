@@ -13,7 +13,7 @@ const Navigation = (props: Props) => {
         <Link
           key={item.name}
           href={item.href}
-          className={`text-[16px] ${props.type === "transparent" ? "text-white hover:text-[#0D72B6]" : "text-[#160A0A] hover:text-[#0D72B6]"} ${props.type === "scroll" ? "font-medium" : ""}`}
+          className={`text-[16px] ${props.type === "transparent" ? "text-white hover:text-[#0D72B6]" : "text-[#160A0A] hover:text-[#0D72B6]"} ${props.type === "scroll" ? "font-medium" : "font-medium"}`}
         >
           {item.name}
         </Link>
