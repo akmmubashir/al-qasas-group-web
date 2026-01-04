@@ -249,7 +249,7 @@ const HeroSection = () => {
                 <h4 className="text-white text-xl max-lg:text-lg font-bold mb-1">
                   IT Solutions
                 </h4>
-                <p className="text-gray-400 text-xs">
+                <p className="text-gray-400 text-sm">
                   Technology infrastructure
                 </p>
               </div>
@@ -269,7 +269,7 @@ const HeroSection = () => {
                 <h4 className="text-white text-xl max-lg:text-lg font-bold mb-1">
                   Corporate Services
                 </h4>
-                <p className="text-gray-400 text-xs">
+                <p className="text-gray-400 text-sm">
                   Business support solutions
                 </p>
               </div>
@@ -289,7 +289,7 @@ const HeroSection = () => {
                 <h4 className="text-white text-xl max-lg:text-lg font-bold mb-1">
                   Project Support
                 </h4>
-                <p className="text-gray-400 text-xs">End-to-end assistance</p>
+                <p className="text-gray-400 text-sm">End-to-end assistance</p>
               </div>
             </div>
           </div>
@@ -307,7 +307,7 @@ const HeroSection = () => {
                 <h4 className="text-white text-xl max-lg:text-lg font-bold mb-1">
                   Transportation
                 </h4>
-                <p className="text-gray-400 text-xs">
+                <p className="text-gray-400 text-sm">
                   Logistics & fleet management
                 </p>
               </div>
