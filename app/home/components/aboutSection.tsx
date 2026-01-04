@@ -120,7 +120,7 @@ const AboutSection = () => {
             className="col-span-7 max-lg:col-span-12 space-y-6"
           >
             <div className="bg-linear-to-br from-gray-50 to-blue-50/30 rounded-3xl p-8 max-lg:p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-start gap-4">
+              <div className="flex max-lg:flex-col items-start gap-4">
                 <div className="shrink-0 w-12 h-12 bg-linear-to-br from-[#0D72B6] to-blue-500 rounded-2xl flex items-center justify-center shadow-lg">
                   <svg
                     className="w-6 h-6 text-white"
@@ -151,7 +151,7 @@ const AboutSection = () => {
             </div>
 
             <div className="bg-linear-to-br from-gray-50 to-blue-50/30 rounded-3xl p-8 max-lg:p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-start gap-4">
+              <div className="flex max-lg:flex-col items-start gap-4">
                 <div className="shrink-0 w-12 h-12 bg-linear-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg">
                   <svg
                     className="w-6 h-6 text-white"
@@ -183,7 +183,7 @@ const AboutSection = () => {
             </div>
 
             <div className="bg-linear-to-br from-gray-50 to-blue-50/30 rounded-3xl p-8 max-lg:p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-start gap-4">
+              <div className="flex max-lg:flex-col items-start gap-4">
                 <div className="shrink-0 w-12 h-12 bg-linear-to-br from-cyan-500 to-teal-500 rounded-2xl flex items-center justify-center shadow-lg">
                   <svg
                     className="w-6 h-6 text-white"
