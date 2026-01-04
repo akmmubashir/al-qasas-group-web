@@ -305,7 +305,7 @@ const ServicesSection = () => {
                 Let&apos;s discuss how we can help your business grow
               </p>
             </div>
-            <button className="group relative px-8 py-4 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold rounded-full overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105">
+            <button className="cursor-pointer group relative px-8 py-4 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold rounded-full overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105">
               <span className="relative z-10 flex items-center gap-2">
                 Contact Us Today
                 <svg

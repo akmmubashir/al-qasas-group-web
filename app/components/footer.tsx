@@ -5,7 +5,7 @@ import { navigationData } from "../utils/data/navigation";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0f0909] text-white">
+    <footer className="bg-linear-to-br from-slate-950 via-blue-950 to-slate-900 text-white">
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo and Description */}
@@ -85,7 +85,7 @@ const Footer = () => {
           <div>
             <h3 className="text-[18px] font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
-              <li className="flex items-start gap-2">
+              {/* <li className="flex items-start gap-2">
                 <svg
                   className="w-5 h-5 mt-0.5 shrink-0 text-gray-200"
                   fill="none"
@@ -131,7 +131,7 @@ const Footer = () => {
                 >
                   +971 4 305 5000
                 </a>
-              </li>
+              </li> */}
               <li className="flex items-center gap-2">
                 <svg
                   className="w-5 h-5 shrink-0 text-gray-200"
