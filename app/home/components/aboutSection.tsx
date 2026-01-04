@@ -6,18 +6,12 @@ import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const stats = [
-  { label: "Years of Experience", value: "10+" },
-  { label: "Satisfied Clients", value: "500+" },
-  { label: "Projects Completed", value: "1000+" },
-  { label: "Countries Serving", value: "2" },
-];
-
 const AboutSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -110,7 +104,7 @@ const AboutSection = () => {
         <div className="grid grid-cols-12 gap-10 max-lg:gap-[30px_0] items-center">
           <div
             ref={textRef}
-            className="col-span-7 max-xl:col-span-6 max-lg:col-span-full space-y-6"
+            className="col-span-6 max-xl:col-span-6 max-lg:col-span-full space-y-6"
           >
             <p className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-700 leading-relaxed">
               Al-Qasas – Trading & Contracting is a trusted diversified
@@ -130,27 +124,23 @@ const AboutSection = () => {
               operational efficiency.
             </p>
           </div>
-
-          <div
-            ref={statsRef}
-            className="col-span-5 max-xl:col-span-6 max-lg:col-span-full grid grid-cols-2 gap-6 max-md:gap-4"
-          >
-            {stats.map((stat, idx) => (
-              <div key={idx} className="stat-card group relative">
-                <div className="absolute inset-0 bg-linear-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur"></div>
-                <div className="relative bg-linear-to-br from-white to-blue-50/50 backdrop-blur-xl p-8 max-md:p-4 rounded-2xl border border-blue-200/50 group-hover:border-cyan-500/50 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-cyan-500/10">
-                  <h3 className="text-[40px] max-xl:text-[32px] max-lg:text-[26px] font-bold bg-linear-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent mb-2 group-hover:from-cyan-500 group-hover:to-blue-500">
-                    {stat.value}
-                  </h3>
-                  <p className="text-[16px] max-xl:text-[14px] max-lg:text-[14px] text-slate-600 group-hover:text-slate-900 transition-colors">
-                    {stat.label}
-                  </p>
-                </div>
-              </div>
-            ))}
+          {/* Right Image */}
+          <div ref={imageRef} className="col-span-6 max-xl:col-span-6 max-lg:col-span-full relative">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+              <Image
+                src="/assets/images/corporate.webp"
+                alt="Al-Qasas Group Overview"
+                width={600}
+                height={400}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-slate-900/50 to-transparent"></div>
+            </div>
+            {/* Decorative element */}
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-linear-to-br from-cyan-500 to-blue-600 rounded-2xl -z-10 max-md:hidden"></div>
           </div>
-          <div className="col-span-full relative">
-            <div className="relative h-100 max-lg:h-auto overflow-hidden rounded-2xl">
+          {/* <div className="col-span-6 max-xl:col-span-6 max-lg:col-span-full relative">
+            <div className="relative overflow-hidden rounded-2xl">
               <Image
                 src={"/assets/images/corporate.webp"}
                 alt="Corporate Image"
@@ -158,10 +148,9 @@ const AboutSection = () => {
                 height={600}
                 className="w-full h-auto relative z-20"
               />
+              <div className="absolute inset-0 bg-linear-to-t from-slate-900/50 to-transparent" />
             </div>
-            <div className="absolute z-10 -bottom-5 -max-lg:bottom-5 -right-25 max-lg:-right-3.75 w-40 max-lg:w-16 aspect-square bg-linear-to-br from-slate-950 via-blue-950 to-[#0D72B6] rounded-full" />
-            {/* <div className="absolute z-10 top-0 max-lg:top-10 rotate-12 -left-20 max-lg:-left-3.75 w-30 max-lg:w-14 aspect-square bg-linear-to-br from-slate-950 via-blue-950 to-[#0D72B6]" /> */}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
