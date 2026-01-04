@@ -125,7 +125,10 @@ const AboutSection = () => {
             </p>
           </div>
           {/* Right Image */}
-          <div ref={imageRef} className="col-span-6 max-xl:col-span-6 max-lg:col-span-full relative">
+          <div
+            ref={imageRef}
+            className="col-span-6 max-xl:col-span-6 max-lg:col-span-full relative"
+          >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
               <Image
                 src="/assets/images/corporate.webp"
