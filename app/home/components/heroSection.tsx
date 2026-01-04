@@ -134,7 +134,7 @@ const HeroSection = () => {
             ref={buttonsRef}
             className="flex flex-wrap gap-4 mb-16 max-lg:mb-10"
           >
-            <button className="group relative px-8 py-4 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold rounded-full overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105">
+            <button className="cursor-pointer group relative px-8 py-4 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold rounded-full overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105">
               <span className="relative z-10 flex items-center gap-2">
                 Get Started
                 <svg
@@ -153,7 +153,7 @@ const HeroSection = () => {
               </span>
             </button>
 
-            <button className="group px-8 py-4 bg-white/5 border border-white/10 text-white text-[15px] font-bold rounded-full hover:bg-white/10 hover:border-white/20 transition-all duration-300">
+            <button className="cursor-pointer group px-8 py-4 bg-white/5 border border-white/10 text-white text-[15px] font-bold rounded-full hover:bg-white/10 hover:border-white/20 transition-all duration-300">
               <span className="flex items-center gap-2">
                 View Services
                 <svg
