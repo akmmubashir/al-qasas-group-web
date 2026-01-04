@@ -93,3 +93,40 @@ export const QuoteIcon = ({ size, color }: Props) => (
     />
   </svg>
 );
+export const ToggleIcon = ({ size, color, stroke }: Props) => (
+  <svg
+    className={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M3 4.5H21"
+      className={color}
+      strokeWidth={stroke ? stroke : "1.5"}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M3 9.5H21"
+      className={color}
+      strokeWidth={stroke ? stroke : "1.5"}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M3 14.5H21"
+      className={color}
+      strokeWidth={stroke ? stroke : "1.5"}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M3 19.5H21"
+      className={color}
+      strokeWidth={stroke ? stroke : "1.5"}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
