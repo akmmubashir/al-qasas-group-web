@@ -160,7 +160,7 @@ const FAQSection = () => {
               >
                 <button
                   onClick={() => toggleFAQ(faq.id)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-cyan-500/5 transition-colors duration-300"
+                  className="cursor-pointer w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-cyan-500/5 transition-colors duration-300"
                 >
                   <span className="font-semibold text-slate-900 group-hover:text-cyan-600 transition-colors">
                     {faq.question}

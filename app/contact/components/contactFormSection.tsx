@@ -156,7 +156,7 @@ const ContactFormSection = () => {
 
             <button
               type="submit"
-              className="w-full rounded-xl bg-linear-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 shadow-lg shadow-cyan-500/20 hover:shadow-xl hover:-translate-y-0.5 transition"
+              className="cursor-pointer w-full rounded-xl bg-linear-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 shadow-lg shadow-cyan-500/20 hover:shadow-xl hover:-translate-y-0.5 transition"
             >
               Send Message
             </button>
