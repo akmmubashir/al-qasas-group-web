@@ -171,7 +171,7 @@ const WhyChooseUsSection = () => {
           </div>
           <p
             ref={subtitleRef}
-            className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed"
+            className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-300 max-w-2xl mx-auto leading-relaxed"
           >
             Your trusted partner for reliable, innovative, and cost-effective
             solutions that drive growth and success

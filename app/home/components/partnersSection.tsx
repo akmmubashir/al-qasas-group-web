@@ -115,7 +115,7 @@ const PartnersSection = () => {
               </span>
             </h2>
           </div>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Partnering with industry leaders across the region{" "}
           </p>
         </div>

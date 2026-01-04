@@ -282,7 +282,7 @@ const IndustriesSection = () => {
           </div>
           <p
             ref={subtitleRef}
-            className="text-[#2a2a2a] text-lg max-w-3xl mx-auto leading-relaxed"
+            className="text-[#2a2a2a] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-w-3xl mx-auto leading-relaxed"
           >
             Serving diverse sectors with tailored solutions and industry
             expertise across Qatar and Saudi Arabia

@@ -118,7 +118,7 @@ const CallToActionSection = () => {
           </div>
           <p
             ref={descriptionRef}
-            className="text-lg max-lg:text-base text-slate-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-lg:text-base text-slate-600 max-w-3xl mx-auto leading-relaxed"
           >
             Partner with Al-Qasas – Trading & Contracting for innovative
             solutions that drive growth, efficiency, and success. Let&apos;s

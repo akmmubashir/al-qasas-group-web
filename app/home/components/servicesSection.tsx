@@ -225,7 +225,7 @@ const ServicesSection = () => {
           </div>
           <p
             ref={subtitleRef}
-            className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed"
+            className="text-gray-600 text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-w-3xl mx-auto leading-relaxed"
           >
             Comprehensive solutions tailored to meet the diverse needs of
             businesses across Qatar and Saudi Arabia

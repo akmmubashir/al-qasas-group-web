@@ -145,7 +145,7 @@ const FAQSection = () => {
           </div>
           <p
             ref={subtitleRef}
-            className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed"
+            className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-600 max-w-2xl mx-auto leading-relaxed"
           >
             Find answers to common questions about our services and process
           </p>

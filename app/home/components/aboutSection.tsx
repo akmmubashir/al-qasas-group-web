@@ -96,9 +96,9 @@ const AboutSection = () => {
         <div className="text-center mb-16 max-lg:mb-12" ref={titleRef}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0D72B6]/10 border border-[#0D72B6]/20 rounded-full mb-6">
             <div className="w-2 h-2 bg-[#0D72B6] rounded-full animate-pulse" />
-            <span className="text-[#0D72B6] text-sm font-bold tracking-wider uppercase">
+            <h6 className="text-[#0D72B6] text-sm font-bold tracking-wider uppercase">
               Who We Are
-            </span>
+            </h6>
           </div>
           <h2 className="text-6xl max-xl:text-5xl max-lg:text-4xl max-md:text-3xl font-black text-[#0A0A0A] mb-4 leading-tight">
             About{" "}
@@ -106,7 +106,7 @@ const AboutSection = () => {
               Al-Qasas
             </span>
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-w-2xl mx-auto">
             Your trusted partner for integrated trading, contracting, and
             business solutions across the Gulf region
           </p>
@@ -140,7 +140,7 @@ const AboutSection = () => {
                   <h3 className="text-xl font-bold text-[#0A0A0A] mb-3">
                     Our Foundation
                   </h3>
-                  <p className="text-gray-700 text-[15px] leading-relaxed">
+                  <p className="text-gray-700 text-[16px] max-xl:text-[16px] max-lg:text-[14px] leading-relaxed">
                     Al-Qasas – Trading & Contracting is a trusted diversified
                     solutions provider dedicated to delivering excellence in
                     integrated trading, contracting, and business services
@@ -171,7 +171,7 @@ const AboutSection = () => {
                   <h3 className="text-xl font-bold text-[#0A0A0A] mb-3">
                     Our Expertise
                   </h3>
-                  <p className="text-gray-700 text-[15px] leading-relaxed">
+                  <p className="text-gray-700 text-[16px] max-xl:text-[16px] max-lg:text-[14px] leading-relaxed">
                     With years of experience in the region, we specialize in
                     movable partition systems, project support, transportation,
                     corporate services, and IT solutions—all built on the
@@ -203,7 +203,7 @@ const AboutSection = () => {
                   <h3 className="text-xl font-bold text-[#0A0A0A] mb-3">
                     Our Commitment
                   </h3>
-                  <p className="text-gray-700 text-[15px] leading-relaxed">
+                  <p className="text-gray-700 text-[16px] max-xl:text-[16px] max-lg:text-[14px] leading-relaxed">
                     Our team is committed to understanding your unique needs and
                     delivering customized solutions that drive business growth
                     and operational efficiency.

@@ -111,7 +111,7 @@ const HeroSection = () => {
 
           <h1
             ref={titleRef}
-            className={`text-white font-black text-[90px] max-xl:text-[70px] max-lg:text-[42px] max-md:text-[32px] leading-[0.95] mb-6 max-lg:mb-4 max-w-5xl ${robotoMono.className}`}
+            className={`text-white font-black text-[90px] max-xl:text-[70px] max-lg:text-[42px] max-md:text-[32px] leading-25 max-xl:leading-20 max-lg:leading-13 max-md:leading-10.5 mb-6 max-lg:mb-4 max-w-5xl ${robotoMono.className}`}
           >
             <span className="text-white">Integrated</span>{" "}
             <span className="bg-linear-to-r from-[#0D72B6] via-blue-400 to-cyan-400 bg-clip-text text-transparent">
