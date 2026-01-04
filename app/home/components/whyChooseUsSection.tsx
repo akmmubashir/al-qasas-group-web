@@ -156,12 +156,15 @@ const WhyChooseUsSection = () => {
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         <div className="text-center mb-20">
           <div ref={titleRef}>
-            <h6 className="inline-block px-4 py-2 rounded-full bg-linear-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-semibold mb-6">
-              Why We Stand Out
-            </h6>
-            <h2 className="text-5xl max-lg:text-3xl font-bold text-white mb-6 leading-tight">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0D72B6]/10 border border-[#0D72B6]/20 rounded-full mb-6">
+              <div className="w-2 h-2 bg-cyan-300 rounded-full animate-pulse" />
+              <h6 className="text-cyan-300 text-sm font-bold tracking-wider uppercase">
+                Why We Stand Out
+              </h6>
+            </div>
+            <h2 className="text-6xl max-xl:text-5xl max-lg:text-4xl max-md:text-3xl font-black text-white mb-4 leading-tight">
               Why Choose{" "}
-              <span className="bg-linear-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-cyan-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
                 Al-Qasas?
               </span>
             </h2>

@@ -12,8 +12,9 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Logo color="white" />
             <p className="mt-4 text-gray-200 text-[14px] leading-relaxed">
-              Leading real estate developer delivering exceptional luxury
-              properties and investment opportunities in prime locations.
+              Excellence in movable partitions, project support, transportation,
+              corporate services, and IT solutions driving quality and
+              innovation across the Gulf region
             </p>
           </div>
 
@@ -163,7 +164,7 @@ const Footer = () => {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-black hover:bg-[#1b1b1b] flex items-center justify-center transition-colors"
+                  className="w-9 h-9 rounded-full bg-[#0D72B6] hover:bg-[#0D72B6]/70 flex items-center justify-center transition-colors"
                 >
                   <svg
                     className="w-5 h-5"
@@ -177,7 +178,7 @@ const Footer = () => {
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-black hover:bg-[#1b1b1b] flex items-center justify-center transition-colors"
+                  className="w-9 h-9 rounded-full bg-[#0D72B6] hover:bg-[#0D72B6]/70 flex items-center justify-center transition-colors"
                 >
                   <svg
                     className="w-5 h-5"
@@ -191,7 +192,7 @@ const Footer = () => {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-black hover:bg-[#1b1b1b] flex items-center justify-center transition-colors"
+                  className="w-9 h-9 rounded-full bg-[#0D72B6] hover:bg-[#0D72B6]/70 flex items-center justify-center transition-colors"
                 >
                   <svg
                     className="w-5 h-5"
@@ -205,7 +206,7 @@ const Footer = () => {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-black hover:bg-[#1b1b1b] flex items-center justify-center transition-colors"
+                  className="w-9 h-9 rounded-full bg-[#0D72B6] hover:bg-[#0D72B6]/70 flex items-center justify-center transition-colors"
                 >
                   <svg
                     className="w-5 h-5"

@@ -109,9 +109,9 @@ const CallToActionSection = () => {
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         <div className="text-center mb-12">
           <div ref={titleRef}>
-            <h2 className="text-5xl max-lg:text-3xl font-bold text-[#2a2a2a] mb-6 leading-tight">
+            <h2 className="text-6xl max-xl:text-5xl max-lg:text-4xl max-md:text-3xl font-black text-[#2a2a2a] mb-4 leading-tight">
               Ready to Transform Your{" "}
-              <span className="bg-linear-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#0D72B6] via-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Business?
               </span>
             </h2>

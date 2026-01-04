@@ -130,12 +130,15 @@ const FAQSection = () => {
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         <div className="text-center mb-16">
           <div ref={titleRef}>
-            <h6 className="inline-block px-4 py-2 rounded-full bg-linear-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-700 text-sm font-semibold mb-6">
-              Got Questions?
-            </h6>
-            <h2 className="text-5xl max-lg:text-3xl font-bold text-slate-900 mb-6 leading-tight">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0D72B6]/10 border border-[#0D72B6]/20 rounded-full mb-6">
+              <div className="w-2 h-2 bg-[#0D72B6] rounded-full animate-pulse" />
+              <h6 className="text-[#0D72B6] text-sm font-bold tracking-wider uppercase">
+                Got Questions?
+              </h6>
+            </div>
+            <h2 className="text-6xl max-xl:text-5xl max-lg:text-4xl max-md:text-3xl font-black text-[#2a2a2a] mb-4 leading-tight">
               Frequently Asked{" "}
-              <span className="bg-linear-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#0D72B6] via-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Questions
               </span>
             </h2>
@@ -206,24 +209,24 @@ const FAQSection = () => {
           <p className="text-slate-600 mb-6">
             Our team is here to help. Contact us for personalized assistance.
           </p>
-           <button className="cursor-pointer group relative px-8 py-4 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold rounded-full overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105">
-              <span className="relative z-10 flex items-center gap-2">
-                Contact Support
-                <svg
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={3}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </span>
-            </button>
+          <button className="cursor-pointer group relative px-8 py-4 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold rounded-full overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105">
+            <span className="relative z-10 flex items-center gap-2">
+              Contact Support
+              <svg
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={3}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </span>
+          </button>
         </div>
       </div>
     </section>

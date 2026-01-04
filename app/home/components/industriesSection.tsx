@@ -269,9 +269,9 @@ const IndustriesSection = () => {
           <div ref={titleRef}>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0D72B6]/10 border border-[#0D72B6]/20 rounded-full mb-6">
               <div className="w-2 h-2 bg-[#0D72B6] rounded-full animate-pulse" />
-              <span className="text-[#0D72B6] text-sm font-bold tracking-wider uppercase">
+              <h6 className="text-[#0D72B6] text-sm font-bold tracking-wider uppercase">
                 Industries We Serve
-              </span>
+              </h6>
             </div>
             <h2 className="text-6xl max-xl:text-5xl max-lg:text-4xl max-md:text-3xl font-black text-[#2a2a2a] mb-4 leading-tight">
               Industries We{" "}
