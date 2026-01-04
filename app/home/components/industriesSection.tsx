@@ -267,9 +267,9 @@ const IndustriesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 max-lg:mb-12">
           <div ref={titleRef}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#515151]/10 border border-[#515151]/30 rounded-full mb-6">
-              <div className="w-2 h-2 bg-[#515151] rounded-full animate-pulse" />
-              <span className="text-[#515151] text-sm font-bold tracking-wider uppercase">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0D72B6]/10 border border-[#0D72B6]/20 rounded-full mb-6">
+              <div className="w-2 h-2 bg-[#0D72B6] rounded-full animate-pulse" />
+              <span className="text-[#0D72B6] text-sm font-bold tracking-wider uppercase">
                 Industries We Serve
               </span>
             </div>
