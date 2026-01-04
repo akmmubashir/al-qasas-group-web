@@ -43,7 +43,10 @@ const NotFound = () => {
         <div className="absolute right-0 bottom-0 w-96 h-96 bg-blue-500/10 blur-3xl" />
       </div>
 
-      <div ref={containerRef} className="relative z-10 max-w-3xl text-center space-y-6">
+      <div
+        ref={containerRef}
+        className="relative z-10 max-w-3xl text-center space-y-6"
+      >
         <div className="flex items-center justify-center gap-3 text-sm uppercase tracking-[0.2em] text-cyan-200">
           <span className="h-px w-10 bg-cyan-400/60" />
           <span>Page Not Found</span>

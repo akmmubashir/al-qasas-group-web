@@ -46,7 +46,7 @@ const Loading = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-linear-to-br from-slate-950 via-blue-950 to-slate-900 text-white">
-         <div className="relative w-100 max-md:w-full max-lg:px-7.5 flex flex-col gap-4">
+      <div className="relative w-100 max-md:w-full max-lg:px-7.5 flex flex-col gap-4">
         <div className="flex items-center justify-between text-[20px] max-md:text-[16px] uppercase tracking-[0.25em] text-cyan-100">
           <span>Loading</span>
           <span ref={percentRef}>0%</span>

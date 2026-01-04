@@ -16,7 +16,6 @@ const BannerSection = (props: Props) => {
         }}
       >
         <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px]">
-
           <h1 className="text-[60px] max-xl:text-[40px] max-lg:text-[30px] max-md:text-[24px] font-semibold text-white uppercase mt-6">
             {props.title}
           </h1>

@@ -245,7 +245,10 @@ const CompanyOverviewSection = () => {
         </div>
 
         {/* Highlights Grid */}
-        <div ref={highlightsRef} className="grid grid-cols-2 max-md:grid-cols-1 gap-6">
+        <div
+          ref={highlightsRef}
+          className="grid grid-cols-2 max-md:grid-cols-1 gap-6"
+        >
           {highlights.map((highlight) => (
             <div
               key={highlight.id}
