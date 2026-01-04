@@ -21,8 +21,8 @@ const HomePage = () => {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
-      <IndustriesSection />
       {/* <ProjectsSection /> */}
+      <IndustriesSection />
       <WhyChooseUsSection />
       <TestimonialsSection />
       <PartnersSection />
