@@ -95,7 +95,7 @@ const HeroSection = () => {
       />
 
       {/* Main Container */}
-      <div className="relative min-h-dvh z-20 max-w-350 mx-auto p-[160px_40px_60px] max-xl:p-[140px_40px_60px] max-lg:p-[120px_20px_60px] w-full">
+      <div className="relative min-h-dvh z-20 max-w-300 mx-auto p-[160px_0px_60px] max-xl:p-[140px_40px_60px] max-lg:p-[120px_20px_60px] w-full">
         {/* Top section with text */}
         <div className="mb-12 max-lg:mb-8">
           {/* Pill badge */}
