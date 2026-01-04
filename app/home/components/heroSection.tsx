@@ -187,7 +187,7 @@ const HeroSection = () => {
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8 max-lg:p-6">
-                <div className="inline-block px-4 py-1.5 bg-[#0D72B6]/20 border border-[#0D72B6]/40 rounded-full text-[#0D72B6] text-xs font-bold mb-3">
+                <div className="inline-block px-4 py-1.5 bg-green-500/20 border border-green-500/40 rounded-full text-green-500 text-xs font-bold mb-3">
                   FEATURED
                 </div>
                 <h3 className="text-white text-3xl max-lg:text-2xl font-bold mb-2">
