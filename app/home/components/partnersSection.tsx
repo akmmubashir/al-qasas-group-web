@@ -124,7 +124,7 @@ const PartnersSection = () => {
             {partners.map((partner) => (
               <div
                 key={`first-${partner.id}`}
-                className="flex-shrink-0 w-48 group"
+                className="shrink-0 w-48 group"
               >
                 <div className="relative bg-linear-to-br bg-white backdrop-blur-xl p-6 rounded-xl border border-slate-700/50 group-hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 flex items-center justify-center min-h-32 aspect-square">
                   <Image
@@ -141,7 +141,7 @@ const PartnersSection = () => {
             {partners.map((partner) => (
               <div
                 key={`second-${partner.id}`}
-                className="flex-shrink-0 w-48 group"
+                className="shrink-0 w-48 group"
               >
                 <div className="relative bg-linear-to-br bg-white backdrop-blur-xl p-6 rounded-xl border border-slate-700/50 group-hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 flex items-center justify-center min-h-32 aspect-square">
                   <Image
