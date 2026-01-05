@@ -6,6 +6,6 @@ type Props = {
 export const navigationData: Props[] = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "Services", href: "#" },
+  { name: "Contact Us", href: "#" },
 ];
