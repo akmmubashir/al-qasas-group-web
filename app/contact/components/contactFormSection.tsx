@@ -2,6 +2,9 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
+import SubHeading from "@/app/components/subHeading";
+import Heading from "@/app/components/heading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,18 +80,14 @@ const ContactFormSection = () => {
 
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         <div className="text-center mb-12" ref={titleRef}>
-          <h6 className="inline-block px-4 py-2 rounded-full bg-linear-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-600 text-sm font-semibold mb-6">
-            Send a message
-          </h6>
-          <h2 className="text-5xl max-lg:text-3xl font-bold text-slate-900 mb-4 leading-tight">
-            Tell us about your project
-          </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          <SubHeading title="Send a message" />
+          <Heading title1="Tell us about your" title2="project" />
+          <p className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Our team will get back to you within one business day
           </p>
         </div>
 
-        <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-10">
+        <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-10 items-start">
           <form
             ref={formRef}
             onSubmit={handleSubmit}
@@ -147,7 +146,7 @@ const ContactFormSection = () => {
                 Message
               </label>
               <textarea
-                rows={5}
+                rows={3}
                 placeholder="Share project details, timeline, and goals"
                 className="w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-800 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-100 transition resize-none"
                 required
@@ -164,50 +163,15 @@ const ContactFormSection = () => {
 
           <div
             ref={asideRef}
-            className="bg-linear-to-br from-slate-900 via-blue-950 to-slate-900 text-white rounded-2xl border border-slate-700/50 shadow-2xl p-8 max-md:p-6 space-y-6"
+            className="rounded-2xl shadow-2xl overflow-hidden"
           >
-            <div className="space-y-2">
-              <p className="text-sm uppercase tracking-[0.2em] text-cyan-200">
-                Prefer to talk?
-              </p>
-              <h3 className="text-3xl font-bold">Book a call</h3>
-              <p className="text-slate-200 leading-relaxed">
-                Schedule a quick discovery call with our consultants and get a
-                tailored roadmap for your project.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-4">
-              <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                <p className="text-sm text-cyan-200">Phone</p>
-                <p className="text-lg font-semibold">+974 4420 5500</p>
-              </div>
-              <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                <p className="text-sm text-cyan-200">Email</p>
-                <p className="text-lg font-semibold">info@alqasasgroup.com</p>
-              </div>
-              <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                <p className="text-sm text-cyan-200">Office Hours</p>
-                <p className="text-lg font-semibold">
-                  Sun - Thu, 8:00 AM - 6:00 PM
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="tel:+97444205500"
-                className="px-4 py-2 rounded-full bg-white text-slate-900 font-semibold shadow hover:-translate-y-0.5 transition"
-              >
-                Call Now
-              </a>
-              <a
-                href="mailto:info@alqasasgroup.com"
-                className="px-4 py-2 rounded-full border border-white/40 text-white font-semibold hover:bg-white/10 transition"
-              >
-                Email Us
-              </a>
-            </div>
+            <Image
+              src={"/assets/common/contact.webp"}
+              alt="Contact"
+              width={1000}
+              height={800}
+              className="object-cover w-full h-full"
+            />
           </div>
         </div>
       </div>

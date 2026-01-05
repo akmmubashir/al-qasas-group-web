@@ -20,7 +20,7 @@ const highlights = [
     id: 1,
     title: "Industry Leader",
     description:
-      "Recognized as one of the leading contracting and trading companies in Qatar and the UAE.",
+      "Recognized as one of the leading contracting and trading companies in Qatar and the Saudi Arabia.",
   },
   {
     id: 2,
@@ -181,7 +181,7 @@ const CompanyOverviewSection = () => {
                 Al-Qasas Group for Contracting and Trading W.L.L. has
                 established itself as a trusted partner in delivering
                 comprehensive engineering, construction, and trading solutions
-                across Qatar and the UAE.
+                across Qatar and the Saudi Arabia.
               </p>
               <p className="text-[16px] max-xl:text-[16px] max-lg:text-[14px] text-slate-700 leading-relaxed">
                 Founded in 2014, we have built our reputation on a foundation of

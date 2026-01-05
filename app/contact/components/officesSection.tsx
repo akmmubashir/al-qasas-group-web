@@ -2,6 +2,8 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SubHeading from "@/app/components/subHeading";
+import Heading from "@/app/components/heading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,21 +17,21 @@ const offices = [
     hours: "Sun - Thu, 8:00 AM - 6:00 PM",
   },
   {
-    city: "Dubai",
-    country: "UAE",
-    address: "Level 14, Sheikh Zayed Road",
-    phone: "+971 4 305 5000",
-    email: "dubai@alqasasgroup.com",
+    city: "Riyadh",
+    country: "Saudi Arabia",
+    address: "Level 14, Olaya Towers, Olaya St.",
+    phone: "+966 11 305 5000",
+    email: "riyadh@alqasasgroup.com",
     hours: "Sun - Thu, 9:00 AM - 6:00 PM",
   },
-  {
-    city: "Lusail",
-    country: "Qatar",
-    address: "Marina District, Tower 5",
-    phone: "+974 4420 5510",
-    email: "lusail@alqasasgroup.com",
-    hours: "Sun - Thu, 8:00 AM - 6:00 PM",
-  },
+  // {
+  //   city: "Lusail",
+  //   country: "Qatar",
+  //   address: "Marina District, Tower 5",
+  //   phone: "+974 4420 5510",
+  //   email: "lusail@alqasasgroup.com",
+  //   hours: "Sun - Thu, 8:00 AM - 6:00 PM",
+  // },
 ];
 
 const OfficesSection = () => {
@@ -90,20 +92,17 @@ const OfficesSection = () => {
 
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         <div className="text-center mb-14" ref={titleRef}>
-          <h6 className="inline-block px-4 py-2 rounded-full bg-linear-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-semibold mb-6">
-            Our Offices
-          </h6>
-          <h2 className="text-5xl max-lg:text-3xl font-bold text-white mb-4 leading-tight">
-            Visit our locations
-          </h2>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Meet with our consultants in Qatar and the UAE
+          <SubHeading title="Our Offices" dark />
+          <Heading title1="Visit our" title2="locations" dark />
+          <p className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            Meet with our consultants in Qatar and the Saudi Arabia offices
+            today.
           </p>
         </div>
 
         <div
           ref={cardsRef}
-          className="grid grid-cols-3 max-xl:grid-cols-2 max-md:grid-cols-1 gap-6"
+          className="grid grid-cols-2 max-xl:grid-cols-2 max-md:grid-cols-1 gap-6"
         >
           {offices.map((office) => (
             <div

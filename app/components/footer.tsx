@@ -109,7 +109,7 @@ const Footer = () => {
                 <span className="text-gray-200 text-[14px]">
                   Sheikh Zayed Road,
                   <br />
-                  Dubai, UAE
+                  Dubai, Saudi Arabia
                 </span>
               </li>
               <li className="flex items-center gap-2">
