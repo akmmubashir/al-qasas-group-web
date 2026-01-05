@@ -6,6 +6,7 @@ import CompanyOverviewSection from "./components/companyOverviewSection";
 import MissionVisionSection from "./components/missionVisionSection";
 import TeamSection from "./components/teamSection";
 import CertificationsSection from "./components/certificationsSection";
+import TestimonialsSection from "../home/components/testimonialsSection";
 
 // type Props = {}
 
@@ -18,6 +19,7 @@ const page = () => {
       <MissionVisionSection />
       <TeamSection />
       <CertificationsSection />
+      <TestimonialsSection />
       <Footer />
     </div>
   );

@@ -3,6 +3,8 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import SubHeading from "@/app/components/subHeading";
+import Heading from "@/app/components/heading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -96,16 +98,9 @@ const TeamSection = () => {
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         <div className="text-center mb-16">
           <div ref={titleRef}>
-            <h6 className="inline-block px-4 py-2 rounded-full bg-linear-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-600 text-sm font-semibold mb-6">
-              Our Leadership
-            </h6>
-            <h2 className="text-5xl max-lg:text-3xl font-bold text-slate-900 mb-6 leading-tight">
-              Meet Our{" "}
-              <span className="bg-linear-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
-                Expert Team
-              </span>
-            </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <SubHeading title="Our Leadership" />
+            <Heading title1="Meet Our" title2="Expert Team" />
+            <p className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Dedicated professionals driving excellence and innovation in every
               project
             </p>
@@ -126,7 +121,7 @@ const TeamSection = () => {
                 <div className="relative w-full aspect-square overflow-hidden bg-slate-100">
                   <Image
                     // src={member.image}
-                    src="/assets/images/corporate.webp"
+                    src="/assets/common/profile.png"
                     alt={member.name}
                     width={400}
                     height={400}
@@ -136,7 +131,7 @@ const TeamSection = () => {
 
                   {/* Bio overlay on hover */}
                   <div className="absolute inset-x-0 bottom-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                    <p className="text-white text-sm leading-relaxed">
+                    <p className="text-white text-[16px] max-xl:text-[16px] max-lg:text-[14px] leading-relaxed">
                       {member.bio}
                     </p>
                   </div>
@@ -147,7 +142,7 @@ const TeamSection = () => {
                   <h3 className="text-xl font-bold text-slate-900 mb-1 group-hover:text-cyan-600 transition-colors">
                     {member.name}
                   </h3>
-                  <p className="text-slate-600 text-sm font-medium">
+                  <p className="text-slate-600 text-[16px] max-xl:text-[16px] max-lg:text-[14px] font-medium">
                     {member.position}
                   </p>
                 </div>

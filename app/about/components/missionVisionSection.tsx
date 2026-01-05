@@ -2,6 +2,8 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SubHeading from "@/app/components/subHeading";
+import Heading from "@/app/components/heading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -100,16 +102,9 @@ const MissionVisionSection = () => {
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         <div className="text-center mb-16">
           <div ref={titleRef}>
-            <h6 className="inline-block px-4 py-2 rounded-full bg-linear-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-semibold mb-6">
-              Who We Are
-            </h6>
-            <h2 className="text-5xl max-lg:text-3xl font-bold text-white mb-6 leading-tight">
-              Our{" "}
-              <span className="bg-linear-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Mission, Vision & Values
-              </span>
-            </h2>
-            <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            <SubHeading title="Who We Are" dark />
+            <Heading title1="Our" title2="Mission, Vision & Values" dark />
+            <p className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Guided by our core principles and driven by a commitment to
               excellence
             </p>
@@ -136,7 +131,7 @@ const MissionVisionSection = () => {
                 <div className="relative z-10">
                   <div className="flex items-start gap-6 max-md:flex-col">
                     {/* Icon */}
-                    <div className="flex-shrink-0">
+                    <div className="shrink-0">
                       <div className="w-20 h-20 max-md:w-16 max-md:h-16 rounded-xl bg-linear-to-br from-slate-700 to-slate-800 border border-slate-600 flex items-center justify-center text-4xl max-md:text-3xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
                         {item.icon}
                       </div>
@@ -147,7 +142,7 @@ const MissionVisionSection = () => {
                       <h3 className="text-3xl max-md:text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                         {item.title}
                       </h3>
-                      <p className="text-slate-300 text-lg max-md:text-base leading-relaxed">
+                      <p className="text-slate-300 text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-base leading-relaxed">
                         {item.description}
                       </p>
                     </div>

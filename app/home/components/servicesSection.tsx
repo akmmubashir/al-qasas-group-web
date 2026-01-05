@@ -230,10 +230,11 @@ const ServicesSection = () => {
             <Link
               href={`/services/${service.title.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`}
               key={service.id}
-              className={`service-card group cursor-pointer ${index < 3
+              className={`service-card group cursor-pointer ${
+                index < 3
                   ? "col-span-4 max-lg:col-span-6 max-md:col-span-12"
                   : "col-span-6 max-lg:col-span-6 max-md:col-span-12"
-                }`}
+              }`}
             >
               <div className="relative h-full bg-white rounded-3xl p-8 max-lg:p-6 border-2 border-gray-100 hover:border-[#0D72B6]/30 shadow-sm hover:shadow-2xl hover:shadow-[#0D72B6]/10 transition-all duration-500 overflow-hidden group-hover:-translate-y-2">
                 {/* Gradient Background Effect */}

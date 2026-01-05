@@ -2,6 +2,8 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SubHeading from "@/app/components/subHeading";
+import Heading from "@/app/components/heading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -143,16 +145,9 @@ const CertificationsSection = () => {
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         <div className="text-center mb-16">
           <div ref={titleRef}>
-            <h6 className="inline-block px-4 py-2 rounded-full bg-linear-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-semibold mb-6">
-              Quality Assurance
-            </h6>
-            <h2 className="text-5xl max-lg:text-3xl font-bold text-white mb-6 leading-tight">
-              Certifications &{" "}
-              <span className="bg-linear-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Accreditations
-              </span>
-            </h2>
-            <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            <SubHeading title="Quality Assurance" dark />
+            <Heading title1="Certifications &" title2="Accreditations" dark />
+            <p className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Committed to maintaining the highest international standards of
               quality, safety, and environmental responsibility
             </p>
@@ -179,7 +174,9 @@ const CertificationsSection = () => {
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                   {cert.title}
                 </h3>
-                <p className="text-slate-400 text-sm">{cert.description}</p>
+                <p className="text-slate-400 text-[16px] max-xl:text-[16px] max-lg:text-[14px]">
+                  {cert.description}
+                </p>
 
                 {/* Decorative element */}
                 <div className="absolute inset-0 bg-linear-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
@@ -209,7 +206,9 @@ const CertificationsSection = () => {
                   <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-cyan-300 transition-colors">
                     {accred.title}
                   </h4>
-                  <p className="text-slate-400 text-sm">{accred.description}</p>
+                  <p className="text-slate-400 text-[16px] max-xl:text-[16px] max-lg:text-[14px]">
+                    {accred.description}
+                  </p>
                 </div>
               </div>
             ))}

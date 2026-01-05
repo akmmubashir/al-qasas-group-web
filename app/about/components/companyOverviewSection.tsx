@@ -3,15 +3,17 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import SubHeading from "@/app/components/subHeading";
+import Heading from "@/app/components/heading";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const stats = [
-  { label: "Years of Experience", value: "10+", icon: "📅" },
-  { label: "Satisfied Clients", value: "500+", icon: "😊" },
-  { label: "Projects Completed", value: "1000+", icon: "✅" },
-  { label: "Countries Serving", value: "2", icon: "🌍" },
-];
+// const stats = [
+//   { label: "Years of Experience", value: "10+", icon: "📅" },
+//   { label: "Satisfied Clients", value: "500+", icon: "😊" },
+//   { label: "Projects Completed", value: "1000+", icon: "✅" },
+//   { label: "Countries Serving", value: "2", icon: "🌍" },
+// ];
 
 const highlights = [
   {
@@ -159,18 +161,11 @@ const CompanyOverviewSection = () => {
 
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 max-lg:mb-6">
           <div ref={titleRef}>
-            <h6 className="inline-block px-4 py-2 rounded-full bg-linear-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-600 text-sm font-semibold mb-6">
-              About Al-Qasas Group
-            </h6>
-            <h2 className="text-5xl max-lg:text-3xl font-bold text-slate-900 mb-6 leading-tight">
-              Building Excellence Since{" "}
-              <span className="bg-linear-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
-                2014
-              </span>
-            </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <SubHeading title="About Al-Qasas Group" />
+            <Heading title1="Building Excellence Since" title2="2014" />
+            <p className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-600 max-w-3xl mx-auto leading-relaxed">
               A premier contracting and trading company delivering innovative
               solutions across the Middle East
             </p>
@@ -178,24 +173,24 @@ const CompanyOverviewSection = () => {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-12 max-lg:gap-8 mb-16">
+        <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-12 max-lg:gap-8 mb-16 items-start ">
           {/* Left Content */}
           <div ref={contentRef} className="space-y-6">
             <div className="prose prose-lg max-w-none">
-              <p className="text-slate-700 leading-relaxed">
+              <p className="text-[16px] max-xl:text-[16px] max-lg:text-[14px] text-slate-700 leading-relaxed">
                 Al-Qasas Group for Contracting and Trading W.L.L. has
                 established itself as a trusted partner in delivering
                 comprehensive engineering, construction, and trading solutions
                 across Qatar and the UAE.
               </p>
-              <p className="text-slate-700 leading-relaxed">
+              <p className="text-[16px] max-xl:text-[16px] max-lg:text-[14px] text-slate-700 leading-relaxed">
                 Founded in 2014, we have built our reputation on a foundation of
                 technical excellence, unwavering commitment to quality, and
                 dedication to customer satisfaction. Our diverse portfolio spans
                 multiple sectors including oil & gas, industrial construction,
                 and infrastructure development.
               </p>
-              <p className="text-slate-700 leading-relaxed">
+              <p className="text-[16px] max-xl:text-[16px] max-lg:text-[14px] text-slate-700 leading-relaxed">
                 With a team of highly skilled professionals and state-of-the-art
                 equipment, we tackle projects of varying complexity with
                 precision and efficiency, ensuring timely delivery and
@@ -222,7 +217,7 @@ const CompanyOverviewSection = () => {
         </div>
 
         {/* Stats Section */}
-        <div
+        {/* <div
           ref={statsRef}
           className="grid grid-cols-4 max-lg:grid-cols-2 max-md:grid-cols-1 gap-6 mb-16"
         >
@@ -242,7 +237,7 @@ const CompanyOverviewSection = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Highlights Grid */}
         <div
@@ -258,7 +253,7 @@ const CompanyOverviewSection = () => {
                 <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-cyan-600 transition-colors">
                   {highlight.title}
                 </h4>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-[16px] max-xl:text-[16px] max-lg:text-[14px] text-slate-600 leading-relaxed">
                   {highlight.description}
                 </p>
               </div>

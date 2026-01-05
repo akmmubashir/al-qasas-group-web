@@ -159,7 +159,7 @@ const WhyChooseUsSection = () => {
         <div className="text-center mb-20">
           <div ref={titleRef}>
             <SubHeading title="Why We Stand Out" dark />
-            <Heading title1="Why Choose" title2="Al-Qasas?" dark/>
+            <Heading title1="Why Choose" title2="Al-Qasas?" dark />
           </div>
           <p
             ref={subtitleRef}
