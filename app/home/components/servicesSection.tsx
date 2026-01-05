@@ -3,6 +3,8 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
+import SubHeading from "@/app/components/subHeading";
+import Heading from "@/app/components/heading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -210,18 +212,8 @@ const ServicesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 max-lg:mb-12">
           <div ref={titleRef}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0D72B6]/10 border border-[#0D72B6]/20 rounded-full mb-6">
-              <div className="w-2 h-2 bg-[#0D72B6] rounded-full animate-pulse" />
-              <span className="text-[#0D72B6] text-sm font-bold tracking-wider uppercase">
-                What We Offer
-              </span>
-            </div>
-            <h2 className="text-6xl max-xl:text-5xl max-lg:text-4xl max-md:text-3xl font-black text-[#0A0A0A] mb-4 leading-tight">
-              Our{" "}
-              <span className="bg-linear-to-r from-[#0D72B6] via-blue-500 to-cyan-500 bg-clip-text text-transparent">
-                Services
-              </span>
-            </h2>
+            <SubHeading title="What We Offer" />
+            <Heading title1="Our" title2="Services" />
           </div>
           <p
             ref={subtitleRef}
@@ -238,11 +230,10 @@ const ServicesSection = () => {
             <Link
               href={`/services/${service.title.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`}
               key={service.id}
-              className={`service-card group cursor-pointer ${
-                index < 3
+              className={`service-card group cursor-pointer ${index < 3
                   ? "col-span-4 max-lg:col-span-6 max-md:col-span-12"
                   : "col-span-6 max-lg:col-span-6 max-md:col-span-12"
-              }`}
+                }`}
             >
               <div className="relative h-full bg-white rounded-3xl p-8 max-lg:p-6 border-2 border-gray-100 hover:border-[#0D72B6]/30 shadow-sm hover:shadow-2xl hover:shadow-[#0D72B6]/10 transition-all duration-500 overflow-hidden group-hover:-translate-y-2">
                 {/* Gradient Background Effect */}

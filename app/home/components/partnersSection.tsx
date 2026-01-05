@@ -3,6 +3,8 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import SubHeading from "@/app/components/subHeading";
+import Heading from "@/app/components/heading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -102,18 +104,8 @@ const PartnersSection = () => {
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         <div className="text-center mb-12">
           <div ref={titleRef}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0D72B6]/10 border border-[#0D72B6]/20 rounded-full mb-6">
-              <div className="w-2 h-2 bg-cyan-300 rounded-full animate-pulse" />
-              <h6 className="text-cyan-300 text-sm font-bold tracking-wider uppercase">
-                Top Partners
-              </h6>
-            </div>
-            <h2 className="text-6xl max-xl:text-5xl max-lg:text-4xl max-md:text-3xl font-black text-white mb-4 leading-tight">
-              Trusted By Leading{" "}
-              <span className="bg-linear-to-r from-cyan-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
-                Organizations
-              </span>
-            </h2>
+            <SubHeading title="Top Partners" dark />
+            <Heading title1="Trusted By" title2="Leading Organizations" dark />
           </div>
           <p className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Partnering with industry leaders across the region{" "}

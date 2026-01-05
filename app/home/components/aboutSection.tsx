@@ -3,6 +3,8 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import SubHeading from "@/app/components/subHeading";
+import Heading from "@/app/components/heading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,18 +96,8 @@ const AboutSection = () => {
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 max-lg:mb-12" ref={titleRef}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0D72B6]/10 border border-[#0D72B6]/20 rounded-full mb-6">
-            <div className="w-2 h-2 bg-[#0D72B6] rounded-full animate-pulse" />
-            <h6 className="text-[#0D72B6] text-sm font-bold tracking-wider uppercase">
-              Who We Are
-            </h6>
-          </div>
-          <h2 className="text-6xl max-xl:text-5xl max-lg:text-4xl max-md:text-3xl font-black text-[#0A0A0A] mb-4 leading-tight">
-            About{" "}
-            <span className="bg-linear-to-r from-[#0D72B6] via-blue-500 to-cyan-500 bg-clip-text text-transparent">
-              Al-Qasas
-            </span>
-          </h2>
+          <SubHeading title="Who We Are" />
+          <Heading title1="About" title2="Al-Qasas" />
           <p className="text-gray-600 text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-w-2xl mx-auto">
             Your trusted partner for integrated trading, contracting, and
             business solutions across the Gulf region

@@ -2,6 +2,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SubHeading from "@/app/components/subHeading";
+import Heading from "@/app/components/heading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -130,18 +132,8 @@ const FAQSection = () => {
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         <div className="text-center mb-16">
           <div ref={titleRef}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0D72B6]/10 border border-[#0D72B6]/20 rounded-full mb-6">
-              <div className="w-2 h-2 bg-[#0D72B6] rounded-full animate-pulse" />
-              <h6 className="text-[#0D72B6] text-sm font-bold tracking-wider uppercase">
-                Got Questions?
-              </h6>
-            </div>
-            <h2 className="text-6xl max-xl:text-5xl max-lg:text-4xl max-md:text-3xl font-black text-[#2a2a2a] mb-4 leading-tight">
-              Frequently Asked{" "}
-              <span className="bg-linear-to-r from-[#0D72B6] via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Questions
-              </span>
-            </h2>
+            <SubHeading title="Got Questions?" />
+            <Heading title1="Frequently Asked" title2="Questions" />
           </div>
           <p
             ref={subtitleRef}
@@ -155,11 +147,10 @@ const FAQSection = () => {
           {faqs.map((faq) => (
             <div key={faq.id} className="faq-item group">
               <div
-                className={`bg-linear-to-br from-white to-blue-50/50 backdrop-blur-xl rounded-2xl border transition-all duration-300 overflow-hidden ${
-                  openId === faq.id
-                    ? "border-cyan-500/50 shadow-lg shadow-cyan-500/10"
-                    : "border-blue-200/50 hover:border-cyan-500/30"
-                }`}
+                className={`bg-linear-to-br from-white to-blue-50/50 backdrop-blur-xl rounded-2xl border transition-all duration-300 overflow-hidden ${openId === faq.id
+                  ? "border-cyan-500/50 shadow-lg shadow-cyan-500/10"
+                  : "border-blue-200/50 hover:border-cyan-500/30"
+                  }`}
               >
                 <button
                   onClick={() => toggleFAQ(faq.id)}
@@ -169,9 +160,8 @@ const FAQSection = () => {
                     {faq.question}
                   </span>
                   <svg
-                    className={`w-6 h-6 text-cyan-500 shrink-0 transition-transform duration-300 ${
-                      openId === faq.id ? "rotate-180" : ""
-                    }`}
+                    className={`w-6 h-6 text-cyan-500 shrink-0 transition-transform duration-300 ${openId === faq.id ? "rotate-180" : ""
+                      }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -186,11 +176,10 @@ const FAQSection = () => {
                 </button>
 
                 <div
-                  className={`transition-all duration-300 ease-in-out ${
-                    openId === faq.id
-                      ? "max-h-96 opacity-100"
-                      : "max-h-0 opacity-0"
-                  }`}
+                  className={`transition-all duration-300 ease-in-out ${openId === faq.id
+                    ? "max-h-96 opacity-100"
+                    : "max-h-0 opacity-0"
+                    }`}
                 >
                   <div className="px-6 pb-6 text-slate-600 leading-relaxed border-t border-cyan-500/10">
                     <p className="pt-4">{faq.answer}</p>

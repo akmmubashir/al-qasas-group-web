@@ -2,6 +2,8 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Heading from "@/app/components/heading";
+import SubHeading from "@/app/components/subHeading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -267,18 +269,8 @@ const IndustriesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 max-lg:mb-12">
           <div ref={titleRef}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0D72B6]/10 border border-[#0D72B6]/20 rounded-full mb-6">
-              <div className="w-2 h-2 bg-[#0D72B6] rounded-full animate-pulse" />
-              <h6 className="text-[#0D72B6] text-sm font-bold tracking-wider uppercase">
-                Industries We Serve
-              </h6>
-            </div>
-            <h2 className="text-6xl max-xl:text-5xl max-lg:text-4xl max-md:text-3xl font-black text-[#2a2a2a] mb-4 leading-tight">
-              Industries We{" "}
-              <span className="bg-linear-to-r from-[#0D72B6] via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Support
-              </span>
-            </h2>
+            <SubHeading title="Industries We Serve" />
+            <Heading title1="Industries We" title2="Support" />
           </div>
           <p
             ref={subtitleRef}

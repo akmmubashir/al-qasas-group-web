@@ -3,6 +3,8 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { QuoteIcon } from "@/app/components/icons";
+import Heading from "@/app/components/heading";
+import SubHeading from "@/app/components/subHeading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -130,18 +132,8 @@ const TestimonialsSection = () => {
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         <div className="text-center mb-16">
           <div ref={titleRef}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0D72B6]/10 border border-[#0D72B6]/20 rounded-full mb-6">
-              <div className="w-2 h-2 bg-[#0D72B6] rounded-full animate-pulse" />
-              <span className="text-[#0D72B6] text-sm font-bold tracking-wider uppercase">
-                Client Success Stories
-              </span>
-            </div>
-            <h2 className="text-6xl max-xl:text-5xl max-lg:text-4xl max-md:text-3xl font-black text-[#2a2a2a] mb-4 leading-tight">
-              What Our{" "}
-              <span className="bg-linear-to-r from-[#0D72B6] via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Clients Say
-              </span>
-            </h2>
+            <SubHeading title="Client Success Stories" />
+            <Heading title1="What Our" title2="Clients Say" />
           </div>
           <p
             ref={subtitleRef}
