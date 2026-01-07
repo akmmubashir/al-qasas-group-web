@@ -151,7 +151,7 @@ const Footer = () => {
                   href="#"
                   className="text-gray-200 hover:text-white transition-colors text-[14px]"
                 >
-                  info@damac.com
+                  info@alqasas.com
                 </a>
               </li>
             </ul>
@@ -225,7 +225,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col max-lg:flex-col-reverse md:flex-row justify-between items-center gap-4">
             <p className="text-gray-200 text-[14px] text-center md:text-left">
-              © {new Date().getFullYear()} DAMAC. All rights reserved
+              © {new Date().getFullYear()} AL QASAS. All rights reserved
             </p>
             <div className="flex gap-6">
               <Link
