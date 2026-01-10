@@ -12,14 +12,14 @@ const slides = [
   },
   {
     video: '/assets/video/hero-2.mp4',
-    heading: 'End-to-End Project Delivery',
+    heading: 'End-to-End Project Delivery Support',
     body: 'From planning to execution, we streamline procurement, logistics, and on-site support to keep your projects on schedule.',
     ctaLabel: 'Explore Projects',
     ctaHref: '/projects',
   },
   {
     video: '/assets/video/hero-3.mp4',
-    heading: 'Trusted Across the Gulf',
+    heading: 'Trusted Across the Gulf Region',
     body: 'Serving Qatar and Saudi Arabia with reliable partnerships, certified teams, and resilient supply chain expertise.',
     ctaLabel: 'Contact Us',
     ctaHref: '/contact',
@@ -170,7 +170,7 @@ const HeroSection = () => {
                     setCurrent(i)
                     resetTimer()
                   }}
-                  className={`h-1 rounded-full transition-all duration-300 ${i === current ? 'w-full bg-white' : 'w-30 bg-white/60'}`}
+                  className={`cursor-pointer h-1 rounded-full transition-all duration-300 ${i === current ? 'w-full bg-white' : 'w-30 bg-white/60'}`}
                 />
               ))}
             </div>
