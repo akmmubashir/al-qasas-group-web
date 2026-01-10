@@ -7,15 +7,31 @@ import Image from "next/image";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      const currentScrollY = window.scrollY;
+      
+      // Determine if scrolled past threshold
+      setScrolled(currentScrollY > 10);
+      
+      // Show header when scrolling up or at top
+      if (currentScrollY < lastScrollY || currentScrollY < 10) {
+        setVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Hide header when scrolling down past 100px
+        setVisible(false);
+      }
+      
+      setLastScrollY(currentScrollY);
     };
-    window.addEventListener("scroll", handleScroll);
+    
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   useEffect(() => {
     if (mobileMenuOpen) {
@@ -31,7 +47,7 @@ const Header = () => {
   return (
     <>
       <div
-        className={`fixed w-full left-0 top-0 z-40 ${scrolled ? "bg-white shadow-2xl items-end" : "bg-transparent"}`}
+        className={`fixed w-full left-0 top-0 z-40 transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"} ${scrolled ? "bg-white shadow-2xl items-end" : "bg-transparent"}`}
       >
         <div
           className={`p-[20px_80px] max-xl:p-[20px_40px] max-md:p-[16px_20px] flex items-center justify-between`}
