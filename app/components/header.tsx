@@ -34,11 +34,11 @@ const Header = () => {
         className={`fixed w-full left-0 top-0 z-40 ${scrolled ? "bg-white shadow-2xl items-end" : "bg-transparent"}`}
       >
         <div
-          className={`p-[20px_0px] max-xl:p-[20px_40px] max-md:p-[16px_20px] max-w-300 mx-auto flex items-center justify-between`}
+          className={`p-[20px_80px] max-xl:p-[20px_40px] max-md:p-[16px_20px] flex items-center justify-between`}
         >
           <Logo color={scrolled ? "black" : "white"} />
           <Navigation type={scrolled ? "scroll" : "transparent"} />
-          <button className="cursor-pointer group relative px-8 py-4 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold rounded-full overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105 max-xl:hidden">
+          <button className="cursor-pointer group relative px-8 py-4 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105 max-xl:hidden">
             <span className="relative z-10 flex items-center gap-2">
               Get Started
               <svg
