@@ -1,85 +1,44 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import SubHeading from "@/app/components/subHeading";
 import Heading from "@/app/components/heading";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLDivElement>(null);
-  const statsRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
+  const [selectedItem, setSelectedItem] = useState(0);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Title animation
-      gsap.fromTo(
-        titleRef.current,
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          ease: "power4.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 60%",
-            toggleActions: "play none none none",
-          },
-        },
-      );
-
-      // Text animation
-      gsap.fromTo(
-        textRef.current,
-        { opacity: 0, x: -50 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1,
-          delay: 0.2,
-          ease: "power4.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 60%",
-            toggleActions: "play none none none",
-          },
-        },
-      );
-
-      // Stats animation
-      const statCards = statsRef.current?.querySelectorAll(".stat-card");
-      if (statCards) {
-        gsap.fromTo(
-          statCards,
-          { opacity: 0, y: 40, scale: 0.9 },
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 0.8,
-            ease: "back.out(1.7)",
-            stagger: 0.15,
-            scrollTrigger: {
-              trigger: statsRef.current,
-              start: "top 70%",
-              toggleActions: "play none none none",
-            },
-          },
-        );
-      }
-    });
-
-    return () => ctx.revert();
-  }, []);
+  const datalist = [
+    {
+      id: 1,
+      title: "About",
+      content:
+        "Excellence in movable partitions, project support, transportation, corporate services, and IT solutions driving quality and innovation across the Gulf region.",
+    },
+    {
+      id: 2,
+      title: "Our Foundation",
+      content:
+        "Al-Qasas – Trading & Contracting is a trusted diversified solutions provider dedicated to delivering excellence in integrated trading, contracting, and business services across Qatar and Saudi Arabia.",
+    },
+    {
+      id: 3,
+      title: "Our Expertise",
+      content:
+        "With years of experience in the region, we specialize in movable partition systems, project support, transportation, corporate services, and IT solutions—all built on the foundations of quality, compliance, and operational excellence.",
+    },
+    {
+      id: 4,
+      title: "Our Commitment",
+      content:
+        "Our team is committed to understanding your unique needs and delivering customized solutions that drive business growth and operational efficiency.",
+    },
+  ];
 
   return (
-    <div ref={sectionRef} className="relative bg-white overflow-hidden">
+    <div className="relative bg-white overflow-hidden">
       {/* Background Pattern */}
       <div
         className="absolute inset-0 opacity-[0.03]"
@@ -93,125 +52,51 @@ const AboutSection = () => {
       <div className="absolute top-0 -right-40 w-125 h-125 bg-[#0D72B6]/5 rounded-full blur-[100px]" />
       <div className="absolute -bottom-40 -left-40 w-125 h-125 bg-blue-500/5 rounded-full blur-[100px]" />
 
-      <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
+      <div className="p-[80px_80px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 max-lg:mb-12" ref={titleRef}>
-          <SubHeading title="Who We Are" />
+        <div className="text-start mb-16 max-lg:mb-12">
+          {/* <SubHeading title="Who We Are" /> */}
           <Heading title1="About" title2="Al-Qasas" />
-          <p className="text-gray-600 text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-w-2xl mx-auto">
+          {/* <p className="text-gray-600 text-[18px] max-xl:text-[16px] max-lg:text-[14px]">
             Your trusted partner for integrated trading, contracting, and
             business solutions across the Gulf region
-          </p>
+          </p> */}
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-12 gap-8 max-lg:gap-6 mb-16 max-lg:mb-12">
+        <div className="grid grid-cols-12 gap-20 max-lg:gap-6">
           {/* Left Content */}
-          <div
-            ref={textRef}
-            className="col-span-7 max-lg:col-span-12 space-y-6"
-          >
-            <div className="bg-linear-to-br from-gray-50 to-blue-50/30 rounded-3xl p-8 max-lg:p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex max-lg:flex-col items-start gap-4">
-                <div className="shrink-0 w-12 h-12 bg-linear-to-br from-[#0D72B6] to-blue-500 rounded-2xl flex items-center justify-center shadow-lg">
-                  <svg
-                    className="w-6 h-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-[#0A0A0A] mb-3">
-                    Our Foundation
-                  </h3>
-                  <p className="text-gray-700 text-[16px] max-xl:text-[16px] max-lg:text-[14px] leading-relaxed">
-                    Al-Qasas – Trading & Contracting is a trusted diversified
-                    solutions provider dedicated to delivering excellence in
-                    integrated trading, contracting, and business services
-                    across Qatar and Saudi Arabia.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-linear-to-br from-gray-50 to-blue-50/30 rounded-3xl p-8 max-lg:p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex max-lg:flex-col items-start gap-4">
-                <div className="shrink-0 w-12 h-12 bg-linear-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg">
-                  <svg
-                    className="w-6 h-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-[#0A0A0A] mb-3">
-                    Our Expertise
-                  </h3>
-                  <p className="text-gray-700 text-[16px] max-xl:text-[16px] max-lg:text-[14px] leading-relaxed">
-                    With years of experience in the region, we specialize in
-                    movable partition systems, project support, transportation,
-                    corporate services, and IT solutions—all built on the
-                    foundations of quality, compliance, and operational
-                    excellence.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-linear-to-br from-gray-50 to-blue-50/30 rounded-3xl p-8 max-lg:p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex max-lg:flex-col items-start gap-4">
-                <div className="shrink-0 w-12 h-12 bg-linear-to-br from-cyan-500 to-teal-500 rounded-2xl flex items-center justify-center shadow-lg">
-                  <svg
-                    className="w-6 h-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-[#0A0A0A] mb-3">
-                    Our Commitment
-                  </h3>
-                  <p className="text-gray-700 text-[16px] max-xl:text-[16px] max-lg:text-[14px] leading-relaxed">
-                    Our team is committed to understanding your unique needs and
-                    delivering customized solutions that drive business growth
-                    and operational efficiency.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="col-span-3 max-lg:col-span-12 flex flex-col gap-4 items-start">
+            {datalist.map((item, index) => (
+              <button
+                key={item.id}
+                onClick={() => setSelectedItem(index)}
+                className={`group cursor-pointer flex justify-between w-full text-[18px] max-2xl:text-[16px] max-lg:text-[14px] font-medium hover:text-[#0D72B6] transition-colors duration-300 py-4 ${selectedItem === index ? "text-[#0D72B6] border-t-2 border-[#0D72B6]" : "text-gray-600 border-t-2 border-gray-600 hover:border-[#0D72B6]"
+                  }`}
+              >
+                <span>{item.title}</span>
+                <svg
+                  className={`w-5 h-5 transition-transform ${selectedItem === index ? "rotate-45" : "group-hover:rotate-45"
+                    }`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            ))}
           </div>
 
-          {/* Right Visual Section */}
-          <div
-            ref={imageRef}
-            className="col-span-5 max-lg:col-span-12 relative"
-          >
+          {/* Center Visual Section */}
+          <div className="col-span-6 max-lg:col-span-12 relative">
             {/* Main Image */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl h-full min-h-150 max-lg:min-h-100 group">
+            <div className="relative overflow-hidden shadow-2xl h-full min-h-150 max-lg:min-h-100 group">
               <Image
                 src="/assets/images/corporate.webp"
                 alt="Al-Qasas Group Overview"
@@ -221,9 +106,9 @@ const AboutSection = () => {
               <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
 
               {/* Floating Badge */}
-              <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl">
+              <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-sm p-4 shadow-xl">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-linear-to-br from-[#0D72B6] to-blue-500 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-linear-to-br from-[#0D72B6] to-blue-500 flex items-center justify-center">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="none"
@@ -248,10 +133,9 @@ const AboutSection = () => {
                   </div>
                 </div>
               </div>
-
               {/* Bottom Stats */}
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-xl">
+              {/* <div className="absolute bottom-6 left-6 right-6">
+                <div className="bg-white/95 backdrop-blur-sm p-5 shadow-xl">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <div className="text-3xl font-black text-[#0D72B6]">
@@ -271,21 +155,21 @@ const AboutSection = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
+          </div>
 
-            {/* Decorative Elements */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-linear-to-br from-[#0D72B6] to-blue-500 rounded-3xl -z-10 max-lg:hidden" />
-            <div className="absolute -top-4 -left-4 w-32 h-32 bg-linear-to-br from-cyan-400 to-blue-500 rounded-full opacity-20 blur-2xl -z-10 max-lg:hidden" />
+          {/* Right Content */}
+          <div className="col-span-3 max-lg:col-span-12 space-y-6 flex flex-col items-start">
+            <p className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-[#2a2a2a] leading-relaxed">
+              {datalist[selectedItem].content}
+            </p>
           </div>
         </div>
 
         {/* Bottom Stats/Features Bar */}
-        <div
-          ref={statsRef}
-          className="grid grid-cols-4 max-lg:grid-cols-2 max-md:grid-cols-1 gap-6"
-        >
-          <div className="stat-card group bg-linear-to-br from-[#0D72B6]/5 to-blue-500/5 border border-[#0D72B6]/10 rounded-2xl p-6 hover:shadow-lg hover:border-[#0D72B6]/30 transition-all cursor-pointer">
+        {/* <div className="grid grid-cols-4 max-lg:grid-cols-2 max-md:grid-cols-1 gap-6">
+          <div className="stat-card group bg-linear-to-br from-[#0D72B6]/5 to-blue-500/5 border border-[#0D72B6]/10 p-6 hover:shadow-lg hover:border-[#0D72B6]/30 transition-all cursor-pointer">
             <div className="w-12 h-12 bg-linear-to-br from-[#0D72B6] to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <svg
                 className="w-6 h-6 text-white"
@@ -380,7 +264,7 @@ const AboutSection = () => {
               Serving Qatar & Saudi Arabia
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

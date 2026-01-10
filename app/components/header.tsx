@@ -14,10 +14,10 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       // Determine if scrolled past threshold
       setScrolled(currentScrollY > 10);
-      
+
       // Show header when scrolling up or at top
       if (currentScrollY < lastScrollY || currentScrollY < 10) {
         setVisible(true);
@@ -25,10 +25,10 @@ const Header = () => {
         // Hide header when scrolling down past 100px
         setVisible(false);
       }
-      
+
       setLastScrollY(currentScrollY);
     };
-    
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
