@@ -86,7 +86,7 @@ const HeroSection = () => {
       <div className='absolute inset-0 bg-black/40'></div>
 
       {/* Content */}
-      <div className='relative z-10 flex flex-col justify-between h-full p-[160px_80px_60px] max-xl:p-[140px_40px_60px] max-lg:p-[120px_20px_60px]'>
+      <div className='relative z-10 flex flex-col justify-between h-full p-[160px_80px_60px] max-xl:p-[140px_40px_60px] max-lg:p-[120px_20px_50px]'>
         <div className='w-full flex flex-col gap-4 max-lg:mt-auto max-lg:mb-2'>
           <div
             className="w-fit inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 border border-white/30 rounded-full"
@@ -160,7 +160,7 @@ const HeroSection = () => {
                 </span>
               </Link>
             </div>
-            <div className='flex justify-center gap-2 mt-6'>
+            <div className='flex justify-center gap-2 mt-6 max-md:mt-10'>
               {slides.map((_, i) => (
                 <button
                   type='button'
