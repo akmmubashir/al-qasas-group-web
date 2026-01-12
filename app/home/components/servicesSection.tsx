@@ -172,7 +172,7 @@ const ServicesSection = () => {
                 <Link
                   href={`/services/${service.title.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`}
                 >
-                  <div className="inline-flex items-center gap-2 text-[#0D72B6] font-bold text-[18px] max-xl:text-[16px] max-md:text-[14px] hover:gap-3 transition-all duration-300">
+                  <div className="inline-flex items-center gap-2 text-[#0D72B6] font-semibold text-[18px] max-xl:text-[16px] max-md:text-[14px] hover:gap-3 transition-all duration-300">
                     <span>Explore Service</span>
                     <svg
                       className="w-5 h-5 hover:translate-x-1 transition-transform duration-300"
