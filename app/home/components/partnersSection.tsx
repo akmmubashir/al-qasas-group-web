@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import SubHeading from "@/app/components/subHeading";
 import Heading from "@/app/components/heading";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -12,41 +11,35 @@ const partners = [
   {
     id: 1,
     name: "Al-Futtaim Engineering & Technologies",
-    icon: "🏢",
     logo: "/assets/companies/al-futtaim.png",
   },
   {
     id: 2,
     name: "Al-Jaber Engineering",
-    icon: "🏗️",
     logo: "/assets/companies/al-jaber.png",
   },
-  { id: 3, name: "Barwa", icon: "🏛️", logo: "/assets/companies/barwa.png" },
+  { id: 3, name: "Barwa", logo: "/assets/companies/barwa.png" },
   {
     id: 4,
     name: "CHIYODA Corporation",
-    icon: "🏭",
     logo: "/assets/companies/chiyoda.png",
   },
   {
     id: 5,
     name: "HBK Contracting",
-    icon: "🏨",
     logo: "/assets/companies/hbk.png",
   },
-  { id: 6, name: "Ooredoo", icon: "🏥", logo: "/assets/companies/ooredoo.png" },
-  { id: 7, name: "QDVC", icon: "🎓", logo: "/assets/companies/qdvc.png" },
+  { id: 6, name: "Ooredoo", logo: "/assets/companies/ooredoo.png" },
+  { id: 7, name: "QDVC", logo: "/assets/companies/qdvc.png" },
   {
     id: 8,
     name: "Samsung Engineering",
-    icon: "🏪",
     logo: "/assets/companies/samsung.png",
   },
-  { id: 9, name: "Siemens", icon: "🏪", logo: "/assets/companies/siemens.png" },
+  { id: 9, name: "Siemens", logo: "/assets/companies/siemens.png" },
   {
     id: 10,
     name: "UCC - UrbaCon Trading & Contracting",
-    icon: "🏪",
     logo: "/assets/companies/ucc.png",
   },
 ];
@@ -101,10 +94,10 @@ const PartnersSection = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-linear-to-br from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-linear-to-br from-blue-500/5 to-purple-500/5 rounded-full blur-3xl"></div>
 
-      <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
+      <div className="p-[80px_80px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         <div className="text-center mb-12">
           <div ref={titleRef}>
-            <SubHeading title="Top Partners" dark />
+            {/* <SubHeading title="Top Partners" dark /> */}
             <Heading title1="Trusted By" title2="Leading Organizations" dark />
           </div>
           <p className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-300 max-w-2xl mx-auto leading-relaxed">

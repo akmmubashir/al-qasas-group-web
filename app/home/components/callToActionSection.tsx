@@ -126,7 +126,7 @@ const CallToActionSection = () => {
           ref={buttonsRef}
           className="flex flex-wrap gap-4 justify-center items-center"
         >
-          <button className="cursor-pointer cta-button group relative px-8 py-4 max-md:px-4 max-md:py-3 font-semibold text-lg max-md:text-[16px] overflow-hidden rounded-full">
+          <button className="cursor-pointer cta-button group relative px-8 py-4 max-md:px-4 max-md:py-3 font-semibold text-lg max-md:text-[16px] overflow-hidden">
             <div className="absolute inset-0 bg-linear-to-r from-cyan-400 to-blue-400 opacity-100 group-hover:opacity-0 transition-opacity duration-300"></div>
             <div className="absolute inset-0 bg-linear-to-r from-cyan-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <span className="relative text-white flex items-center gap-2 group-hover:gap-3 transition-all duration-300">
@@ -147,7 +147,7 @@ const CallToActionSection = () => {
             </span>
           </button>
 
-          <button className="cursor-pointer cta-button group relative px-8 py-4 max-md:px-4 max-md:py-3 font-semibold text-lg max-md:text-[16px] overflow-hidden rounded-full shadow-lg">
+          <button className="cursor-pointer cta-button group relative px-8 py-4 max-md:px-4 max-md:py-3 font-semibold text-lg max-md:text-[16px] overflow-hidden shadow-lg">
             <div className="absolute inset-0 bg-white opacity-100 group-hover:opacity-0 transition-opacity duration-300"></div>
             <div className="absolute inset-0 bg-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <span className="relative text-black flex items-center gap-2 group-hover:gap-3 transition-all duration-300">

@@ -146,7 +146,7 @@ const IndustriesSection = () => {
           </div>
           <p
             ref={subtitleRef}
-            className="text-slate-600 text-[18px] max-xl:text-[16px] max-md:text-[14px]  max-w-2xl leading-relaxed mt-4"
+            className="text-slate-600 text-[18px] max-xl:text-[16px] max-md:text-[14px] max-w-2xl leading-relaxed mt-4"
           >
             From construction to healthcare, we deliver tailored solutions
             across every sector with proven excellence
@@ -156,11 +156,11 @@ const IndustriesSection = () => {
         {/* Industries Grid */}
         <div
           ref={itemsRef}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-lg:gap-6"
         >
           {industries.map((industry) => (
             <div key={industry.id} className="industry-card group">
-              <div className="relative bg-white overflow-hidden border border-slate-100 hover:border-sky-200 shadow-sm hover:shadow-lg transition-all duration-500 flex flex-col h-60">
+              <div className="relative bg-white overflow-hidden border border-slate-100 hover:border-sky-200 shadow-sm hover:shadow-lg transition-all duration-500 flex flex-col h-80 max-lg:h-60">
                 {/* Image - Full height background */}
                 <div className="absolute inset-0">
                   <Image
