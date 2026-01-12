@@ -66,7 +66,7 @@ const HeroSection = () => {
       timeline.fromTo(
         badgeRef.current,
         { opacity: 0, y: -20 },
-        { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
+        { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
       );
 
       // Heading animation
@@ -74,7 +74,7 @@ const HeroSection = () => {
         headingRef.current,
         { opacity: 0, y: 40 },
         { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
-        "-=0.4"
+        "-=0.4",
       );
 
       // Top CTA animation
@@ -82,7 +82,7 @@ const HeroSection = () => {
         ctaTopRef.current,
         { opacity: 0, x: -30 },
         { opacity: 1, x: 0, duration: 0.8, ease: "back.out(1.5)" },
-        "-=0.5"
+        "-=0.5",
       );
 
       // Description animation
@@ -90,7 +90,7 @@ const HeroSection = () => {
         descriptionRef.current,
         { opacity: 0, y: 30 },
         { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
-        "-=0.4"
+        "-=0.4",
       );
 
       // Bottom CTA animation
@@ -98,7 +98,7 @@ const HeroSection = () => {
         ctaBottomRef.current,
         { opacity: 0, x: -30 },
         { opacity: 1, x: 0, duration: 0.8, ease: "back.out(1.5)" },
-        "-=0.6"
+        "-=0.6",
       );
 
       // Indicators animation
@@ -106,7 +106,7 @@ const HeroSection = () => {
         indicatorsRef.current,
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
-        "-=0.4"
+        "-=0.4",
       );
     });
 
@@ -124,7 +124,7 @@ const HeroSection = () => {
       timeline.fromTo(
         headingRef.current,
         { opacity: 0, x: -40 },
-        { opacity: 1, x: 0, duration: 0.8, ease: "power3.out" }
+        { opacity: 1, x: 0, duration: 0.8, ease: "power3.out" },
       );
 
       // Animate top CTA
@@ -132,7 +132,7 @@ const HeroSection = () => {
         ctaTopRef.current,
         { opacity: 0, scale: 0.9 },
         { opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.5)" },
-        "-=0.4"
+        "-=0.4",
       );
 
       // Animate description
@@ -140,7 +140,7 @@ const HeroSection = () => {
         descriptionRef.current,
         { opacity: 0, x: 40 },
         { opacity: 1, x: 0, duration: 0.8, ease: "power2.out" },
-        "-=0.6"
+        "-=0.6",
       );
 
       // Animate bottom CTA
@@ -148,7 +148,7 @@ const HeroSection = () => {
         ctaBottomRef.current,
         { opacity: 0, scale: 0.9 },
         { opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.5)" },
-        "-=0.6"
+        "-=0.6",
       );
     });
 
@@ -199,18 +199,27 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-between h-full p-[160px_80px_60px] max-xl:p-[140px_40px_60px] max-lg:p-[120px_20px_50px]">
         <div className="w-full flex flex-col gap-4 max-lg:mt-auto max-lg:mb-2">
-          <div ref={badgeRef} className="w-fit inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 border border-white/30 rounded-full">
+          <div
+            ref={badgeRef}
+            className="w-fit inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 border border-white/30 rounded-full"
+          >
             <div className="w-2 h-2 bg-[#0D72B6] rounded-full animate-pulse" />
             <span className="text-white text-sm font-medium tracking-wide">
               QATAR & SAUDI ARABIA
             </span>
           </div>
-          <h1 ref={headingRef} className="text-white font-medium w-2/4 max-lg:w-full text-[60px] max-xl:text-[50px] max-lg:text-[36px] max-md:text-[26px]">
+          <h1
+            ref={headingRef}
+            className="text-white font-medium w-2/4 max-lg:w-full text-[60px] max-xl:text-[50px] max-lg:text-[36px] max-md:text-[26px]"
+          >
             {slide.heading}
           </h1>
 
           {/* CTA Buttons */}
-          <div ref={ctaTopRef} className="flex flex-wrap gap-4 max-md:gap-3 max-lg:hidden">
+          <div
+            ref={ctaTopRef}
+            className="flex flex-wrap gap-4 max-md:gap-3 max-lg:hidden"
+          >
             <Link
               href={slide.ctaHref}
               className="cursor-pointer group px-8 py-4 max-md:px-5 max-md:py-3 bg-white border border-white/90 text-black text-[15px] font-bold hover:bg-white/80 hover:border-white/20 transition-all duration-300"
@@ -237,10 +246,16 @@ const HeroSection = () => {
         <div className="w-full grid grid-cols-12 justify-end">
           <div className="col-span-8 max-lg:hidden" />
           <div className="col-span-4 max-lg:col-span-full">
-            <p ref={descriptionRef} className="text-gray-200 text-[20px] max-xl:text-[18px] max-lg:text-[16px] leading-relaxed mb-4">
+            <p
+              ref={descriptionRef}
+              className="text-gray-200 text-[20px] max-xl:text-[18px] max-lg:text-[16px] leading-relaxed mb-4"
+            >
               {slide.body}
             </p>
-            <div ref={ctaBottomRef} className="flex flex-wrap gap-4 max-md:gap-3 lg:hidden">
+            <div
+              ref={ctaBottomRef}
+              className="flex flex-wrap gap-4 max-md:gap-3 lg:hidden"
+            >
               <Link
                 href={slide.ctaHref}
                 className="cursor-pointer group px-8 py-4 max-md:px-5 max-md:py-3 bg-white border border-white/90 text-black text-[15px] font-bold hover:bg-white/80 hover:border-white/20 transition-all duration-300"
@@ -263,7 +278,10 @@ const HeroSection = () => {
                 </span>
               </Link>
             </div>
-            <div ref={indicatorsRef} className="flex justify-center gap-2 mt-6 max-md:mt-10">
+            <div
+              ref={indicatorsRef}
+              className="flex justify-center gap-2 mt-6 max-md:mt-10"
+            >
               {slides.map((_, i) => (
                 <button
                   type="button"

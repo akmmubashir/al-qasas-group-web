@@ -64,7 +64,7 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
             start: "top 65%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       // Subtitle animation
@@ -82,7 +82,7 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
             start: "top 65%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       // Navigation buttons animation with stagger
@@ -102,7 +102,7 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
               start: "top 75%",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
       }
 
@@ -120,7 +120,7 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
             start: "top 75%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       // Content text animation
@@ -137,7 +137,7 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
             start: "top 75%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       // Stats cards animation with stagger
@@ -158,7 +158,7 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
               start: "top 80%",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
       }
     });
@@ -167,7 +167,10 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-linear-to-br from-sky-50 via-white to-blue-50">
+    <section
+      ref={sectionRef}
+      className="relative overflow-hidden bg-linear-to-br from-sky-50 via-white to-blue-50"
+    >
       <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_20%_20%,rgba(13,114,182,0.15),transparent_40%),radial-gradient(circle_at_80%_0%,rgba(59,130,246,0.12),transparent_38%),radial-gradient(circle_at_50%_80%,rgba(14,165,233,0.14),transparent_36%)]" />
       <div className="absolute inset-0 bg-[url('/assets/common/aboutbg.webp')] bg-cover bg-center mix-blend-multiply opacity-10" />
 
@@ -176,7 +179,10 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
           <div ref={headingRef}>
             <Heading title1="Who We" title2="Are" />
           </div>
-          <p ref={subtitleRef} className="max-w-3xl text-[18px] max-xl:text-[16px] max-md:text-[14px] sm:text-lg text-slate-600">
+          <p
+            ref={subtitleRef}
+            className="max-w-3xl text-[18px] max-xl:text-[16px] max-md:text-[14px] sm:text-lg text-slate-600"
+          >
             Integrated trading, contracting, and business solutions tailored for
             Qatar and Saudi Arabia, built on reliability and thoughtful
             partnerships.
@@ -184,7 +190,10 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
         </div>
 
         <div className="grid grid-cols-12 gap-8 lg:gap-10 items-start">
-          <div ref={navRef} className="col-span-3 max-2xl:col-span-6 max-md:col-span-12 flex flex-col gap-3 lg:gap-4">
+          <div
+            ref={navRef}
+            className="col-span-3 max-2xl:col-span-6 max-md:col-span-12 flex flex-col gap-3 lg:gap-4"
+          >
             <div className="flex lg:block gap-3 overflow-x-auto no-scrollbar pb-2 -mx-1 px-1 snap-x snap-mandatory">
               {datalist.map((item, index) => {
                 const isActive = selectedItem === index;
@@ -238,7 +247,10 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
             </div>
           </div>
 
-          <div ref={imageRef} className="col-span-5 max-2xl:col-span-6 max-md:col-span-12 order-last lg:order-0">
+          <div
+            ref={imageRef}
+            className="col-span-5 max-2xl:col-span-6 max-md:col-span-12 order-last lg:order-0"
+          >
             <div className="relative overflow-hidden shadow-2xl h-full min-h-80 sm:min-h-95 lg:min-h-115 group bg-slate-900">
               <Image
                 src="/assets/images/corporate.webp"

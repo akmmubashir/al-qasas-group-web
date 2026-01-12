@@ -133,7 +133,7 @@ const ServicesSection = () => {
     const ctx = gsap.context(() => {
       // Animate service cards
       const serviceCards = cardsRef.current?.querySelectorAll(".service-card");
-      
+
       if (serviceCards) {
         serviceCards.forEach((card, index) => {
           const image = card.querySelector(".service-image");
@@ -155,17 +155,17 @@ const ServicesSection = () => {
                 start: "top 80%",
                 toggleActions: "play none none none",
               },
-            }
+            },
           );
 
           // Image animation - slide and scale
           if (image) {
             gsap.fromTo(
               image,
-              { 
+              {
                 opacity: 0,
                 x: index % 2 === 0 ? -60 : 60,
-                scale: 1.1
+                scale: 1.1,
               },
               {
                 opacity: 1,
@@ -178,7 +178,7 @@ const ServicesSection = () => {
                   start: "top 75%",
                   toggleActions: "play none none none",
                 },
-              }
+              },
             );
           }
 
@@ -186,9 +186,9 @@ const ServicesSection = () => {
           if (content) {
             gsap.fromTo(
               content,
-              { 
+              {
                 opacity: 0,
-                x: index % 2 === 0 ? 60 : -60
+                x: index % 2 === 0 ? 60 : -60,
               },
               {
                 opacity: 1,
@@ -201,7 +201,7 @@ const ServicesSection = () => {
                   start: "top 75%",
                   toggleActions: "play none none none",
                 },
-              }
+              },
             );
           }
 
@@ -221,7 +221,7 @@ const ServicesSection = () => {
                   start: "top 75%",
                   toggleActions: "play none none none",
                 },
-              }
+              },
             );
           }
 
@@ -241,7 +241,7 @@ const ServicesSection = () => {
                   start: "top 75%",
                   toggleActions: "play none none none",
                 },
-              }
+              },
             );
           }
 
@@ -261,7 +261,7 @@ const ServicesSection = () => {
                   start: "top 75%",
                   toggleActions: "play none none none",
                 },
-              }
+              },
             );
           }
         });
@@ -287,7 +287,10 @@ const ServicesSection = () => {
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-[120px]" />
 
       <div className="p-20 max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
-        <div ref={cardsRef} className="grid grid-cols-12 gap-25 max-xl:gap-20 max-lg:gap-12 max-md:gap-[40px_0]">
+        <div
+          ref={cardsRef}
+          className="grid grid-cols-12 gap-25 max-xl:gap-20 max-lg:gap-12 max-md:gap-[40px_0]"
+        >
           {services.map((service, index) => (
             <div
               key={service.id}
