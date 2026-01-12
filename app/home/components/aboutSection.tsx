@@ -1,10 +1,21 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Heading from "@/app/components/heading";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = () => {
   const [selectedItem, setSelectedItem] = useState(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const headingRef = useRef<HTMLDivElement>(null);
+  const subtitleRef = useRef<HTMLParagraphElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const statsRef = useRef<HTMLDivElement>(null);
 
   const datalist = [
     {
@@ -37,15 +48,135 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
     },
   ];
 
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Heading animation
+      gsap.fromTo(
+        headingRef.current,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 65%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+
+      // Subtitle animation
+      gsap.fromTo(
+        subtitleRef.current,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          delay: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 65%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+
+      // Navigation buttons animation with stagger
+      const navButtons = navRef.current?.querySelectorAll("button");
+      if (navButtons) {
+        gsap.fromTo(
+          navButtons,
+          { opacity: 0, x: -40 },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            stagger: 0.1,
+            scrollTrigger: {
+              trigger: navRef.current,
+              start: "top 75%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      }
+
+      // Image container animation
+      gsap.fromTo(
+        imageRef.current,
+        { opacity: 0, scale: 0.95 },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: imageRef.current,
+            start: "top 75%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+
+      // Content text animation
+      gsap.fromTo(
+        contentRef.current,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: contentRef.current,
+            start: "top 75%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+
+      // Stats cards animation with stagger
+      const statCards = statsRef.current?.querySelectorAll(".stat-card");
+      if (statCards) {
+        gsap.fromTo(
+          statCards,
+          { opacity: 0, y: 40, scale: 0.9 },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.8,
+            ease: "back.out(1.5)",
+            stagger: 0.15,
+            scrollTrigger: {
+              trigger: statsRef.current,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      }
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="relative overflow-hidden bg-linear-to-br from-sky-50 via-white to-blue-50">
+    <section ref={sectionRef} className="relative overflow-hidden bg-linear-to-br from-sky-50 via-white to-blue-50">
       <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_20%_20%,rgba(13,114,182,0.15),transparent_40%),radial-gradient(circle_at_80%_0%,rgba(59,130,246,0.12),transparent_38%),radial-gradient(circle_at_50%_80%,rgba(14,165,233,0.14),transparent_36%)]" />
       <div className="absolute inset-0 bg-[url('/assets/common/aboutbg.webp')] bg-cover bg-center mix-blend-multiply opacity-10" />
 
       <div className="relative z-10 p-[80px_80px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px]">
         <div className="flex flex-col gap-4 sm:gap-3 mb-12 sm:mb-14">
-          <Heading title1="Who We" title2="Are" />
-          <p className="max-w-3xl text-[18px] max-xl:text-[16px] max-md:text-[14px] sm:text-lg text-slate-600">
+          <div ref={headingRef}>
+            <Heading title1="Who We" title2="Are" />
+          </div>
+          <p ref={subtitleRef} className="max-w-3xl text-[18px] max-xl:text-[16px] max-md:text-[14px] sm:text-lg text-slate-600">
             Integrated trading, contracting, and business solutions tailored for
             Qatar and Saudi Arabia, built on reliability and thoughtful
             partnerships.
@@ -53,7 +184,7 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
         </div>
 
         <div className="grid grid-cols-12 gap-8 lg:gap-10 items-start">
-          <div className="col-span-3 max-2xl:col-span-6 max-md:col-span-12 flex flex-col gap-3 lg:gap-4">
+          <div ref={navRef} className="col-span-3 max-2xl:col-span-6 max-md:col-span-12 flex flex-col gap-3 lg:gap-4">
             <div className="flex lg:block gap-3 overflow-x-auto no-scrollbar pb-2 -mx-1 px-1 snap-x snap-mandatory">
               {datalist.map((item, index) => {
                 const isActive = selectedItem === index;
@@ -107,7 +238,7 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
             </div>
           </div>
 
-          <div className="col-span-5 max-2xl:col-span-6 max-md:col-span-12 order-last lg:order-0">
+          <div ref={imageRef} className="col-span-5 max-2xl:col-span-6 max-md:col-span-12 order-last lg:order-0">
             <div className="relative overflow-hidden shadow-2xl h-full min-h-80 sm:min-h-95 lg:min-h-115 group bg-slate-900">
               <Image
                 src="/assets/images/corporate.webp"
@@ -140,16 +271,16 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
           </div>
 
           <div className="col-span-4 max-2xl:col-span-12 max-md:col-span-12 order-2 lg:order-0 space-y-6">
-            {/* <div className="rounded-3xl bg-white/80 backdrop-blur-sm border border-slate-100 shadow-sm p-6"> */}
-            <p
-              className="text-[18px] max-xl:text-[16px] max-md:text-[14px] text-slate-700 leading-relaxed"
-              dangerouslySetInnerHTML={{
-                __html: datalist[selectedItem].content,
-              }}
-            />
-            {/* </div> */}
-            <div className="grid grid-cols-2 gap-4 sm:gap-5">
-              <div className="bg-white border border-slate-100 p-4 shadow-sm">
+            <div ref={contentRef}>
+              <p
+                className="text-[18px] max-xl:text-[16px] max-md:text-[14px] text-slate-700 leading-relaxed"
+                dangerouslySetInnerHTML={{
+                  __html: datalist[selectedItem].content,
+                }}
+              />
+            </div>
+            <div ref={statsRef} className="grid grid-cols-2 gap-4 sm:gap-5">
+              <div className="stat-card bg-white border border-slate-100 p-4 shadow-sm">
                 <div className="text-xs font-semibold uppercase tracking-wide text-slate-500">
                   Industries
                 </div>
@@ -160,7 +291,7 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
                   Construction, tech, services, logistics
                 </p>
               </div>
-              <div className="bg-sky-50 border border-sky-100 p-4 shadow-sm">
+              <div className="stat-card bg-sky-50 border border-sky-100 p-4 shadow-sm">
                 <div className="text-xs font-semibold uppercase tracking-wide text-sky-600">
                   Satisfaction
                 </div>
