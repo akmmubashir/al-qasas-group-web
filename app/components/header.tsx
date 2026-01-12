@@ -74,7 +74,7 @@ const Header = () => {
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="cursor-pointer group relative px-2 py-2 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold rounded-full overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105 xl:hidden"
+            className="cursor-pointer group relative px-2 py-2 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold rounded-md overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105 xl:hidden"
           >
             <ToggleIcon size="w-6 h-6" color="stroke-white" stroke="2" />
           </button>
@@ -106,7 +106,7 @@ const Header = () => {
           <div className="mt-auto">
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="cursor-pointer w-full group relative px-8 py-4 bg-linear-to-r from-[#515151] to-[#353535] text-white text-[16px] font-medium uppercase rounded-full overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300"
+              className="cursor-pointer w-full group relative px-8 py-4 bg-linear-to-r from-[#515151] to-[#353535] text-white text-[16px] font-medium uppercase overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 Close Menu

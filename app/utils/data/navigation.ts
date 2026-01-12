@@ -6,20 +6,20 @@ type Props = {
 
 export const navigationData: Props[] = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
+  { name: "About", href: "#" },
   {
     name: "Services",
-    href: "/services",
+    href: "#",
     dropMenu: [
       {
         name: "Movable Partitions & Ironmongeries",
-        href: "/services/movable-partitions-ironmongeries",
+        href: "#",
       },
-      { name: "Project Support", href: "/services/project-support" },
-      { name: "Transportation", href: "/services/transportation" },
-      { name: "Corporate Services", href: "/services/corporate-services" },
-      { name: "IT Solutions", href: "/services/it-solutions" },
+      { name: "Project Support", href: "#" },
+      { name: "Transportation", href: "#" },
+      { name: "Corporate Services", href: "#" },
+      { name: "IT Solutions", href: "#" },
     ],
   },
-  { name: "Contact Us", href: "/contact" },
+  { name: "Contact Us", href: "#" },
 ];
