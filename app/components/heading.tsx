@@ -4,12 +4,20 @@ type Props = {
   title1?: string;
   title2?: string;
   dark?: boolean;
+  nostyle?: boolean;
 };
 
 const Heading = (props: Props) => {
   return (
     <React.Fragment>
-      {props.dark ? (
+      {props.nostyle ? (
+        <h2
+          className={`text-6xl max-xl:text-5xl max-lg:text-4xl max-md:text-3xl font-semibold ${props.dark ? "text-white" : "text-[#2a2a2a]"} mb-4 leading-tight`}
+        >
+          {props.title1}
+          {props.title2}
+        </h2>
+      ) : props.dark ? (
         <h2 className="text-6xl max-xl:text-5xl max-lg:text-4xl max-md:text-3xl font-semibold text-white mb-4 leading-tight">
           {props.title1}{" "}
           <span className="bg-linear-to-r from-[#0D72B6] via-blue-500 to-cyan-500 bg-clip-text text-transparent">

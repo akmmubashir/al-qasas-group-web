@@ -45,16 +45,16 @@ const Loading = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-linear-to-br from-slate-950 via-blue-950 to-slate-900 text-white">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white text-slate-900">
       <div className="relative w-100 max-md:w-full max-lg:px-7.5 flex flex-col gap-4">
-        <div className="flex items-center justify-between text-[20px] max-md:text-[16px] uppercase tracking-[0.25em] text-cyan-100">
+        <div className="flex items-center justify-between text-[20px] max-md:text-[16px] uppercase tracking-[0.25em] text-slate-600">
           <span>Loading</span>
           <span ref={percentRef}>0%</span>
         </div>
-        <div className="h-2 w-full overflow-hidden rounded-full bg-white/10 backdrop-blur">
+        <div className="h-2 w-full overflow-hidden rounded-full bg-slate-200 backdrop-blur">
           <div
             ref={progressRef}
-            className="h-full w-0 rounded-full bg-linear-to-r from-cyan-400 via-blue-400 to-purple-400 shadow-lg shadow-cyan-500/20"
+            className="h-full w-0 rounded-full bg-linear-to-r from-sky-500 via-blue-500 to-cyan-500 shadow-lg shadow-sky-500/20"
           ></div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import SubHeading from "@/app/components/subHeading";
 import Heading from "@/app/components/heading";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,6 +31,7 @@ const services = [
       </svg>
     ),
     gradient: "from-[#0D72B6] to-blue-500",
+    img: "/assets/images/movableitems.webp",
   },
   {
     id: 2,
@@ -52,6 +54,7 @@ const services = [
       </svg>
     ),
     gradient: "from-blue-500 to-cyan-500",
+    img: "/assets/images/mov.webp",
   },
   {
     id: 3,
@@ -74,6 +77,7 @@ const services = [
       </svg>
     ),
     gradient: "from-cyan-500 to-teal-500",
+    img: "/assets/images/transportation.webp",
   },
   {
     id: 4,
@@ -96,6 +100,7 @@ const services = [
       </svg>
     ),
     gradient: "from-purple-500 to-pink-500",
+    img: "/assets/images/corporate.webp",
   },
   {
     id: 5,
@@ -118,6 +123,7 @@ const services = [
       </svg>
     ),
     gradient: "from-indigo-500 to-blue-500",
+    img: "/assets/images/it-solution.webp",
   },
 ];
 
@@ -191,10 +197,7 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <div
-      ref={sectionRef}
-      className="relative bg-linear-to-b from-gray-100 to-white overflow-hidden"
-    >
+    <div ref={sectionRef} className="relative bg-white overflow-hidden">
       {/* Background Pattern */}
       <div
         className="absolute inset-0 opacity-[0.02]"
@@ -208,16 +211,16 @@ const ServicesSection = () => {
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#0D72B6]/5 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-[120px]" />
 
-      <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
+      <div className="p-[80px_80px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 max-lg:mb-12">
+        <div className="mb-16 max-lg:mb-12">
           <div ref={titleRef}>
-            <SubHeading title="What We Offer" />
-            <Heading title1="Our" title2="Services" />
+            {/* <SubHeading title="What We Offer" /> */}
+            <Heading title1="What " title2="We Offer" nostyle />
           </div>
           <p
             ref={subtitleRef}
-            className="text-gray-600 text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-w-3xl mx-auto leading-relaxed"
+            className="text-gray-600 text-[18px] max-xl:text-[16px] max-lg:text-[14px] leading-relaxed"
           >
             Comprehensive solutions tailored to meet the diverse needs of
             businesses across Qatar and Saudi Arabia
@@ -225,29 +228,38 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div ref={cardsRef} className="grid grid-cols-12 gap-6 max-lg:gap-4">
+        <div ref={cardsRef} className="grid grid-cols-12 gap-10 max-lg:gap-4">
           {services.map((service, index) => (
             <Link
               href={`/services/${service.title.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`}
               key={service.id}
-              className={`service-card group cursor-pointer ${
-                index < 3
-                  ? "col-span-4 max-lg:col-span-6 max-md:col-span-12"
-                  : "col-span-6 max-lg:col-span-6 max-md:col-span-12"
+              className={`service-card group cursor-pointer grid grid-cols-12 border-2 border-gray-100 hover:border-[#0D72B6]/30 shadow-lg hover:shadow-2xl hover:shadow-[#0D72B6]/10 transition-all duration-500 overflow-hidden group-hover:-translate-y-2 ${
+                index < 4
+                  ? "col-span-6 max-md:col-span-12"
+                  : "col-span-6 max-md:col-span-12"
               }`}
             >
-              <div className="relative h-full bg-white rounded-3xl p-8 max-lg:p-6 border-2 border-gray-100 hover:border-[#0D72B6]/30 shadow-sm hover:shadow-2xl hover:shadow-[#0D72B6]/10 transition-all duration-500 overflow-hidden group-hover:-translate-y-2">
+              <div className="col-span-4 w-full h-full">
+                <Image
+                  src={service.img}
+                  alt={service.title + "service-image"}
+                  className="w-full h-full"
+                  width={1000}
+                  height={600}
+                />
+              </div>
+              <div className="col-span-8 relative h-full bg-white p-8 max-lg:p-6 ">
                 {/* Gradient Background Effect */}
                 <div
-                  className={`absolute top-0 right-0 w-32 h-32 bg-linear-to-br ${service.gradient} opacity-0 group-hover:opacity-10 rounded-full blur-2xl transition-opacity duration-500`}
+                  className={`absolute top-0 right-0 w-32 h-32 bg-linear-to-br ${service.gradient} opacity-0 group-hover:opacity-10 blur-2xl transition-opacity duration-500`}
                 />
 
                 {/* Icon Container */}
-                <div
-                  className={`relative w-16 h-16 bg-linear-to-br ${service.gradient} rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}
+                {/* <div
+                  className={`relative w-16 h-16 bg-linear-to-br ${service.gradient} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}
                 >
                   <div className="text-white">{service.icon}</div>
-                </div>
+                </div> */}
 
                 {/* Content */}
                 <h3 className="text-2xl max-lg:text-xl font-bold text-[#0A0A0A] mb-3 group-hover:text-[#0D72B6] transition-colors duration-300">
