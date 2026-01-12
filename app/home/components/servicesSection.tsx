@@ -1,13 +1,7 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React from "react";
 import Link from "next/link";
-import SubHeading from "@/app/components/subHeading";
-import Heading from "@/app/components/heading";
 import Image from "next/image";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
@@ -54,7 +48,7 @@ const services = [
       </svg>
     ),
     gradient: "from-blue-500 to-cyan-500",
-    img: "/assets/images/mov.webp",
+    img: "/assets/images/project.webp",
   },
   {
     id: 3,
@@ -128,76 +122,8 @@ const services = [
 ];
 
 const ServicesSection = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLDivElement>(null);
-  const subtitleRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Title animation
-      gsap.fromTo(
-        titleRef.current,
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          ease: "power4.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 60%",
-            toggleActions: "play none none none",
-          },
-        },
-      );
-
-      // Subtitle animation
-      gsap.fromTo(
-        subtitleRef.current,
-        { opacity: 0, y: 20 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          delay: 0.2,
-          ease: "power4.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 60%",
-            toggleActions: "play none none none",
-          },
-        },
-      );
-
-      // Cards animation with stagger
-      const cards = cardsRef.current?.querySelectorAll(".service-card");
-      if (cards) {
-        gsap.fromTo(
-          cards,
-          { opacity: 0, y: 60, scale: 0.9 },
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 0.8,
-            ease: "back.out(1.7)",
-            stagger: 0.12,
-            scrollTrigger: {
-              trigger: cardsRef.current,
-              start: "top 65%",
-              toggleActions: "play none none none",
-            },
-          },
-        );
-      }
-    });
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <div ref={sectionRef} className="relative bg-white overflow-hidden">
+    <div className="relative bg-white overflow-hidden">
       {/* Background Pattern */}
       <div
         className="absolute inset-0 opacity-[0.02]"
@@ -211,123 +137,61 @@ const ServicesSection = () => {
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#0D72B6]/5 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-[120px]" />
 
-      <div className="p-[80px_80px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
-        {/* Section Header */}
-        <div className="mb-16 max-lg:mb-12">
-          <div ref={titleRef}>
-            {/* <SubHeading title="What We Offer" /> */}
-            <Heading title1="What " title2="We Offer" nostyle />
-          </div>
-          <p
-            ref={subtitleRef}
-            className="text-gray-600 text-[18px] max-xl:text-[16px] max-lg:text-[14px] leading-relaxed"
-          >
-            Comprehensive solutions tailored to meet the diverse needs of
-            businesses across Qatar and Saudi Arabia
-          </p>
-        </div>
-
-        {/* Services Grid */}
-        <div ref={cardsRef} className="grid grid-cols-12 gap-10 max-lg:gap-4">
+      <div className="p-20 max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
+        <div className="grid grid-cols-12 gap-25 max-xl:gap-20 max-lg:gap-12 max-md:gap-[40px_0]">
           {services.map((service, index) => (
-            <Link
-              href={`/services/${service.title.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`}
+            <div
               key={service.id}
-              className={`service-card group cursor-pointer grid grid-cols-12 border-2 border-gray-100 hover:border-[#0D72B6]/30 shadow-lg hover:shadow-2xl hover:shadow-[#0D72B6]/10 transition-all duration-500 overflow-hidden group-hover:-translate-y-2 ${
-                index < 4
-                  ? "col-span-6 max-md:col-span-12"
-                  : "col-span-6 max-md:col-span-12"
-              }`}
+              className={`service-card col-span-full group grid grid-cols-12 items-center`}
             >
-              <div className="col-span-4 w-full h-full">
-                <Image
-                  src={service.img}
-                  alt={service.title + "service-image"}
-                  className="w-full h-full"
-                  width={1000}
-                  height={600}
-                />
+              <div
+                className={`col-span-5 max-md:col-span-full ${index % 2 === 1 ? "order-2 max-md:order-1" : "order-1"}`}
+              >
+                <div className="h-100 max-lg:h-80 max-md:h-60 relative">
+                  <Image
+                    src={service.img}
+                    alt={service.title + "service-image"}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    width={1000}
+                    height={600}
+                  />
+                </div>
               </div>
-              <div className="col-span-8 relative h-full bg-white p-8 max-lg:p-6 ">
-                {/* Gradient Background Effect */}
-                <div
-                  className={`absolute top-0 right-0 w-32 h-32 bg-linear-to-br ${service.gradient} opacity-0 group-hover:opacity-10 blur-2xl transition-opacity duration-500`}
-                />
-
-                {/* Icon Container */}
-                {/* <div
-                  className={`relative w-16 h-16 bg-linear-to-br ${service.gradient} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}
-                >
-                  <div className="text-white">{service.icon}</div>
-                </div> */}
-
+              <div
+                className={`col-span-7 max-md:col-span-full bg-white p-30 max-xl:p-20 max-lg:p-10 max-md:p-[20px_0] flex flex-col justify-center h-full ${index % 2 === 1 ? "order-1 max-md:order-2" : "order-2"}`}
+              >
                 {/* Content */}
-                <h3 className="text-2xl max-lg:text-xl font-bold text-[#0A0A0A] mb-3 group-hover:text-[#0D72B6] transition-colors duration-300">
+                <h3 className="text-[36px] max-xl:text-[30px] max-lg:text-[26px] max-md:text-[22px] font-semibold text-[#0A0A0A] mb-3 group-hover:text-[#0D72B6] transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-[15px] leading-relaxed mb-6">
+                <p className="text-gray-600 text-[18px] max-xl:text-[16px] max-md:text-[14px] leading-relaxed mb-6">
                   {service.description}
                 </p>
 
                 {/* CTA Link */}
-                <div className="inline-flex items-center gap-2 text-[#0D72B6] font-bold text-sm group-hover:gap-3 transition-all duration-300">
-                  <span>Explore Service</span>
-                  <svg
-                    className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </div>
-
-                {/* Corner Accent */}
-                <div className="absolute bottom-0 right-0 w-24 h-24 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div
-                    className={`absolute bottom-0 right-0 w-full h-full bg-linear-to-tl ${service.gradient} opacity-5 rounded-tl-[100px]`}
-                  />
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="mt-16 max-lg:mt-12 text-center">
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-linear-to-r from-[#0D72B6]/5 via-blue-500/5 to-cyan-500/5 border-2 border-[#0D72B6]/20 rounded-2xl p-8 max-lg:p-6">
-            <div className="flex-1 text-left max-sm:text-center">
-              <h3 className="text-2xl max-lg:text-xl font-bold text-[#0A0A0A] mb-2">
-                Need a Custom Solution?
-              </h3>
-              <p className="text-gray-600 text-sm">
-                Let&apos;s discuss how we can help your business grow
-              </p>
-            </div>
-            <button className="cursor-pointer group relative px-8 py-4 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold rounded-full overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105">
-              <span className="relative z-10 flex items-center gap-2">
-                Contact Us Today
-                <svg
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={3}
+                <Link
+                  href={`/services/${service.title.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </span>
-            </button>
-          </div>
+                  <div className="inline-flex items-center gap-2 text-[#0D72B6] font-bold text-[18px] max-xl:text-[16px] max-md:text-[14px] hover:gap-3 transition-all duration-300">
+                    <span>Explore Service</span>
+                    <svg
+                      className="w-5 h-5 hover:translate-x-1 transition-transform duration-300"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2.5}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -45,7 +45,7 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
       <div className="relative z-10 p-[80px_80px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px]">
         <div className="flex flex-col gap-4 sm:gap-3 mb-12 sm:mb-14">
           <Heading title1="Who We" title2="Are" />
-          <p className="max-w-3xl text-base sm:text-lg text-slate-600">
+          <p className="max-w-3xl text-[18px] max-xl:text-[16px] max-md:text-[14px] sm:text-lg text-slate-600">
             Integrated trading, contracting, and business solutions tailored for
             Qatar and Saudi Arabia, built on reliability and thoughtful
             partnerships.
@@ -53,7 +53,7 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
         </div>
 
         <div className="grid grid-cols-12 gap-8 lg:gap-10 items-start">
-          <div className="col-span-12 lg:col-span-3 flex flex-col gap-3 lg:gap-4">
+          <div className="col-span-3 max-2xl:col-span-6 max-md:col-span-12 flex flex-col gap-3 lg:gap-4">
             <div className="flex lg:block gap-3 overflow-x-auto no-scrollbar pb-2 -mx-1 px-1 snap-x snap-mandatory">
               {datalist.map((item, index) => {
                 const isActive = selectedItem === index;
@@ -69,7 +69,7 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
                     }`}
                   >
                     <div className="flex items-center justify-between gap-3">
-                      <span className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+                      <span className="text-[18px] max-xl:text-[16px] max-md:text-[14px] font-semibold uppercase tracking-wide text-slate-500">
                         {item.title}
                       </span>
                       <span
@@ -107,7 +107,7 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
             </div>
           </div>
 
-          <div className="col-span-12 lg:col-span-5 order-last lg:order-0">
+          <div className="col-span-5 max-2xl:col-span-6 max-md:col-span-12 order-last lg:order-0">
             <div className="relative overflow-hidden shadow-2xl h-full min-h-80 sm:min-h-95 lg:min-h-115 group bg-slate-900">
               <Image
                 src="/assets/images/corporate.webp"
@@ -139,10 +139,10 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
             </div>
           </div>
 
-          <div className="col-span-12 lg:col-span-4 order-2 lg:order-0 space-y-6">
+          <div className="col-span-4 max-2xl:col-span-12 max-md:col-span-12 order-2 lg:order-0 space-y-6">
             {/* <div className="rounded-3xl bg-white/80 backdrop-blur-sm border border-slate-100 shadow-sm p-6"> */}
             <p
-              className="text-base sm:text-lg text-slate-700 leading-relaxed"
+              className="text-[18px] max-xl:text-[16px] max-md:text-[14px] text-slate-700 leading-relaxed"
               dangerouslySetInnerHTML={{
                 __html: datalist[selectedItem].content,
               }}
