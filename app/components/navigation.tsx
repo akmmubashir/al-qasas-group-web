@@ -35,7 +35,7 @@ const Navigation = (props: Props) => {
         <Link
           key={item.name}
           href={item.href}
-          className={`relative pb-1 text-[16px] ${props.type === "transparent" ? "text-white" : "text-[#160A0A]"} hover:text-[#0D72B6] ${props.type === "scroll" ? "font-medium" : "font-medium"} ${pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href)) ? "after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-[#0D72B6]" : "after:hidden"}`}
+          className={`relative pb-1 text-[16px] ${props.type === "transparent" ? "text-white hover:text-[#f0f0f0]" : "text-[#160A0A] hover:text-[#0D72B6]"} hover:scale-105 ${props.type === "scroll" ? "font-medium" : "font-medium"} ${pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href)) ? "after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-[#0087e2]" : "after:hidden"}`}
         >
           {item.name}
         </Link>
