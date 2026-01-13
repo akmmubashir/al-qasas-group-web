@@ -96,7 +96,7 @@ const ServiceContextSection: React.FC<ServiceContextSectionProps> = ({
               key={index}
               className="col-span-4 max-lg:col-span-6 max-md:col-span-12 context-item group"
             >
-              <div className="relative bg-linear-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl p-8 rounded-xl border border-slate-700/50 group-hover:border-cyan-500/50 transition-all duration-500 h-full hover:shadow-lg hover:shadow-cyan-500/10">
+              <div className="relative bg-linear-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl p-8 border border-slate-700/50 group-hover:border-cyan-500/50 transition-all duration-500 h-full hover:shadow-lg hover:shadow-cyan-500/10">
                 {/* Icon */}
                 {item.icon && (
                   <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
