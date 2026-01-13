@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "../../components/header";
 import BannerSection from "../../components/bannerSection";
-// import ServiceDetailSection from "../components/serviceDetailSection";
-// import ServiceContextSection from "../components/serviceContextSection";
+import ServiceDetailSection from "../components/serviceDetailSection";
+import ServiceContextSection from "../components/serviceContextSection";
 import ServiceContactForm from "../components/serviceContactForm";
 import Footer from "../../components/footer";
 
@@ -17,8 +17,10 @@ const servicesData: Record<
   string,
   {
     title: string;
+    subtitle: string;
     description: string;
     icon: string;
+    image: string;
     features: string[];
     benefits: string[];
     context: Array<{
@@ -30,9 +32,11 @@ const servicesData: Record<
 > = {
   "movable-partitions": {
     title: "Movable Partitions & Ironmongeries",
+    subtitle: "Flexible Architectural Solutions for Modern Workspaces",
     description:
-      "High-quality movable partition systems and ironmongery solutions for flexible workspace design and modern office environments.",
+      "Our Movable Partitions & Ironmongeries service provides a comprehensive range of modular partition systems designed to transform any workspace into a flexible, scalable, and aesthetically balanced environment. Whether you're building modern office layouts, collaborative zones, private meeting rooms, or multi-purpose spaces, our solutions ensure both functional adaptability and visual elegance. We focus on creating structures that are easy to install, reconfigure, and maintain, making them ideal for organizations aiming to optimize their physical environments without undertaking large-scale construction. With durable materials, customizable finishes, and soundproofing options, our partition systems enhance productivity, privacy, and overall workflow efficiency.",
     icon: "🏗️",
+    image: "/assets/images/movablePartition.webp",
     features: [
       "Modular partition systems for flexible office layouts",
       "Customizable designs to match your brand aesthetic",
@@ -68,11 +72,14 @@ const servicesData: Record<
       },
     ],
   },
+
   "project-support": {
     title: "Project Support",
+    subtitle: "End-to-End Project Management for Smooth Execution",
     description:
-      "Comprehensive project management and support services to ensure timely delivery and optimal resource utilization.",
+      "Our Project Support service delivers a full spectrum of management, planning, monitoring, and coordination solutions to ensure seamless project execution from start to finish. We work closely with teams, stakeholders, and vendors to align timelines, budgeting, resource allocation, and scope management. Whether it's a construction project, corporate initiative, or operational setup, we ensure every stage is executed with precision and efficiency. With real-time tracking, detailed reporting, and proactive risk mitigation, our service enhances communication, reduces errors, and supports overall project success.",
     icon: "📋",
+    image: "/assets/images/project.webp",
     features: [
       "End-to-end project management services",
       "Resource planning and optimization",
@@ -108,11 +115,14 @@ const servicesData: Record<
       },
     ],
   },
+
   transportation: {
     title: "Transportation",
+    subtitle: "Reliable Logistics and Secure Goods Movement",
     description:
-      "Reliable and efficient transportation solutions for goods and logistics management across the region.",
+      "Our Transportation service delivers dependable, secure, and efficient logistics solutions designed to support businesses of all sizes. With a fleet of modern, well-maintained vehicles equipped with GPS tracking, we ensure timely pickup, safe handling, and reliable delivery of goods across regional and remote locations. Our trained drivers and logistics team coordinate every step, from scheduling to route optimization, ensuring maximum efficiency and minimal delay. Whether you're managing daily shipments, bulk deliveries, or specialized cargo, our transportation network provides the scalability and safety your business needs.",
     icon: "🚚",
+    image: "/assets/images/transportation.webp",
     features: [
       "Full fleet of modern vehicles",
       "Real-time tracking and monitoring",
@@ -148,11 +158,14 @@ const servicesData: Record<
       },
     ],
   },
+
   "corporate-services": {
     title: "Corporate Services",
+    subtitle: "Professional Administrative & Business Support Solutions",
     description:
-      "Professional corporate solutions including administrative support, consulting, and strategic business services.",
+      "Our Corporate Services division offers a diverse range of administrative, operational, and strategic solutions designed to support businesses in their day-to-day functions as well as long-term planning. From HR management and compliance support to financial consulting and workflow optimization, we help organizations streamline operations and build strong foundations for growth. Our team of experts ensures HR processes, documentation, licensing, and compliance are handled with precision, allowing businesses to focus on core activities while improving efficiency and reducing overhead costs.",
     icon: "🏢",
+    image: "/assets/images/corporate.webp",
     features: [
       "Business consulting and strategy development",
       "Administrative support and management",
@@ -188,11 +201,14 @@ const servicesData: Record<
       },
     ],
   },
+
   "it-solutions": {
     title: "IT Solutions",
+    subtitle: "Innovative Digital & Technology Infrastructure Services",
     description:
-      "Cutting-edge information technology solutions to streamline operations and enhance digital transformation.",
+      "Our IT Solutions service empowers organizations with modern technological systems designed to accelerate digital transformation, enhance security, and improve operational efficiency. From cloud migration and cybersecurity to custom software development and IT infrastructure optimization, we deliver scalable solutions that support both current needs and future growth. We help businesses transition into secure, digitally enabled environments where operations run smoothly, data remains protected, and technology becomes an asset rather than a challenge. With 24/7 support and ongoing maintenance, we ensure your systems stay updated, reliable, and efficient.",
     icon: "💻",
+    image: "/assets/images/it-solution.webp",
     features: [
       "Cloud infrastructure and migration",
       "Cybersecurity and data protection",
@@ -240,10 +256,12 @@ const page = async ({ params }: ServicePageProps) => {
     <div className="min-h-dvh overflow-hidden">
       <Header />
       <BannerSection title={serviceData.title} />
-      {/* <ServiceDetailSection
+      <ServiceDetailSection
         title={serviceData.title}
         description={serviceData.description}
         icon={serviceData.icon}
+        subtitle={serviceData.subtitle}
+        image={serviceData.image}
         features={serviceData.features}
         benefits={serviceData.benefits}
       />
@@ -251,7 +269,7 @@ const page = async ({ params }: ServicePageProps) => {
         title="Why Choose Us for This Service?"
         subtitle="Discover what makes our approach unique and effective for your needs"
         content={serviceData.context}
-      /> */}
+      />
       <ServiceContactForm serviceName={serviceData.title} />
       <Footer />
     </div>
