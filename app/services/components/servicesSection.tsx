@@ -140,7 +140,7 @@ const ServicesSection = () => {
           </div>
           <p
             ref={subtitleRef}
-            className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed"
+            className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-600 max-w-2xl mx-auto leading-relaxed"
           >
             Discover the full range of comprehensive services we offer to
             support your business success
