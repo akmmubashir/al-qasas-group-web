@@ -92,10 +92,10 @@ const ServiceContactForm: React.FC<ServiceContactFormProps> = ({
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="relative bg-white/80 backdrop-blur-xl rounded-2xl border border-slate-200/50 shadow-xl p-8 max-md:p-6 space-y-6 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-500"
+            className="relative bg-white/80 backdrop-blur-xl border border-slate-200/50 shadow-xl p-8 max-md:p-6 space-y-6 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-500"
           >
             {isSubmitted && (
-              <div className="absolute inset-0 rounded-2xl bg-green-50 border border-green-300 flex items-center justify-center z-20">
+              <div className="absolute inset-0 bg-green-50 border border-green-300 flex items-center justify-center z-20">
                 <div className="text-center">
                   <div className="text-5xl mb-3">✓</div>
                   <p className="text-green-700 font-semibold text-lg">
@@ -117,7 +117,7 @@ const ServiceContactForm: React.FC<ServiceContactFormProps> = ({
                   type="text"
                   value={serviceName}
                   disabled
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-600 bg-slate-50 cursor-not-allowed font-medium"
+                  className="w-full border border-slate-300 px-4 py-3 text-slate-600 bg-slate-50 cursor-not-allowed font-medium"
                 />
               </div>
             )}
@@ -130,7 +130,7 @@ const ServiceContactForm: React.FC<ServiceContactFormProps> = ({
                 <input
                   type="text"
                   placeholder="Enter your name"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 placeholder-slate-400 bg-white focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition"
+                  className="w-full border border-slate-300 px-4 py-3 text-slate-900 placeholder-slate-400 bg-white focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition"
                   required
                 />
               </div>
@@ -141,7 +141,7 @@ const ServiceContactForm: React.FC<ServiceContactFormProps> = ({
                 <input
                   type="email"
                   placeholder="name@email.com"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 placeholder-slate-400 bg-white focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition"
+                  className="w-full border border-slate-300 px-4 py-3 text-slate-900 placeholder-slate-400 bg-white focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition"
                   required
                 />
               </div>
@@ -155,7 +155,7 @@ const ServiceContactForm: React.FC<ServiceContactFormProps> = ({
                 <input
                   type="tel"
                   placeholder="+974 44 205 500"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 placeholder-slate-400 bg-white focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition"
+                  className="w-full border border-slate-300 px-4 py-3 text-slate-900 placeholder-slate-400 bg-white focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition"
                 />
               </div>
               <div className="flex flex-col space-y-2">
@@ -165,7 +165,7 @@ const ServiceContactForm: React.FC<ServiceContactFormProps> = ({
                 <input
                   type="text"
                   placeholder="Your company name"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 placeholder-slate-400 bg-white focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition"
+                  className="w-full border border-slate-300 px-4 py-3 text-slate-900 placeholder-slate-400 bg-white focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition"
                 />
               </div>
             </div>
@@ -177,7 +177,7 @@ const ServiceContactForm: React.FC<ServiceContactFormProps> = ({
               <textarea
                 rows={4}
                 placeholder="Tell us about your requirements and project timeline"
-                className="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 placeholder-slate-400 bg-white focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition resize-none"
+                className="w-full border border-slate-300 px-4 py-3 text-slate-900 placeholder-slate-400 bg-white focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition resize-none"
                 required
               />
             </div>
@@ -185,7 +185,7 @@ const ServiceContactForm: React.FC<ServiceContactFormProps> = ({
             <button
               type="submit"
               disabled={isSubmitted}
-              className="cursor-pointer w-full rounded-xl bg-linear-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+              className="cursor-pointer w-full bg-linear-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
             >
               {isSubmitted ? "Sending..." : "Send Inquiry"}
             </button>
