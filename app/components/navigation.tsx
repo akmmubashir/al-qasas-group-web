@@ -76,7 +76,7 @@ const Navigation = (props: Props) => {
             {item.name}
             {item.dropMenu && item.dropMenu.length > 0 && (
               <ArrowDownIcon
-                color={`${props.scrolled ? "stroke-[#0D72B6]" : "stroke-white"}`}
+                color={`${props.scrolled ? "stroke-[#160A0A]" : "stroke-white"}`}
                 stroke="2"
                 size={`w-5 h-5 group-hover:rotate-180 mb-1`}
               />
