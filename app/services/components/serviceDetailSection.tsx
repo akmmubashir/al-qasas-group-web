@@ -129,7 +129,7 @@ const ServiceDetailSection: React.FC<ServiceDetailSectionProps> = ({
               className={`${image ? "col-span-6 max-lg:col-span-12" : "col-span-12"}`}
             >
               <Heading title1={subtitle} title2="" />
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-600 leading-relaxed">
                 {description}
               </p>
             </div>
