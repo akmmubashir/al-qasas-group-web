@@ -90,15 +90,18 @@ const TeamSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative bg-white overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="relative bg-linear-to-b from-white to-blue-100 overflow-hidden"
+    >
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-linear-to-br from-blue-500/5 to-purple-500/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-linear-to-br from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl"></div>
 
-      <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
+      <div className="p-20 max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         <div className="text-center mb-16">
           <div ref={titleRef}>
-            <SubHeading title="Our Leadership" />
+            {/* <SubHeading title="Our Leadership" /> */}
             <Heading title1="Meet Our" title2="Expert Team" />
             <p className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Dedicated professionals driving excellence and innovation in every
@@ -148,7 +151,7 @@ const TeamSection = () => {
                 </div>
 
                 {/* Decorative element */}
-                <div className="absolute top-4 right-4 w-12 h-12 bg-linear-to-br from-cyan-500/20 to-blue-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                {/* <div className="absolute top-4 right-4 w-12 h-12 bg-linear-to-br from-cyan-500/20 to-blue-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div> */}
               </div>
             </div>
           ))}

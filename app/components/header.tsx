@@ -54,24 +54,26 @@ const Header = () => {
         >
           <Logo color={scrolled ? "black" : "white"} />
           <Navigation type={scrolled ? "scroll" : "transparent"} />
-          {scrolled ? <button className="cursor-pointer group relative px-8 py-4 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105 max-xl:hidden">
-            <span className="relative z-10 flex items-center gap-2">
-              Get Started
-              <svg
-                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={3}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </span>
-          </button> :
+          {scrolled ? (
+            <button className="cursor-pointer group relative px-8 py-4 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105 max-xl:hidden">
+              <span className="relative z-10 flex items-center gap-2">
+                Get Started
+                <svg
+                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={3}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </span>
+            </button>
+          ) : (
             <button className="cursor-pointer group relative px-8 py-4 bg-none border border-white text-white text-[15px] font-bold overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105 max-xl:hidden">
               <span className="relative z-10 flex items-center gap-2">
                 Get Started
@@ -89,7 +91,8 @@ const Header = () => {
                   />
                 </svg>
               </span>
-            </button>}
+            </button>
+          )}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="cursor-pointer group relative px-2 py-2 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold rounded-md overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105 xl:hidden"

@@ -2,7 +2,6 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SubHeading from "@/app/components/subHeading";
 import Heading from "@/app/components/heading";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -24,9 +23,9 @@ const items = [
     description:
       "To be the leading provider of integrated engineering and contracting services in the region, recognized for our commitment to quality, safety, and innovation. We envision a future where our solutions contribute to building sustainable infrastructure and advancing industrial progress.",
     icon: "👁️",
-    gradient: "from-blue-500/20 to-purple-500/20",
-    borderColor: "border-blue-500/30",
-    hoverShadow: "hover:shadow-blue-500/20",
+    gradient: "from-cyan-500/20 to-blue-500/20",
+    borderColor: "border-cyan-500/30",
+    hoverShadow: "hover:shadow-cyan-500/20",
   },
   {
     id: 3,
@@ -34,9 +33,9 @@ const items = [
     description:
       "Integrity, Excellence, Safety, Innovation, and Customer Satisfaction form the cornerstone of everything we do. We believe in ethical business practices, continuous improvement, and creating value for all stakeholders while maintaining the highest standards of quality and professionalism.",
     icon: "⭐",
-    gradient: "from-purple-500/20 to-pink-500/20",
-    borderColor: "border-purple-500/30",
-    hoverShadow: "hover:shadow-purple-500/20",
+    gradient: "from-cyan-500/20 to-blue-500/20",
+    borderColor: "border-cyan-500/30",
+    hoverShadow: "hover:shadow-cyan-500/20",
   },
 ];
 
@@ -102,7 +101,6 @@ const MissionVisionSection = () => {
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         <div className="text-center mb-16">
           <div ref={titleRef}>
-            <SubHeading title="Who We Are" dark />
             <Heading title1="Our" title2="Mission, Vision & Values" dark />
             <p className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Guided by our core principles and driven by a commitment to

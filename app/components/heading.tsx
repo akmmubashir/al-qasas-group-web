@@ -25,7 +25,7 @@ const Heading = (props: Props) => {
           </span>
         </h2>
       ) : (
-        <h2 className="text-5xl max-xl:text-4xl max-lg:text-3xl max-md:text-2xl font-semibold text-slate-900 mb-4 leading-tight">
+        <h2 className="text-6xl max-xl:text-5xl max-lg:text-4xl max-md:text-3xl font-semibold text-slate-900 mb-4 leading-tight">
           {props.title1}{" "}
           <span className="bg-linear-to-r from-[#0D72B6] via-blue-500 to-cyan-500 bg-clip-text text-transparent">
             {props.title2}
