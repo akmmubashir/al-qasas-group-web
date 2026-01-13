@@ -116,10 +116,10 @@ const OfficesSection = () => {
           {offices.map((office) => (
             <div key={office.city} className="office-card group relative">
               {/* Card background with border */}
-              <div className="absolute inset-0 bg-linear-to-br from-slate-800/60 via-slate-700/50 to-slate-800/60 border border-slate-700/60 rounded-2xl shadow-xl group-hover:shadow-2xl group-hover:border-cyan-500/50 transition-all duration-500 backdrop-blur-sm"></div>
+              <div className="absolute inset-0 bg-linear-to-br from-slate-800/60 via-slate-700/50 to-slate-800/60 border border-slate-700/60 shadow-xl group-hover:shadow-2xl group-hover:border-cyan-500/50 transition-all duration-500 backdrop-blur-sm"></div>
 
               {/* Animated gradient overlay */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-linear-to-br from-cyan-500/10 via-transparent to-blue-500/10 rounded-2xl transition-all duration-500 pointer-events-none"></div>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-linear-to-br from-cyan-500/10 via-transparent to-blue-500/10 transition-all duration-500 pointer-events-none"></div>
 
               {/* Animated accent line */}
               <div className="absolute top-0 left-0 h-1 w-0 group-hover:w-24 bg-linear-to-r from-cyan-500 to-blue-600 rounded-full transition-all duration-500"></div>
@@ -138,7 +138,7 @@ const OfficesSection = () => {
                       {office.city}
                     </h3>
                   </div>
-                  <div className="shrink-0 w-16 h-16 rounded-xl bg-linear-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                  <div className="shrink-0 w-16 h-16 bg-linear-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                     📍
                   </div>
                 </div>
@@ -194,7 +194,7 @@ const OfficesSection = () => {
 
                   <a
                     href={`mailto:${office.email}`}
-                    className="flex items-center justify-between w-full p-4 rounded-xl border-2 border-slate-600 hover:border-cyan-500 bg-slate-700/30 hover:bg-cyan-500/10 text-slate-100 font-semibold transition-all duration-300 group/email hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-500/20"
+                    className="flex items-center justify-between w-full p-4 border-2 border-slate-600 hover:border-cyan-500 bg-slate-700/30 hover:bg-cyan-500/10 text-slate-100 font-semibold transition-all duration-300 group/email hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-500/20"
                   >
                     <div className="flex items-center gap-2">
                       <span className="text-lg">✉️</span>
