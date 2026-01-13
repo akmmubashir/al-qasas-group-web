@@ -87,7 +87,7 @@ const ContactFormSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-12 gap-10 max-lg:gap-[40px_0] items-start">
           <form
             ref={formRef}
             onSubmit={handleSubmit}
