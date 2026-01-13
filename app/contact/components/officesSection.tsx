@@ -125,7 +125,7 @@ const OfficesSection = () => {
               <div className="absolute top-0 left-0 h-1 w-0 group-hover:w-24 bg-linear-to-r from-cyan-500 to-blue-600 rounded-full transition-all duration-500"></div>
 
               {/* Content */}
-              <div className="relative p-10 space-y-8 h-full flex flex-col">
+              <div className="relative p-10 max-md:p-6 space-y-8 h-full flex flex-col">
                 {/* Header */}
                 <div className="flex items-start justify-between gap-6">
                   <div className="space-y-3">
