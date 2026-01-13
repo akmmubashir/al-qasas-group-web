@@ -83,7 +83,7 @@ const ServiceContextSection: React.FC<ServiceContextSectionProps> = ({
         <div ref={titleRef} className="text-center mb-16 max-lg:mb-12">
           <Heading title1={title} dark />
           {subtitle && (
-            <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-300 max-w-3xl mx-auto leading-relaxed">
               {subtitle}
             </p>
           )}
