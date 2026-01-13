@@ -9,7 +9,7 @@ export const navigationData: Props[] = [
   { name: "About", href: "/about" },
   {
     name: "Services",
-    href: "#",
+    href: "/services",
     dropMenu: [
       {
         name: "Movable Partitions & Ironmongeries",

@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/header";
 import BannerSection from "../components/bannerSection";
-// import ServicesSection from "./components/servicesSection";
+import ServicesSection from "./components/servicesSection";
 import Footer from "../components/footer";
 // type Props = {}
 
@@ -10,7 +10,7 @@ const page = () => {
     <div className="min-h-dvh overflow-hidden">
       <Header />
       <BannerSection title="Services" />
-      {/* <ServicesSection /> */}
+      <ServicesSection />
       <Footer />
     </div>
   );
