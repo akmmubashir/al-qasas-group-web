@@ -245,26 +245,26 @@ const CompanyOverviewSection = () => {
               </div>
               <div className="mt-8 grid grid-cols-2 max-sm:grid-cols-1 gap-4 text-left">
                 <div className="group flex items-start gap-4 p-4 rounded-xl transition-all duration-300 hover:bg-cyan-50/50">
-                  <div className="h-3 w-3 rounded-full bg-linear-to-br from-cyan-500 to-cyan-600 mt-2 shadow-md"></div>
-                  <p className="text-sm text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
+                  <div className="h-3 w-3 aspect-square rounded-full bg-linear-to-br from-cyan-500 to-cyan-600 mt-2 shadow-md"></div>
+                  <p className="text-[16px] max-lg:text-[14px] text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
                     Integrated teams across Qatar and KSA for fast mobilization.
                   </p>
                 </div>
                 <div className="group flex items-start gap-4 p-4 rounded-xl transition-all duration-300 hover:bg-blue-50/50">
-                  <div className="h-3 w-3 rounded-full bg-linear-to-br from-blue-500 to-blue-600 mt-2 shadow-md"></div>
-                  <p className="text-sm text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
+                  <div className="h-3 w-3 aspect-square rounded-full bg-linear-to-br from-blue-500 to-blue-600 mt-2 shadow-md"></div>
+                  <p className="text-[16px] max-lg:text-[14px] text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
                     Digital progress tracking and QA/QC checkpoints each phase.
                   </p>
                 </div>
                 <div className="group flex items-start gap-4 p-4 rounded-xl transition-all duration-300 hover:bg-cyan-50/50">
-                  <div className="h-3 w-3 rounded-full bg-linear-to-br from-cyan-500 to-cyan-600 mt-2 shadow-md"></div>
-                  <p className="text-sm text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
+                  <div className="h-3 w-3 aspect-square rounded-full bg-linear-to-br from-cyan-500 to-cyan-600 mt-2 shadow-md"></div>
+                  <p className="text-[16px] max-lg:text-[14px] text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
                     Heavy equipment fleet with in-house maintenance for uptime.
                   </p>
                 </div>
                 <div className="group flex items-start gap-4 p-4 rounded-xl transition-all duration-300 hover:bg-blue-50/50">
-                  <div className="h-3 w-3 rounded-full bg-linear-to-br from-blue-500 to-blue-600 mt-2 shadow-md"></div>
-                  <p className="text-sm text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
+                  <div className="h-3 w-3 aspect-square rounded-full bg-linear-to-br from-blue-500 to-blue-600 mt-2 shadow-md"></div>
+                  <p className="text-[16px] max-lg:text-[14px] text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
                     Procurement muscle backed by long-term supplier alliances.
                   </p>
                 </div>
@@ -283,10 +283,10 @@ const CompanyOverviewSection = () => {
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-linear-to-br from-cyan-50 to-blue-50 transition-all duration-500"></div>
                   <div className="absolute top-0 right-0 w-20 h-20 bg-linear-to-br from-cyan-100 to-transparent opacity-0 group-hover:opacity-50 rounded-full blur-2xl transition-all duration-500 group-hover:scale-150"></div>
                   <div className="relative">
-                    <h4 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-700 transition-colors duration-300">
+                    <h4 className="text-[20px] max-lg:text-[18px] font-semibold text-slate-900 mb-3 group-hover:text-cyan-700 transition-colors duration-300">
                       {pillar.title}
                     </h4>
-                    <p className="text-sm text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">
+                    <p className="text-[16px] max-lg:text-[14px] text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">
                       {pillar.description}
                     </p>
                   </div>
@@ -346,7 +346,7 @@ const CompanyOverviewSection = () => {
                 <p className="text-xs uppercase tracking-widest font-bold text-slate-500 group-hover:text-cyan-600 transition-colors duration-300 mb-3">
                   {stat.label}
                 </p>
-                <p className="text-4xl font-bold bg-linear-to-r from-slate-900 to-slate-700 group-hover:from-cyan-600 group-hover:to-blue-600 bg-clip-text text-transparent transition-all duration-300">
+                <p className="text-[40px] max-xl:text-[30px] max-lg:text-[20px] font-bold bg-linear-to-r from-slate-900 to-slate-700 group-hover:from-cyan-600 group-hover:to-blue-600 bg-clip-text text-transparent transition-all duration-300">
                   {stat.value}
                 </p>
               </div>
@@ -356,7 +356,7 @@ const CompanyOverviewSection = () => {
 
         <div
           ref={rhythmRef}
-          className="rounded-2xl border border-slate-200/60 bg-linear-to-br from-slate-50 via-white to-slate-50 p-10 shadow-lg hover:shadow-xl transition-all duration-500"
+          className="rounded-2xl border border-slate-200/60 bg-linear-to-br from-slate-50 via-white to-slate-50 p-10 max-lg:p-6 shadow-lg hover:shadow-xl transition-all duration-500"
         >
           <div className="flex flex-col gap-4 max-w-3xl mb-8">
             <div className="inline-flex items-center gap-3 w-fit">
@@ -365,10 +365,10 @@ const CompanyOverviewSection = () => {
                 Delivery Process
               </p>
             </div>
-            <h3 className="text-3xl font-bold text-slate-900">
+            <h3 className="text-[30px] max-lg:text-[20px] font-bold text-slate-900">
               A seamless delivery rhythm designed to stay ahead of risk
             </h3>
-            <p className="text-base text-slate-600 leading-relaxed">
+            <p className="text-[16px] max-lg:text-[14px] text-slate-600 leading-relaxed">
               From the first briefing to closeout, every phase is sequenced with
               QA/QC gates and transparent reporting so owners always know where
               time and cost stand.
@@ -386,14 +386,14 @@ const CompanyOverviewSection = () => {
                   <div className="shrink-0 w-10 h-10 rounded-full bg-linear-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-sm font-bold text-white shadow-md group-hover:scale-110 transition-transform duration-300">
                     {index + 1}
                   </div>
-                  <div className="space-y-3">
-                    <p className="text-xs uppercase tracking-widest font-bold text-slate-500 group-hover:text-cyan-600 transition-colors">
+                  <div className="space-y-3 max-lg:space-y-2">
+                    {/* <p className="text-[14px] max-lg:text-[12px] uppercase tracking-widest font-bold text-slate-500 group-hover:text-cyan-600 transition-colors">
                       {item.id}
-                    </p>
-                    <h4 className="text-lg font-bold text-slate-900 group-hover:text-cyan-700 transition-colors">
+                    </p> */}
+                    <h4 className="text-[20px] max-lg:text-[18px] font-semibold text-slate-900 group-hover:text-cyan-700 transition-colors">
                       {item.title}
                     </h4>
-                    <p className="text-sm text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
+                    <p className="text-[16px] max-lg:text-[14px] text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
                       {item.detail}
                     </p>
                   </div>
