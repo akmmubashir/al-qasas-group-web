@@ -83,7 +83,7 @@ const ContactFormSection = () => {
           {/* <SubHeading title="Send a message" /> */}
           <Heading title1="Tell us about your" title2="project" />
           <p className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Our team will get back to you within one business day
+            Our team will get back to you within 1 business day
           </p>
         </div>
 
@@ -91,7 +91,7 @@ const ContactFormSection = () => {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="col-span-7 max-lg:col-span-full max-lg:order-2 bg-white rounded-2xl border border-slate-200 shadow-xl p-8 max-md:p-6 space-y-4"
+            className="col-span-7 max-lg:col-span-full max-lg:order-2 bg-white border border-slate-200 shadow-xl p-8 max-md:p-6 space-y-4"
           >
             <div className="grid grid-cols-2 max-md:grid-cols-1 gap-4">
               <div className="space-y-2">
@@ -101,7 +101,7 @@ const ContactFormSection = () => {
                 <input
                   type="text"
                   placeholder="Enter your name"
-                  className="w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-800 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-100 transition"
+                  className="w-full border border-slate-200 px-4 py-3 text-slate-800 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-100 transition"
                   required
                 />
               </div>
@@ -112,7 +112,7 @@ const ContactFormSection = () => {
                 <input
                   type="email"
                   placeholder="name@email.com"
-                  className="w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-800 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-100 transition"
+                  className="w-full border border-slate-200 px-4 py-3 text-slate-800 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-100 transition"
                   required
                 />
               </div>
@@ -126,7 +126,7 @@ const ContactFormSection = () => {
                 <input
                   type="tel"
                   placeholder="+974 44 205 500"
-                  className="w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-800 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-100 transition"
+                  className="w-full border border-slate-200 px-4 py-3 text-slate-800 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-100 transition"
                 />
               </div>
               <div className="space-y-2">
@@ -136,7 +136,7 @@ const ContactFormSection = () => {
                 <input
                   type="text"
                   placeholder="How can we help?"
-                  className="w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-800 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-100 transition"
+                  className="w-full border border-slate-200 px-4 py-3 text-slate-800 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-100 transition"
                 />
               </div>
             </div>
@@ -148,14 +148,14 @@ const ContactFormSection = () => {
               <textarea
                 rows={4}
                 placeholder="Share project details, timeline, and goals"
-                className="w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-800 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-100 transition resize-none"
+                className="w-full border border-slate-200 px-4 py-3 text-slate-800 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-100 transition resize-none"
                 required
               />
             </div>
 
             <button
               type="submit"
-              className="cursor-pointer w-full rounded-xl bg-linear-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 shadow-lg shadow-cyan-500/20 hover:shadow-xl hover:-translate-y-0.5 transition"
+              className="cursor-pointer w-full bg-linear-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 shadow-lg shadow-cyan-500/20 hover:shadow-xl hover:-translate-y-0.5 transition"
             >
               Send Message
             </button>
@@ -163,7 +163,7 @@ const ContactFormSection = () => {
 
           <div
             ref={asideRef}
-            className="col-span-5 max-lg:col-span-full  rounded-2xl shadow-2xl overflow-hidden"
+            className="col-span-5 max-lg:col-span-full shadow-2xl overflow-hidden"
           >
             <Image
               src={"/assets/common/contact.webp"}
