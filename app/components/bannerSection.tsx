@@ -11,7 +11,7 @@ const BannerSection = (props: Props) => {
       <div
         className="min-h-110 max-md:min-h-80 flex justify-center items-center bg-no-repeat bg-cover bg-center z-10"
         style={{
-          backgroundImage: "url(/assets/common/hero-image.webp)",
+          backgroundImage: "url(/assets/common/heroimg.webp)",
           // filter: 'brightness(90%)',
         }}
       >
