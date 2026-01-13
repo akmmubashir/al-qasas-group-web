@@ -3,7 +3,7 @@ import Header from "../../components/header";
 import BannerSection from "../../components/bannerSection";
 // import ServiceDetailSection from "../components/serviceDetailSection";
 // import ServiceContextSection from "../components/serviceContextSection";
-// import ServiceContactForm from "../components/serviceContactForm";
+import ServiceContactForm from "../components/serviceContactForm";
 import Footer from "../../components/footer";
 
 interface ServicePageProps {
@@ -251,8 +251,8 @@ const page = async ({ params }: ServicePageProps) => {
         title="Why Choose Us for This Service?"
         subtitle="Discover what makes our approach unique and effective for your needs"
         content={serviceData.context}
-      />
-      <ServiceContactForm serviceName={serviceData.title} /> */}
+      /> */}
+      <ServiceContactForm serviceName={serviceData.title} />
       <Footer />
     </div>
   );

@@ -15,8 +15,8 @@ const BannerSection = (props: Props) => {
           // filter: 'brightness(90%)',
         }}
       >
-        <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px]">
-          <h1 className="text-[60px] max-xl:text-[40px] max-lg:text-[30px] max-md:text-[24px] font-semibold text-white uppercase mt-6">
+        <div className="p-[100px_80px_80px] max-xl:p-[80px_40px_60px] max-lg:p-[60px_20px_40px] max-md:p-[60px_20px_40px]">
+          <h1 className="text-center text-[50px] max-xl:text-[46px] max-lg:text-[36px] max-md:text-[24px] font-semibold text-white uppercase mt-6">
             {props.title}
           </h1>
         </div>

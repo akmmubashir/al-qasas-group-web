@@ -13,12 +13,12 @@ export const navigationData: Props[] = [
     dropMenu: [
       {
         name: "Movable Partitions & Ironmongeries",
-        href: "#",
+        href: "/services/movable-partitions",
       },
-      { name: "Project Support", href: "#" },
-      { name: "Transportation", href: "#" },
-      { name: "Corporate Services", href: "#" },
-      { name: "IT Solutions", href: "#" },
+      { name: "Project Support", href: "/services/project-support" },
+      { name: "Transportation", href: "/services/transportation" },
+      { name: "Corporate Services", href: "/services/corporate-services" },
+      { name: "IT Solutions", href: "/services/it-solutions" },
     ],
   },
   { name: "Contact Us", href: "/contact" },
