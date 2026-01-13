@@ -133,7 +133,7 @@ const ServicesSection = () => {
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-radial from-blue-500/10 to-transparent rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
+      <div className="p-[80px_80px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         <div className="text-center mb-20">
           <div ref={titleRef}>
             <Heading title1="Explore Our" title2="Services" />
@@ -147,16 +147,16 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div ref={cardsRef} className="grid grid-cols-12 gap-6">
+        <div ref={cardsRef} className="grid grid-cols-12 gap-10">
           {services.map((service) => (
             <div
               key={service.id}
-              className="col-span-4 max-xl:col-span-6 max-lg:col-span-12 service-card group relative overflow-hidden rounded-2xl"
+              className="col-span-4 max-xl:col-span-6 max-lg:col-span-12 service-card group relative overflow-hidden"
             >
               {/* Card wrapper */}
-              <div className="relative bg-white rounded-2xl overflow-hidden border border-slate-200/50 group-hover:border-cyan-400/50 transition-all duration-500 h-full hover:shadow-2xl hover:shadow-cyan-500/10 flex flex-col">
+              <div className="relative bg-white overflow-hidden border border-slate-200/50 group-hover:border-cyan-400/50 transition-all duration-500 h-full hover:shadow-2xl hover:shadow-cyan-500/10 flex flex-col">
                 {/* Image section */}
-                <div className="relative h-56 w-full overflow-hidden bg-slate-100">
+                <div className="relative h-80 max-lg:h-56 w-full overflow-hidden bg-slate-100">
                   <Image
                     src={service.img}
                     alt={service.title}
@@ -172,7 +172,7 @@ const ServicesSection = () => {
                     {/* <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                       {service.icon}
                     </div> */}
-                    <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors duration-300">
+                    <h3 className="text-lg font-semibold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors duration-300">
                       {service.title}
                     </h3>
                     <p className="text-slate-600 leading-relaxed text-sm mb-6">

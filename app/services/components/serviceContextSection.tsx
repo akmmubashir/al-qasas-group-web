@@ -81,7 +81,6 @@ const ServiceContextSection: React.FC<ServiceContextSectionProps> = ({
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         {/* Header */}
         <div ref={titleRef} className="text-center mb-16 max-lg:mb-12">
-
           <Heading title1={title} dark />
           {subtitle && (
             <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">

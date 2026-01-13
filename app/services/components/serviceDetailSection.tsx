@@ -112,7 +112,7 @@ const ServiceDetailSection: React.FC<ServiceDetailSectionProps> = ({
             {/* Image Section */}
             {image && (
               <div className="col-span-6 max-lg:col-span-12">
-                <div className="relative h-96 max-md:h-64 rounded-2xl overflow-hidden border border-slate-200 shadow-lg hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-500 group">
+                <div className="relative h-120 max-2xl:h-160 max-xl:h-160 max-lg:h-64 overflow-hidden border border-slate-200 shadow-lg hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-500 group">
                   <Image
                     src={image}
                     alt={title}
@@ -152,7 +152,7 @@ const ServiceDetailSection: React.FC<ServiceDetailSectionProps> = ({
                   {features.map((feature, index) => (
                     <div
                       key={index}
-                      className="feature-item group flex gap-4 p-4 rounded-xl bg-white border border-slate-200 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300"
+                      className="feature-item group flex gap-4 p-4 bg-white border border-slate-200 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300"
                     >
                       <div className="shrink-0 w-6 h-6 rounded-full bg-cyan-100 border border-cyan-400 flex items-center justify-center text-cyan-600 text-sm font-bold mt-1">
                         •
@@ -179,7 +179,7 @@ const ServiceDetailSection: React.FC<ServiceDetailSectionProps> = ({
                   {benefits.map((benefit, index) => (
                     <div
                       key={index}
-                      className="benefit-item group flex gap-4 p-4 rounded-xl bg-white border border-slate-200 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300"
+                      className="benefit-item group flex gap-4 p-4 bg-white border border-slate-200 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300"
                     >
                       <div className="shrink-0 w-6 h-6 rounded-full bg-blue-100 border border-blue-400 flex items-center justify-center text-blue-600 text-sm font-bold mt-1">
                         •
