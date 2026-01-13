@@ -29,7 +29,7 @@ const services = [
       </svg>
     ),
     gradient: "from-[#0D72B6] to-blue-500",
-    img: "/assets/images/movableitems.webp",
+    img: "/assets/images/movablePartition.webp",
   },
   {
     id: 2,
