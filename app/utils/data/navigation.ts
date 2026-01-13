@@ -21,5 +21,5 @@ export const navigationData: Props[] = [
       { name: "IT Solutions", href: "#" },
     ],
   },
-  { name: "Contact Us", href: "#" },
+  { name: "Contact Us", href: "/contact" },
 ];
