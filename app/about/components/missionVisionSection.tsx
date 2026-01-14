@@ -119,18 +119,18 @@ const MissionVisionSection = () => {
               className="mission-card group relative overflow-hidden"
             >
               <div
-                className={`relative bg-slate-800/50 backdrop-blur-xl p-8 max-md:p-6 rounded-2xl border ${item.borderColor} transition-all duration-500 hover:border-opacity-100 hover:shadow-2xl ${item.hoverShadow}`}
+                className={`relative bg-slate-800/50 backdrop-blur-xl p-8 max-md:p-6 border ${item.borderColor} transition-all duration-500 hover:border-opacity-100 hover:shadow-2xl ${item.hoverShadow}`}
               >
                 {/* Gradient overlay */}
                 <div
-                  className={`absolute inset-0 bg-linear-to-br ${item.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`}
+                  className={`absolute inset-0 bg-linear-to-br ${item.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
                 ></div>
 
                 <div className="relative z-10">
                   <div className="flex items-start gap-6 max-md:flex-col">
                     {/* Icon */}
                     <div className="shrink-0">
-                      <div className="w-20 h-20 max-md:w-16 max-md:h-16 rounded-xl bg-linear-to-br from-slate-700 to-slate-800 border border-slate-600 flex items-center justify-center text-4xl max-md:text-3xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                      <div className="w-20 h-20 max-md:w-16 max-md:h-16 bg-linear-to-br from-slate-700 to-slate-800 border border-slate-600 flex items-center justify-center text-4xl max-md:text-3xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
                         {item.icon}
                       </div>
                     </div>

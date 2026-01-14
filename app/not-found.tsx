@@ -64,13 +64,13 @@ const NotFound = () => {
         <div className="flex flex-wrap justify-center gap-4">
           <Link
             href="/"
-            className="px-6 py-3 rounded-full bg-sky-500 text-white font-semibold shadow-lg shadow-sky-500/30 hover:bg-sky-600 transition-colors"
+            className="px-6 py-3 bg-sky-500 text-white font-semibold shadow-lg shadow-sky-500/30 hover:bg-sky-600 transition-colors"
           >
             Back to Home
           </Link>
           <Link
             href="/contact"
-            className="px-6 py-3 rounded-full border border-sky-400 text-sky-600 font-semibold hover:bg-sky-50 transition-colors"
+            className="px-6 py-3 border border-sky-400 text-sky-600 font-semibold hover:bg-sky-50 transition-colors"
           >
             Contact Support
           </Link>

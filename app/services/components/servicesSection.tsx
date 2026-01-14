@@ -147,7 +147,10 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div ref={cardsRef} className="grid grid-cols-12 gap-10 max-lg:gap-[40px_0]">
+        <div
+          ref={cardsRef}
+          className="grid grid-cols-12 gap-10 max-lg:gap-[40px_0]"
+        >
           {services.map((service) => (
             <div
               key={service.id}

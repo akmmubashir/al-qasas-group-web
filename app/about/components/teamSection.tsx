@@ -119,7 +119,7 @@ const TeamSection = () => {
               key={member.id}
               className="team-card group relative overflow-hidden"
             >
-              <div className="relative bg-white rounded-2xl overflow-hidden border border-slate-200 group-hover:border-cyan-300 transition-all duration-500 hover:shadow-2xl">
+              <div className="relative bg-white overflow-hidden border border-slate-200 group-hover:border-cyan-300 transition-all duration-500 hover:shadow-2xl">
                 {/* Image */}
                 <div className="relative w-full aspect-square overflow-hidden bg-slate-100">
                   <Image
