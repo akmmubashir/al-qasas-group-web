@@ -8,25 +8,54 @@ gsap.registerPlugin();
 const slides = [
   {
     video: "/assets/video/hero-1.mp4",
-    heading: "Integrated Trading & Contracting Solutions",
+    heading: "AL QASAS Group of Companies: Qatar & Saudi Arabia",
     body: "Excellence in movable partitions, project support, transportation, corporate services, and IT solutions driving quality and innovation across the Gulf region.",
     ctaLabel: "View Services",
     ctaHref: "/services",
+    locations: ["Qatar", "Saudi Arabia, UAE"],
   },
   {
     video: "/assets/video/hero-2.mp4",
-    heading: "End-to-End Project Delivery Support",
-    body: "From planning to execution, we streamline procurement, logistics, and on-site support to keep your projects on schedule.",
-    ctaLabel: "Explore Projects",
-    ctaHref: "/projects",
+    heading:
+      "Manpower & Project Support Services, Your Trusted Manpower Partner",
+    body: "Oil & Gas ( Onshore & Project Support) | Construction & Infrastructure | Interior Fit-Out & Specialized Works",
+    ctaLabel: "Know More",
+    ctaHref: "/services/project-support",
+    locations: ["Qatar", "Saudi Arabia", "UAE"],
   },
   {
     video: "/assets/video/hero-3.mp4",
-    heading: "Trusted Across the Gulf Region",
+    heading: "Trusted Across the Gulf Region for Project Excellence",
     body: "Serving Qatar and Saudi Arabia with reliable partnerships, certified teams, and resilient supply chain expertise.",
-    ctaLabel: "Contact Us",
-    ctaHref: "/contact",
+    ctaLabel: "Explore More",
+    ctaHref: "/services/corporate-services",
+    locations: ["Qatar", "Saudi Arabia"],
   },
+  {
+    video: "/assets/video/hero-4.mp4",
+    heading:
+      "Transported to Excellence: Leading Logistics Solutions in Qatar & Saudi Arabia",
+    body: "Comprehensive logistics and transportation services tailored to meet the dynamic needs of businesses across Qatar and Saudi Arabia.",
+    ctaLabel: "Know More",
+    ctaHref: "/services/transportation",
+    locations: ["Qatar", "Saudi Arabia"],
+  },
+  {
+    video: "/assets/video/hero-5.mp4",
+    heading:
+      "Al Qasas Systems: Pioneering IT Solutions in Qatar & Saudi Arabia",
+    body: "Delivering cutting-edge technology solutions tailored to empower businesses across Qatar and Saudi Arabia.",
+    ctaLabel: "Explore More",
+    ctaHref: "/services/it-solutions",
+    locations: ["Qatar", "Saudi Arabia"],
+  },
+  // {
+  //   video: "/assets/video/hero-3.mp4",
+  //   heading: "Trusted Across the Gulf Region for Project Excellence",
+  //   body: "Serving Qatar and Saudi Arabia with reliable partnerships, certified teams, and resilient supply chain expertise.",
+  //   ctaLabel: "Contact Us",
+  //   ctaHref: "/contact",
+  // },
 ];
 
 const SLIDE_DURATION_MS = 8000;
@@ -176,9 +205,9 @@ const HeroSection = () => {
     <div className="relative h-dvh w-full overflow-hidden bg-white">
       {/* Background Videos */}
       <div className="absolute inset-0">
-        {slides.map(({ video }, i) => (
+        {slides.map(({ heading, video }, i) => (
           <video
-            key={video}
+            key={heading}
             ref={(el) => {
               videoRefs.current[i] = el;
             }}
@@ -197,20 +226,22 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col justify-between h-full p-[160px_80px_60px] max-xl:p-[140px_40px_60px] max-lg:p-[120px_20px_50px]">
-        <div className="w-full flex flex-col gap-4 max-lg:mt-auto max-lg:mb-2">
+      <div className="relative z-10 flex flex-col justify-between h-full p-[120px_80px_60px] max-xl:p-[120px_40px_60px] max-lg:p-[120px_20px_50px]">
+        <div className="w-full flex flex-col gap-4 max-lg:mt-auto max-lg:mb-2n lg:my-auto">
           <div
             ref={badgeRef}
             className="w-fit inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 border border-white/30 rounded-full"
           >
             <div className="w-2 h-2 bg-[#0D72B6] rounded-full animate-pulse" />
-            <span className="text-white text-sm font-medium tracking-wide">
-              QATAR & SAUDI ARABIA
+            <span className="text-white text-sm font-medium tracking-wide uppercase">
+              {slide.locations.length > 2
+                ? `${slide.locations.slice(0, -1).join(", ")} & ${slide.locations[slide.locations.length - 1]}`
+                : slide.locations.join(" & ")}
             </span>
           </div>
           <h1
             ref={headingRef}
-            className="text-white font-medium w-2/4 max-lg:w-full text-[60px] max-xl:text-[50px] max-lg:text-[36px] max-md:text-[26px]"
+            className="text-white font-medium w-3/5 max-2xl:w-4/5 max-lg:w-full text-[60px] max-xl:text-[50px] max-lg:text-[36px] max-md:text-[26px]"
           >
             {slide.heading}
           </h1>
@@ -243,15 +274,16 @@ const HeroSection = () => {
             </Link>
           </div>
         </div>
-        <div className="w-full grid grid-cols-12 justify-end">
-          <div className="col-span-8 max-lg:hidden" />
-          <div className="col-span-4 max-lg:col-span-full">
+        <div className="w-full grid grid-cols-12 justify-end items-end">
+          <div className="col-span-8 max-lg:col-span-full">
             <p
               ref={descriptionRef}
-              className="text-gray-200 text-[20px] max-xl:text-[18px] max-lg:text-[16px] leading-relaxed mb-4"
+              className="text-gray-200 w-2/4 max-lg:w-full text-[20px] max-xl:text-[18px] max-lg:text-[16px] leading-relaxed mb-4"
             >
               {slide.body}
             </p>
+          </div>
+          <div className="col-span-4 max-lg:col-span-full">
             <div
               ref={ctaBottomRef}
               className="flex flex-wrap gap-4 max-md:gap-3 lg:hidden"
