@@ -12,7 +12,7 @@ const slides = [
     body: "Excellence in movable partitions, project support, transportation, corporate services, and IT solutions driving quality and innovation across the Gulf region.",
     ctaLabel: "View Services",
     ctaHref: "/services",
-    locations: ["Qatar", "Saudi Arabia, UAE"],
+    locations: ["Qatar", "Saudi Arabia", "UAE"],
   },
   {
     video: "/assets/video/hero-2.mp4",
@@ -191,12 +191,12 @@ const HeroSection = () => {
         try {
           v.currentTime = 0;
           const p = v.play();
-          if (p && typeof p.then === "function") p.catch(() => {});
-        } catch {}
+          if (p && typeof p.then === "function") p.catch(() => { });
+        } catch { }
       } else {
         try {
           v.pause();
-        } catch {}
+        } catch { }
       }
     });
   }, [current]);
