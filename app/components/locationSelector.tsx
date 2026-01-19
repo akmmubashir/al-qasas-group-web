@@ -1,10 +1,14 @@
 "use client";
 import React, { useEffect } from "react";
 import Image from "next/image";
+import { useRouter, usePathname } from "next/navigation";
 import { useLocationStore } from "@/app/store/locationStore";
 import { locationList } from "../utils/data/locations";
 
 const LocationSelector = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const router = useRouter();
+  const pathname = usePathname();
   const { selectedLocation, setSelectedLocation, initializeLocation } =
     useLocationStore();
 
@@ -18,10 +22,31 @@ const LocationSelector = () => {
   }, [initializeLocation]);
 
   const handleLocationToggle = (location: (typeof locationList)[0]) => {
+    // Update store
     setSelectedLocation(location);
 
-    // Force full page reload to update all content
-    window.location.reload();
+    // Check if we're on a location-based page
+    const currentPath = pathname || "/";
+    const pathParts = currentPath.split("/").filter(Boolean);
+
+    // Check if first part is a location code
+    const isLocationInPath = locationList.some(
+      (loc) => loc.code.toLowerCase() === pathParts[0]?.toLowerCase(),
+    );
+
+    // Add a small delay to ensure Zustand persists the change
+    setTimeout(() => {
+      if (isLocationInPath) {
+        // Update URL with new location on location-based pages
+        pathParts[0] = location.code.toLowerCase();
+        const newPath = "/" + pathParts.join("/");
+        // Use window.location to navigate with the new URL
+        window.location.href = newPath;
+      } else {
+        // On home/about pages, just reload with new location from store
+        window.location.reload();
+      }
+    }, 100);
   };
 
   return (

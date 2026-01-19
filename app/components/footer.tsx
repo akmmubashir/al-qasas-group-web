@@ -1,11 +1,40 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import Logo from "./logo";
-import { getNavigationData } from "../utils/data/navigation";
+import { getNavigationData, buildLocationUrl } from "../utils/data/navigation";
+import { useLocationStore } from "../store/locationStore";
+import locationConfig from "../utils/data/locationConfig.json";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
+  const { selectedLocation } = useLocationStore();
+
+  // Get location-specific services from JSON
+  const locationServices = useMemo(() => {
+    const countryConfig =
+      locationConfig[selectedLocation.code as keyof typeof locationConfig];
+
+    // Fallback to Saudi Arabia config if country not found
+    if (!countryConfig) {
+      const fallbackConfig = locationConfig.SA;
+      return Object.entries(fallbackConfig.services).map(([slug, service]) => ({
+        name: service.title,
+        slug: slug,
+      }));
+    }
+
+    return Object.entries(countryConfig.services).map(([slug, service]) => ({
+      name: service.title,
+      slug: slug,
+    }));
+  }, [selectedLocation.code]);
+
+  // Get location-specific navigation data
+  const navigationData = useMemo(
+    () => getNavigationData(selectedLocation.code),
+    [selectedLocation.code],
+  );
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -156,17 +185,24 @@ const Footer = () => {
               Quick Links
             </h3>
             <ul className="space-y-3">
-              {getNavigationData().map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="group text-slate-300 hover:text-[#0D72B6] transition-colors text-[14px] font-light flex items-center gap-2"
-                  >
-                    <span className="w-0 h-px bg-[#0D72B6] group-hover:w-4 transition-all duration-300"></span>
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
+              {navigationData.map((item) => {
+                const itemUrl = buildLocationUrl(
+                  item.href,
+                  selectedLocation.code,
+                  item.useLocation,
+                );
+                return (
+                  <li key={item.name}>
+                    <Link
+                      href={itemUrl}
+                      className="group text-slate-300 hover:text-[#0D72B6] transition-colors text-[14px] font-light flex items-center gap-2"
+                    >
+                      <span className="w-0 h-px bg-[#0D72B6] group-hover:w-4 transition-all duration-300"></span>
+                      {item.name}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
@@ -177,51 +213,17 @@ const Footer = () => {
               Our Services
             </h3>
             <ul className="space-y-3">
-              <li>
-                <Link
-                  href="#"
-                  className="group text-slate-300 hover:text-[#0D72B6] transition-colors text-[14px] font-light flex items-center gap-2"
-                >
-                  <span className="w-0 h-px bg-[#0D72B6] group-hover:w-4 transition-all duration-300"></span>
-                  Movable Partitions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="group text-slate-300 hover:text-[#0D72B6] transition-colors text-[14px] font-light flex items-center gap-2"
-                >
-                  <span className="w-0 h-px bg-[#0D72B6] group-hover:w-4 transition-all duration-300"></span>
-                  Project Support
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="group text-slate-300 hover:text-[#0D72B6] transition-colors text-[14px] font-light flex items-center gap-2"
-                >
-                  <span className="w-0 h-px bg-[#0D72B6] group-hover:w-4 transition-all duration-300"></span>
-                  Transportation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="group text-slate-300 hover:text-[#0D72B6] transition-colors text-[14px] font-light flex items-center gap-2"
-                >
-                  <span className="w-0 h-px bg-[#0D72B6] group-hover:w-4 transition-all duration-300"></span>
-                  Corporate Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="group text-slate-300 hover:text-[#0D72B6] transition-colors text-[14px] font-light flex items-center gap-2"
-                >
-                  <span className="w-0 h-px bg-[#0D72B6] group-hover:w-4 transition-all duration-300"></span>
-                  IT Solutions
-                </Link>
-              </li>
+              {locationServices.map((service) => (
+                <li key={service.slug}>
+                  <Link
+                    href={`/${selectedLocation.code.toLowerCase()}/services/${service.slug}`}
+                    className="group text-slate-300 hover:text-[#0D72B6] transition-colors text-[14px] font-light flex items-center gap-2"
+                  >
+                    <span className="w-0 h-px bg-[#0D72B6] group-hover:w-4 transition-all duration-300"></span>
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -283,7 +285,7 @@ const Footer = () => {
                 <div>
                   <p className="text-slate-400 text-xs mb-1">Locations</p>
                   <p className="text-slate-300 text-[14px] font-light">
-                    Qatar & Saudi Arabia
+                    Qatar | Saudi Arabia | UAE  
                   </p>
                 </div>
               </li>
