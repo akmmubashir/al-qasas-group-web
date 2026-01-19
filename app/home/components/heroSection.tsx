@@ -191,12 +191,12 @@ const HeroSection = () => {
         try {
           v.currentTime = 0;
           const p = v.play();
-          if (p && typeof p.then === "function") p.catch(() => { });
-        } catch { }
+          if (p && typeof p.then === "function") p.catch(() => {});
+        } catch {}
       } else {
         try {
           v.pause();
-        } catch { }
+        } catch {}
       }
     });
   }, [current]);

@@ -4,6 +4,7 @@ import Logo from "./logo";
 import Navigation from "./navigation";
 import { ToggleIcon } from "./icons";
 import Image from "next/image";
+import LocationSelector from "./locationSelector";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -58,25 +59,29 @@ const Header = () => {
             type={scrolled ? "scroll" : "scroll"}
             scrolled={scrolled}
           />
-          {/* {scrolled ? ( */}
-          <button className="cursor-pointer group relative px-8 py-4 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105 max-xl:hidden">
-            <span className="relative z-10 flex items-center gap-2">
-              Get Started
-              <svg
-                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={3}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </span>
-          </button>
+          <div className="flex gap-5 items-center max-xl:hidden">
+
+            <LocationSelector />
+            {/* {scrolled ? ( */}
+            <button className="cursor-pointer group relative px-8 py-4 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105">
+              <span className="relative z-10 flex items-center gap-2">
+                Get Started
+                <svg
+                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={3}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
           {/* ) : (
             <button className="cursor-pointer group relative px-8 py-4 bg-none border border-white text-white text-[15px] font-bold overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105 max-xl:hidden">
               <span className="relative z-10 flex items-center gap-2">
@@ -117,13 +122,17 @@ const Header = () => {
         className={`fixed top-0 right-0 h-dvh w-full bg-white z-50 xl:hidden transform transition-transform duration-300 ease-in-out shadow-2xl ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex flex-col h-full p-8">
-          <Image
-            src="/assets/common/logo-og.png"
-            alt="Logo"
-            width={80}
-            height={100}
-            className="mb-10"
-          />
+          <div className="mb-10 flex justify-between">
+            <Image
+              src="/assets/common/logo-og.png"
+              alt="Logo"
+              width={80}
+              height={100}
+              // className="mb-10"
+            />
+
+             <LocationSelector />
+          </div>
           <Navigation
             type="mobile"
             onItemClick={() => setMobileMenuOpen(false)}
