@@ -1,5 +1,5 @@
-import React from "react"; 
-import ServicesSection from "./components/servicesSection"; 
+import React from "react";
+import ServicesSection from "./components/servicesSection";
 import Header from "@/app/components/header";
 import BannerSection from "@/app/components/bannerSection";
 import Footer from "@/app/components/footer";

@@ -8,11 +8,15 @@ type Props = {
 };
 
 // Helper function to build location-aware URLs
-export const buildLocationUrl = (path: string, location: string, useLocation: boolean = true): string => {
+export const buildLocationUrl = (
+  path: string,
+  location: string,
+  useLocation: boolean = true,
+): string => {
   if (!useLocation) {
     return path;
   }
-  
+
   const locationCode = location.toLowerCase();
   if (path === "" || path === "/") {
     return `/${locationCode}`;
@@ -22,8 +26,10 @@ export const buildLocationUrl = (path: string, location: string, useLocation: bo
 
 // Get navigation data based on location
 export const getNavigationData = (locationCode: string = "AE"): Props[] => {
-  const services = locationServicesData[locationCode as keyof typeof locationServicesData] || locationServicesData.AE;
-  
+  const services =
+    locationServicesData[locationCode as keyof typeof locationServicesData] ||
+    locationServicesData.AE;
+
   return [
     { name: "Home", href: "/", useLocation: false },
     { name: "About", href: "/about", useLocation: false },
@@ -31,7 +37,7 @@ export const getNavigationData = (locationCode: string = "AE"): Props[] => {
       name: "Services",
       href: "/services",
       useLocation: true,
-      dropMenu: services.map(service => ({
+      dropMenu: services.map((service) => ({
         name: service.name,
         href: service.href,
         useLocation: true,

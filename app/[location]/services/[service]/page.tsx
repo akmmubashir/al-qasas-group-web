@@ -1,8 +1,8 @@
-import React from "react"; 
+import React from "react";
 import { redirect } from "next/navigation";
 import ServiceDetailSection from "../components/serviceDetailSection";
 import ServiceContextSection from "../components/serviceContextSection";
-import ServiceContactForm from "../components/serviceContactForm"; 
+import ServiceContactForm from "../components/serviceContactForm";
 import Header from "@/app/components/header";
 import BannerSection from "@/app/components/bannerSection";
 import Footer from "@/app/components/footer";
@@ -21,13 +21,15 @@ const page = async ({ params }: ServicePageProps) => {
   const locationCode = location.toUpperCase() as keyof typeof locationConfig;
 
   // Check if service is available in this location
-  const locationData = locationConfig[locationCode as keyof typeof locationConfig];
-  
+  const locationData =
+    locationConfig[locationCode as keyof typeof locationConfig];
+
   if (!locationData) {
     redirect(`/${location}/services`);
   }
 
-  const serviceData = locationData.services[serviceSlug as keyof typeof locationData.services];
+  const serviceData =
+    locationData.services[serviceSlug as keyof typeof locationData.services];
 
   // If service not available in this location, redirect to services page
   if (!serviceData) {

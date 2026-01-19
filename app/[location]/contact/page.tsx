@@ -1,7 +1,7 @@
-import React from "react"; 
+import React from "react";
 // import ContactInfoSection from "./components/contactInfoSection";
 import ContactFormSection from "./components/contactFormSection";
-import OfficesSection from "./components/officesSection"; 
+import OfficesSection from "./components/officesSection";
 import Header from "@/app/components/header";
 import BannerSection from "@/app/components/bannerSection";
 import Footer from "@/app/components/footer";

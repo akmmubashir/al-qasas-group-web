@@ -29,7 +29,7 @@ const LocationSelector = () => {
 
     // Check if first part is a location code
     const isLocationInPath = locationList.some(
-      (loc) => loc.code.toLowerCase() === pathParts[0]?.toLowerCase()
+      (loc) => loc.code.toLowerCase() === pathParts[0]?.toLowerCase(),
     );
 
     // Only update URL if we're on a location-based route (contact or services)

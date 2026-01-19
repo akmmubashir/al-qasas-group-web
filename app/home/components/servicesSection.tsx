@@ -16,16 +16,19 @@ const ServicesSection = () => {
 
   // Get location-specific services from JSON
   const services = useMemo(() => {
-    const countryConfig = locationConfig[selectedLocation.code as keyof typeof locationConfig];
+    const countryConfig =
+      locationConfig[selectedLocation.code as keyof typeof locationConfig];
     if (!countryConfig) return [];
-    
-    return Object.entries(countryConfig.services).map(([slug, service], index) => ({
-      id: index + 1,
-      title: service.title,
-      description: service.subtitle,
-      img: service.image,
-      slug: slug,
-    }));
+
+    return Object.entries(countryConfig.services).map(
+      ([slug, service], index) => ({
+        id: index + 1,
+        title: service.title,
+        description: service.subtitle,
+        img: service.image,
+        slug: slug,
+      }),
+    );
   }, [selectedLocation.code]);
 
   useEffect(() => {

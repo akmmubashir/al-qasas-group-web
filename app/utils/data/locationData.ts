@@ -1,19 +1,19 @@
 import locationConfig from "./locationConfig.json";
 
 export const locationServicesData = {
-  SA: Object.keys(locationConfig.SA.services).map(slug => ({
+  SA: Object.keys(locationConfig.SA.services).map((slug) => ({
     name: slug,
     href: `/services/${slug}`,
   })),
-  QA: Object.keys(locationConfig.QA.services).map(slug => ({
+  QA: Object.keys(locationConfig.QA.services).map((slug) => ({
     name: slug,
     href: `/services/${slug}`,
   })),
-  AE: Object.keys(locationConfig.AE.services).map(slug => ({
+  AE: Object.keys(locationConfig.AE.services).map((slug) => ({
     name: slug,
     href: `/services/${slug}`,
   })),
-  OM: Object.keys(locationConfig.OM.services).map(slug => ({
+  OM: Object.keys(locationConfig.OM.services).map((slug) => ({
     name: slug,
     href: `/services/${slug}`,
   })),

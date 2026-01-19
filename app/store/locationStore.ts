@@ -17,7 +17,8 @@ interface LocationStore {
 }
 
 // Saudi Arabia as default location
-const DEFAULT_LOCATION = locationList.find((loc) => loc.code === "SA") || locationList[0];
+const DEFAULT_LOCATION =
+  locationList.find((loc) => loc.code === "SA") || locationList[0];
 
 export const useLocationStore = create<LocationStore>()(
   persist(
@@ -28,13 +29,16 @@ export const useLocationStore = create<LocationStore>()(
       initializeLocation: () => {
         // Only set to default if no location is already stored
         const currentLocation = get().selectedLocation;
-        if (!currentLocation || currentLocation.code === DEFAULT_LOCATION.code) {
+        if (
+          !currentLocation ||
+          currentLocation.code === DEFAULT_LOCATION.code
+        ) {
           set({ selectedLocation: DEFAULT_LOCATION });
         }
       },
     }),
     {
       name: "location-storage",
-    }
-  )
+    },
+  ),
 );

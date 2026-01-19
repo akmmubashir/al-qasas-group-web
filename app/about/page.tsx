@@ -1,4 +1,4 @@
-import React from "react"; 
+import React from "react";
 import CompanyOverviewSection from "./components/companyOverviewSection";
 import MissionVisionSection from "./components/missionVisionSection";
 import TeamSection from "./components/teamSection";

@@ -11,9 +11,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const OfficesSection = () => {
   const { selectedLocation } = useLocationStore();
-  const locationData = locationConfig[selectedLocation.code as keyof typeof locationConfig];
+  const locationData =
+    locationConfig[selectedLocation.code as keyof typeof locationConfig];
   const offices = locationData?.offices || [];
-  
+
   const sectionRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);

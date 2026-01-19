@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import Logo from "./logo"; 
+import Logo from "./logo";
 import { getNavigationData } from "../utils/data/navigation";
 
 const Footer = () => {

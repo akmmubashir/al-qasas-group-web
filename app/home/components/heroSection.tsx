@@ -81,10 +81,11 @@ const HeroSection = () => {
 
   // Filter slides based on selected country's available services
   const slides = useMemo(() => {
-    const countryConfig = locationConfig[selectedLocation.code as keyof typeof locationConfig];
+    const countryConfig =
+      locationConfig[selectedLocation.code as keyof typeof locationConfig];
     if (!countryConfig) return allSlides;
 
-    return allSlides.filter(slide => {
+    return allSlides.filter((slide) => {
       // Always show the general services slide
       if (!slide.serviceSlug) return true;
       // Check if service is available in selected country
@@ -103,21 +104,21 @@ const HeroSection = () => {
       // General services slide - show all locations
       return ["Saudi Arabia", "Qatar", "UAE", "Oman"];
     }
-    
+
     const availableIn: string[] = [];
     const locationMap: Record<string, string> = {
       SA: "Saudi Arabia",
       QA: "Qatar",
       AE: "UAE",
-      OM: "Oman"
+      OM: "Oman",
     };
-    
+
     Object.entries(locationConfig).forEach(([code, config]) => {
       if (config.services.hasOwnProperty(serviceSlug)) {
         availableIn.push(locationMap[code] || code);
       }
     });
-    
+
     return availableIn;
   };
 
@@ -142,7 +143,7 @@ const HeroSection = () => {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Initial load animations
@@ -243,7 +244,6 @@ const HeroSection = () => {
     return () => ctx.revert();
   }, [current]);
 
-   
   useEffect(() => {
     videoRefs.current.forEach((v, i) => {
       if (!v) return;
@@ -300,7 +300,9 @@ const HeroSection = () => {
             <div className="w-2 h-2 bg-[#0D72B6] rounded-full animate-pulse" />
             <span className="text-white text-sm font-medium tracking-wide uppercase">
               {(() => {
-                const availableLocations = getAvailableLocations(slide.serviceSlug);
+                const availableLocations = getAvailableLocations(
+                  slide.serviceSlug,
+                );
                 return availableLocations.length > 2
                   ? `${availableLocations.slice(0, -1).join(", ")} & ${availableLocations[availableLocations.length - 1]}`
                   : availableLocations.join(" & ");

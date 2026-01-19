@@ -20,7 +20,7 @@ export default function LocationLayout({
           : params.location[0].toUpperCase();
 
       const location = locationList.find(
-        (loc) => loc.code.toLowerCase() === locationCode.toLowerCase()
+        (loc) => loc.code.toLowerCase() === locationCode.toLowerCase(),
       );
 
       if (location) {
