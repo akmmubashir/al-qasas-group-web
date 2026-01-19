@@ -62,7 +62,7 @@ const LocationSelector = () => {
           }`}
           aria-label={`Select ${location.name}`}
         >
-          <div className="max-md:w-8">
+          <div className="max-md:w-10">
             <Image
               src={location.flag}
               alt={location.name}
