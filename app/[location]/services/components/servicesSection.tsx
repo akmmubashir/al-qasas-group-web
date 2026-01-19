@@ -1,66 +1,36 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useMemo } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import Image from "next/image";
 import Heading from "@/app/components/heading";
+import { useLocationStore } from "@/app/store/locationStore";
+import locationConfig from "@/app/utils/data/locationConfig.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const services = [
-  {
-    id: 1,
-    title: "Movable Partitions & Ironmongeries",
-    description:
-      "High-quality movable partition systems and ironmongery solutions for flexible workspace design and modern office environments.",
-    icon: "🏗️",
-    slug: "movable-partitions",
-    img: "/assets/images/movablePartition.webp",
-  },
-  {
-    id: 2,
-    title: "Project Support",
-    description:
-      "Comprehensive project management and support services to ensure timely delivery and optimal resource utilization.",
-    icon: "📋",
-    slug: "project-support",
-    img: "/assets/images/project.webp",
-  },
-  {
-    id: 3,
-    title: "Transportation",
-    description:
-      "Reliable and efficient transportation solutions for goods and logistics management across the region.",
-    icon: "🚚",
-    slug: "transportation",
-    img: "/assets/images/transportation.webp",
-  },
-  {
-    id: 4,
-    title: "Corporate Services",
-    description:
-      "Professional corporate solutions including administrative support, consulting, and strategic business services.",
-    icon: "🏢",
-    slug: "corporate-services",
-    img: "/assets/images/corporate.webp",
-  },
-  {
-    id: 5,
-    title: "IT Solutions",
-    description:
-      "Cutting-edge information technology solutions to streamline operations and enhance digital transformation.",
-    icon: "💻",
-    slug: "it-solutions",
-    img: "/assets/images/it-solution.webp",
-  },
-];
-
 const ServicesSection = () => {
+  const { selectedLocation } = useLocationStore();
   const sectionRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const subtitleRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
+
+  // Get location-specific services from JSON
+  const locationSpecificServices = useMemo(() => {
+    const countryConfig = locationConfig[selectedLocation.code as keyof typeof locationConfig];
+    if (!countryConfig) return [];
+    
+    return Object.entries(countryConfig.services).map(([slug, service], index) => ({
+      id: index + 1,
+      title: service.title,
+      description: service.subtitle,
+      icon: service.icon,
+      slug: slug,
+      img: service.image,
+    }));
+  }, [selectedLocation.code]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -151,7 +121,7 @@ const ServicesSection = () => {
           ref={cardsRef}
           className="grid grid-cols-12 gap-10 max-lg:gap-[40px_0]"
         >
-          {services.map((service) => (
+          {locationSpecificServices.map((service) => (
             <div
               key={service.id}
               className="col-span-4 max-xl:col-span-6 max-lg:col-span-12 service-card group relative overflow-hidden"
@@ -183,7 +153,7 @@ const ServicesSection = () => {
                     </p>
                   </div>
                   <Link
-                    href={`/services/${service.slug}`}
+                    href={`/${selectedLocation.code.toLowerCase()}/services/${service.slug}`}
                     className="text-cyan-600 text-sm font-semibold flex items-center gap-2 group-hover:gap-3 transition-all duration-300 w-fit"
                   >
                     Learn More

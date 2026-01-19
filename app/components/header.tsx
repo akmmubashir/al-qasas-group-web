@@ -60,10 +60,9 @@ const Header = () => {
             scrolled={scrolled}
           />
           <div className="flex gap-5 items-center max-xl:hidden">
-
             <LocationSelector />
             {/* {scrolled ? ( */}
-            <button className="cursor-pointer group relative px-8 py-4 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105">
+            {/* <button className="cursor-pointer group relative px-8 py-4 bg-linear-to-r from-[#0D72B6] to-blue-500 text-white text-[15px] font-bold overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300 hover:scale-105">
               <span className="relative z-10 flex items-center gap-2">
                 Get Started
                 <svg
@@ -80,7 +79,7 @@ const Header = () => {
                   />
                 </svg>
               </span>
-            </button>
+            </button> */}
           </div>
           {/* ) : (
             <button className="cursor-pointer group relative px-8 py-4 bg-none border border-white text-white text-[15px] font-bold overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105 max-xl:hidden">
@@ -131,7 +130,7 @@ const Header = () => {
               // className="mb-10"
             />
 
-             <LocationSelector />
+            <LocationSelector />
           </div>
           <Navigation
             type="mobile"

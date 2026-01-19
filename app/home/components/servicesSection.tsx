@@ -1,133 +1,32 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLocationStore } from "@/app/store/locationStore";
+import locationConfig from "@/app/utils/data/locationConfig.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const services = [
-  {
-    id: 1,
-    title: "Movable Partitions & Ironmongeries",
-    description:
-      "High-quality movable partition systems and ironmongery solutions for flexible workspace design and modern office environments.",
-    icon: (
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-        />
-      </svg>
-    ),
-    gradient: "from-[#0D72B6] to-blue-500",
-    img: "/assets/images/movablePartition.webp",
-  },
-  {
-    id: 2,
-    title: "Project Support",
-    description:
-      "Comprehensive project management and support services to ensure timely delivery and optimal resource utilization.",
-    icon: (
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-        />
-      </svg>
-    ),
-    gradient: "from-blue-500 to-cyan-500",
-    img: "/assets/images/project.webp",
-  },
-  {
-    id: 3,
-    title: "Transportation",
-    description:
-      "Reliable and efficient transportation solutions for goods and logistics management across the region.",
-    icon: (
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"
-        />
-      </svg>
-    ),
-    gradient: "from-cyan-500 to-teal-500",
-    img: "/assets/images/transportation.webp",
-  },
-  {
-    id: 4,
-    title: "Corporate Services",
-    description:
-      "Professional corporate solutions including administrative support, consulting, and strategic business services.",
-    icon: (
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-        />
-      </svg>
-    ),
-    gradient: "from-purple-500 to-pink-500",
-    img: "/assets/images/corporate.webp",
-  },
-  {
-    id: 5,
-    title: "IT Solutions",
-    description:
-      "Cutting-edge information technology solutions to streamline operations and enhance digital transformation.",
-    icon: (
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-        />
-      </svg>
-    ),
-    gradient: "from-indigo-500 to-blue-500",
-    img: "/assets/images/it-solution.webp",
-  },
-];
-
 const ServicesSection = () => {
+  const { selectedLocation } = useLocationStore();
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
+
+  // Get location-specific services from JSON
+  const services = useMemo(() => {
+    const countryConfig = locationConfig[selectedLocation.code as keyof typeof locationConfig];
+    if (!countryConfig) return [];
+    
+    return Object.entries(countryConfig.services).map(([slug, service], index) => ({
+      id: index + 1,
+      title: service.title,
+      description: service.subtitle,
+      img: service.image,
+      slug: slug,
+    }));
+  }, [selectedLocation.code]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -322,7 +221,7 @@ const ServicesSection = () => {
 
                 {/* CTA Link */}
                 <Link
-                  href={`/services/${service.title.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`}
+                  href={`/${selectedLocation.code.toLowerCase()}/services/${service.slug}`}
                 >
                   <div className="service-cta inline-flex items-center gap-2 text-[#0D72B6] font-semibold text-[18px] max-xl:text-[16px] max-md:text-[14px] hover:gap-3 transition-all duration-300">
                     <span>Explore Service</span>

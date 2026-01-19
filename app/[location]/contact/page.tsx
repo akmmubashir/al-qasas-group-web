@@ -1,11 +1,11 @@
-import React from "react";
-import Header from "../components/header";
-import BannerSection from "../components/bannerSection";
-import Footer from "../components/footer";
+import React from "react"; 
 // import ContactInfoSection from "./components/contactInfoSection";
 import ContactFormSection from "./components/contactFormSection";
-import OfficesSection from "./components/officesSection";
-import CallToActionSection from "../home/components/callToActionSection";
+import OfficesSection from "./components/officesSection"; 
+import Header from "@/app/components/header";
+import BannerSection from "@/app/components/bannerSection";
+import Footer from "@/app/components/footer";
+import CallToActionSection from "@/app/home/components/callToActionSection";
 
 // type Props = {}
 

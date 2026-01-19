@@ -1,0 +1,702 @@
+{
+  "SA": {
+    "name": "Saudi Arabia",
+    "code": "SA",
+    "services": {
+      "movable-partitions": {
+        "title": "Movable Partitions & Ironmongeries",
+        "subtitle": "Flexible Architectural Solutions for Modern Saudi Workspaces",
+        "description": "Transform your Saudi Arabian workspace with our premium movable partition systems. We provide modular solutions designed specifically for the Middle Eastern business environment, combining functionality with elegant design. Our ironmongery solutions ensure durability in high-traffic office environments and seamlessly blend with contemporary Saudi design preferences.",
+        "icon": "🏗️",
+        "image": "/assets/images/movablePartition.webp",
+        "features": [
+          "Custom partition systems for Saudi office standards",
+          "Premium finishes matching local aesthetics",
+          "Soundproof options for open office environments",
+          "Quick installation with minimal disruption",
+          "Long-lasting materials suited for Middle Eastern climate"
+        ],
+        "benefits": [
+          "Optimize office space in Riyadh and major cities",
+          "Create flexible work environments for growing teams",
+          "Cost-effective solution for office renovation",
+          "Improved productivity with better acoustics",
+          "Professional appearance meeting corporate standards"
+        ],
+        "context": [
+          {
+            "heading": "Saudi Design Standards",
+            "description": "Partition systems designed to meet local building codes and aesthetic preferences.",
+            "icon": "🎨"
+          },
+          {
+            "heading": "Fast Installation",
+            "description": "Rapid deployment without affecting your business operations.",
+            "icon": "⚙️"
+          },
+          {
+            "heading": "Local Support",
+            "description": "Dedicated support team based in Riyadh for quick assistance.",
+            "icon": "🤝"
+          }
+        ]
+      },
+      "project-support": {
+        "title": "Project Support",
+        "subtitle": "Expert Project Management for Saudi Construction & Business Initiatives",
+        "description": "Our project support services are tailored for Saudi Arabia's unique business landscape. We provide comprehensive project management expertise for construction projects, corporate initiatives, and operational setups. With deep knowledge of local regulations, market conditions, and business practices, we ensure your projects succeed.",
+        "icon": "📋",
+        "image": "/assets/images/project.webp",
+        "features": [
+          "Project management aligned with Saudi regulations",
+          "Budget optimization for maximum ROI",
+          "Team coordination across multiple stakeholders",
+          "Real-time progress tracking and reporting",
+          "Risk management specific to Saudi market"
+        ],
+        "benefits": [
+          "On-time project delivery meeting deadlines",
+          "Cost control and budget adherence",
+          "Regulatory compliance assurance",
+          "Enhanced stakeholder communication",
+          "Reduced project complications"
+        ],
+        "context": [
+          {
+            "heading": "Local Expertise",
+            "description": "Deep understanding of Saudi business environment and regulations.",
+            "icon": "👥"
+          },
+          {
+            "heading": "Transparency",
+            "description": "Complete visibility into project progress with regular reporting.",
+            "icon": "📊"
+          },
+          {
+            "heading": "Risk Expertise",
+            "description": "Proactive management of market-specific risks.",
+            "icon": "🛡️"
+          }
+        ]
+      },
+      "transportation": {
+        "title": "Transportation",
+        "subtitle": "Reliable Logistics Solutions Across Saudi Arabia",
+        "description": "Our transportation network covers the entire Kingdom of Saudi Arabia with modern vehicles and experienced drivers. We specialize in navigating Saudi Arabia's diverse geography from Riyadh to Jeddah, Eastern Province, and beyond, ensuring reliable delivery of goods and materials.",
+        "icon": "🚚",
+        "image": "/assets/images/transportation.webp",
+        "features": [
+          "Extensive fleet covering all Saudi regions",
+          "GPS tracking for real-time monitoring",
+          "Temperature-controlled vehicles available",
+          "Professional drivers with regional expertise",
+          "Insured shipments with security protocols"
+        ],
+        "benefits": [
+          "Coverage to all major Saudi cities",
+          "Cost-effective shipping solutions",
+          "Real-time delivery tracking",
+          "Safe handling of all cargo types",
+          "Expand your market reach nationwide"
+        ],
+        "context": [
+          {
+            "heading": "National Coverage",
+            "description": "Reliable service across Riyadh, Jeddah, Dammam, and beyond.",
+            "icon": "🚛"
+          },
+          {
+            "heading": "Expert Drivers",
+            "description": "Experienced team familiar with Saudi roads and regulations.",
+            "icon": "🚗"
+          },
+          {
+            "heading": "Nationwide Network",
+            "description": "Comprehensive coverage for all your logistics needs.",
+            "icon": "🗺️"
+          }
+        ]
+      },
+      "corporate-services": {
+        "title": "Corporate Services",
+        "subtitle": "Business Support for Saudi Organizations",
+        "description": "We provide comprehensive corporate services tailored to Saudi Arabia's business environment. From HR management to regulatory compliance, our team helps Saudi organizations navigate business challenges and achieve growth.",
+        "icon": "🏢",
+        "image": "/assets/images/corporate.webp",
+        "features": [
+          "HR and recruitment services",
+          "Business consulting and strategy",
+          "Administrative support and management",
+          "Compliance with Saudi regulations",
+          "Financial planning assistance"
+        ],
+        "benefits": [
+          "Expert guidance for business growth",
+          "Reduced operational costs",
+          "Improved employee management",
+          "Ensured regulatory compliance",
+          "Strategic business decisions"
+        ],
+        "context": [
+          {
+            "heading": "Saudi Business Expertise",
+            "description": "Deep knowledge of local regulations and business practices.",
+            "icon": "💼"
+          },
+          {
+            "heading": "Talent Solutions",
+            "description": "HR services for recruiting and developing Saudi teams.",
+            "icon": "👔"
+          },
+          {
+            "heading": "Compliance Assurance",
+            "description": "Full compliance with Saudi labor and business laws.",
+            "icon": "✅"
+          }
+        ]
+      },
+      "it-solutions": {
+        "title": "IT Solutions",
+        "subtitle": "Digital Transformation for Saudi Businesses",
+        "description": "Modern IT infrastructure solutions designed for Saudi organizations. We help businesses embrace digital transformation while maintaining security and reliability in the local market context.",
+        "icon": "💻",
+        "image": "/assets/images/it-solution.webp",
+        "features": [
+          "Cloud infrastructure aligned with Saudi data laws",
+          "Cybersecurity and data protection",
+          "Custom software development",
+          "Network optimization",
+          "24/7 technical support"
+        ],
+        "benefits": [
+          "Enhanced data security and protection",
+          "Scalable IT infrastructure",
+          "Reduced operational costs",
+          "Improved business continuity",
+          "Accelerated digital transformation"
+        ],
+        "context": [
+          {
+            "heading": "Secure Cloud Solutions",
+            "description": "Cloud services compliant with Saudi data regulations.",
+            "icon": "☁️"
+          },
+          {
+            "heading": "Advanced Security",
+            "description": "Protection against emerging cyber threats.",
+            "icon": "🔒"
+          },
+          {
+            "heading": "Round-the-Clock Support",
+            "description": "24/7 technical support in Arabic and English.",
+            "icon": "🔧"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "+966 11 4650 000",
+      "email": "info.sa@alqasasgroup.com",
+      "address": "Riyadh, Saudi Arabia",
+      "hours": "Sun - Thu, 9:00 AM - 6:00 PM",
+      "description": "Welcome to Al Qasas Group Saudi Arabia. We're committed to delivering exceptional services to businesses across the Kingdom."
+    },
+    "offices": [
+      {
+        "city": "Riyadh",
+        "country": "Saudi Arabia",
+        "address": "Level 14, Olaya Towers, Olaya Street, Riyadh 12241",
+        "phone": "+966 11 4650 000",
+        "email": "riyadh@alqasasgroup.com",
+        "hours": "Sun - Thu, 9:00 AM - 6:00 PM"
+      }
+    ]
+  },
+  "QA": {
+    "name": "Qatar",
+    "code": "QA",
+    "services": {
+      "movable-partitions": {
+        "title": "Movable Partitions & Ironmongeries",
+        "subtitle": "Modern Office Solutions for Qatar's Growing Business Sector",
+        "description": "Discover our innovative movable partition solutions designed for Qatar's modern business environment. Perfect for Doha's dynamic corporate sector, our systems provide flexibility, elegance, and functionality for forward-thinking organizations.",
+        "icon": "🏗️",
+        "image": "/assets/images/movablePartition.webp",
+        "features": [
+          "State-of-the-art partition systems for Qatari offices",
+          "Premium materials and finishes",
+          "Acoustic solutions for multi-level buildings",
+          "Seamless installation and reconfiguration",
+          "Climate-controlled durability"
+        ],
+        "benefits": [
+          "Create flexible workspaces in Doha",
+          "Enhance employee productivity and comfort",
+          "Cost-effective office transformation",
+          "Professional aesthetics for corporate image",
+          "Sustainable and eco-friendly options"
+        ],
+        "context": [
+          {
+            "heading": "Qatar Innovation",
+            "description": "Modern designs aligned with Qatar's commitment to innovation.",
+            "icon": "🎨"
+          },
+          {
+            "heading": "Efficient Installation",
+            "description": "Fast setup with expert technical support.",
+            "icon": "⚙️"
+          },
+          {
+            "heading": "Premium Quality",
+            "description": "World-class materials and craftsmanship.",
+            "icon": "✨"
+          }
+        ]
+      },
+      "project-support": {
+        "title": "Project Support",
+        "subtitle": "Comprehensive Project Management for Qatar's Development",
+        "description": "Partner with us for successful project execution across Qatar. Our team brings international expertise combined with local market knowledge to deliver outstanding results for mega-projects and corporate initiatives.",
+        "icon": "📋",
+        "image": "/assets/images/project.webp",
+        "features": [
+          "International standard project management",
+          "Expertise in mega-project delivery",
+          "Multi-stakeholder coordination",
+          "Advanced tracking and reporting systems",
+          "Risk mitigation for large-scale projects"
+        ],
+        "benefits": [
+          "Successful project completion within timelines",
+          "Budget optimization and cost control",
+          "International compliance standards",
+          "Seamless stakeholder management",
+          "Enhanced project visibility"
+        ],
+        "context": [
+          {
+            "heading": "Mega-Project Expertise",
+            "description": "Experience with Qatar's large-scale development initiatives.",
+            "icon": "👥"
+          },
+          {
+            "heading": "Real-time Monitoring",
+            "description": "Advanced systems for project tracking and reporting.",
+            "icon": "📊"
+          },
+          {
+            "heading": "Risk Management",
+            "description": "Proactive approach to project challenges.",
+            "icon": "🛡️"
+          }
+        ]
+      },
+      "transportation": {
+        "title": "Transportation",
+        "subtitle": "Premium Logistics Services for Qatar",
+        "description": "Experience reliable and efficient transportation solutions throughout Qatar. Our modern fleet and professional team ensure safe, timely delivery of goods across all major Qatari cities and industrial zones.",
+        "icon": "🚚",
+        "image": "/assets/images/transportation.webp",
+        "features": [
+          "Modern fleet meeting international standards",
+          "GPS tracking and real-time monitoring",
+          "Climate control for sensitive cargo",
+          "Professional drivers with international licenses",
+          "Comprehensive insurance coverage"
+        ],
+        "benefits": [
+          "Reliable delivery across Qatar",
+          "Premium service at competitive rates",
+          "Full shipment visibility",
+          "Safe handling of all cargo types",
+          "Support for business expansion"
+        ],
+        "context": [
+          {
+            "heading": "Modern Fleet",
+            "description": "Latest vehicles with advanced tracking technology.",
+            "icon": "🚛"
+          },
+          {
+            "heading": "Professional Service",
+            "description": "Certified drivers with exceptional safety records.",
+            "icon": "🚗"
+          },
+          {
+            "heading": "Full Coverage",
+            "description": "Service across Doha and all Qatari regions.",
+            "icon": "🗺️"
+          }
+        ]
+      },
+      "corporate-services": {
+        "title": "Corporate Services",
+        "subtitle": "Strategic Business Solutions for Qatar",
+        "description": "Comprehensive corporate services designed for Qatar's dynamic business landscape. We support organizations with strategic planning, HR solutions, and operational excellence.",
+        "icon": "🏢",
+        "image": "/assets/images/corporate.webp",
+        "features": [
+          "Business strategy and consulting",
+          "HR and talent development programs",
+          "Administrative and operational support",
+          "Regulatory and legal compliance",
+          "Financial advisory services"
+        ],
+        "benefits": [
+          "Strategic direction for growth",
+          "Improved organizational efficiency",
+          "Strong talent management",
+          "Regulatory compliance assurance",
+          "Financial optimization"
+        ],
+        "context": [
+          {
+            "heading": "Strategic Planning",
+            "description": "Expert guidance for business development in Qatar.",
+            "icon": "💼"
+          },
+          {
+            "heading": "Talent Development",
+            "description": "HR solutions for building strong teams.",
+            "icon": "👔"
+          },
+          {
+            "heading": "Full Compliance",
+            "description": "Adherence to all Qatari regulations and standards.",
+            "icon": "✅"
+          }
+        ]
+      },
+      "it-solutions": {
+        "title": "IT Solutions",
+        "subtitle": "Digital Infrastructure for Qatar's Future",
+        "description": "Transform your organization with cutting-edge IT solutions tailored for Qatar. From cloud services to cybersecurity, we provide the technology infrastructure for digital excellence.",
+        "icon": "💻",
+        "image": "/assets/images/it-solution.webp",
+        "features": [
+          "Cloud infrastructure and services",
+          "Enterprise-grade cybersecurity",
+          "Custom software development",
+          "Network architecture and optimization",
+          "Managed IT services and support"
+        ],
+        "benefits": [
+          "Secure and reliable IT infrastructure",
+          "Scalable cloud solutions",
+          "Reduced technology costs",
+          "Business continuity assurance",
+          "Digital transformation enablement"
+        ],
+        "context": [
+          {
+            "heading": "Enterprise Cloud",
+            "description": "Secure cloud solutions for enterprise needs.",
+            "icon": "☁️"
+          },
+          {
+            "heading": "Cybersecurity Excellence",
+            "description": "Advanced protection for digital assets.",
+            "icon": "🔒"
+          },
+          {
+            "heading": "Expert Support",
+            "description": "24/7 managed services and technical support.",
+            "icon": "🔧"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "+974 4420 5500",
+      "email": "info.qa@alqasasgroup.com",
+      "address": "Doha, Qatar",
+      "hours": "Sun - Thu, 8:00 AM - 6:00 PM",
+      "description": "Al Qasas Group is proud to serve Qatar's business community with innovative solutions and exceptional service quality."
+    },
+    "offices": [
+      {
+        "city": "Doha",
+        "country": "Qatar",
+        "address": "Building 12, Industrial Area, Street 34, Doha",
+        "phone": "+974 4420 5500",
+        "email": "doha@alqasasgroup.com",
+        "hours": "Sun - Thu, 8:00 AM - 6:00 PM"
+      }
+    ]
+  },
+  "AE": {
+    "name": "United Arab Emirates",
+    "code": "AE",
+    "services": {
+      "project-support": {
+        "title": "Project Support",
+        "subtitle": "Expert Project Management for UAE Developments",
+        "description": "Al Qasas Group delivers specialized project support services for UAE's thriving construction and business sectors. With extensive experience in Dubai, Abu Dhabi, and across the Emirates, we ensure project success through expert management and local knowledge.",
+        "icon": "📋",
+        "image": "/assets/images/project.webp",
+        "features": [
+          "Expert project management for UAE developments",
+          "International best practices implementation",
+          "Multi-disciplinary team coordination",
+          "Advanced project tracking systems",
+          "Compliance with UAE building codes"
+        ],
+        "benefits": [
+          "On-time project delivery in UAE",
+          "Cost optimization and control",
+          "Full regulatory compliance",
+          "Seamless stakeholder coordination",
+          "Transparent progress reporting"
+        ],
+        "context": [
+          {
+            "heading": "UAE Expertise",
+            "description": "Deep experience with UAE's construction standards and regulations.",
+            "icon": "👥"
+          },
+          {
+            "heading": "Advanced Tracking",
+            "description": "Real-time monitoring and detailed reporting systems.",
+            "icon": "📊"
+          },
+          {
+            "heading": "Risk Expertise",
+            "description": "Proactive risk management for successful outcomes.",
+            "icon": "🛡️"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "+971 4 305 5000",
+      "email": "info.ae@alqasasgroup.com",
+      "address": "Dubai, United Arab Emirates",
+      "hours": "Sun - Thu, 8:00 AM - 6:00 PM",
+      "description": "Al Qasas Group UAE provides premium project support services for businesses throughout the Emirates."
+    },
+    "offices": [
+      {
+        "city": "Dubai",
+        "country": "United Arab Emirates",
+        "address": "Dubai Marina, Tower 1, Level 20, Dubai",
+        "phone": "+971 4 305 5000",
+        "email": "dubai@alqasasgroup.com",
+        "hours": "Sun - Thu, 8:00 AM - 6:00 PM"
+      }
+    ]
+  },
+  "OM": {
+    "name": "Oman",
+    "code": "OM",
+    "services": {
+      "movable-partitions": {
+        "title": "Movable Partitions & Ironmongeries",
+        "subtitle": "Elegant Workspace Solutions for Oman",
+        "description": "Our movable partition systems bring modern flexibility to Oman's growing business sector. Designed with Omani architectural preferences in mind, our solutions offer style, durability, and functionality for contemporary workplaces.",
+        "icon": "🏗️",
+        "image": "/assets/images/movablePartition.webp",
+        "features": [
+          "Premium partition systems for Omani offices",
+          "Elegant design matching local aesthetics",
+          "Soundproofing for better productivity",
+          "Easy installation and reconfiguration",
+          "Long-lasting materials for tropical climate"
+        ],
+        "benefits": [
+          "Transform office spaces in Muscat and beyond",
+          "Enhanced employee comfort and productivity",
+          "Cost-effective office solutions",
+          "Professional corporate appearance",
+          "Sustainable workspace design"
+        ],
+        "context": [
+          {
+            "heading": "Omani Design",
+            "description": "Solutions aligned with Oman's design heritage and modernity.",
+            "icon": "🎨"
+          },
+          {
+            "heading": "Quick Setup",
+            "description": "Rapid installation with minimal business disruption.",
+            "icon": "⚙️"
+          },
+          {
+            "heading": "Local Support",
+            "description": "Dedicated team based in Muscat for local support.",
+            "icon": "🤝"
+          }
+        ]
+      },
+      "project-support": {
+        "title": "Project Support",
+        "subtitle": "Reliable Project Management for Oman",
+        "description": "Partner with Al Qasas Group for successful project delivery across Oman. Our team understands the Omani business environment and delivers projects with precision, reliability, and local expertise.",
+        "icon": "📋",
+        "image": "/assets/images/project.webp",
+        "features": [
+          "Project management tailored for Oman",
+          "Budget-conscious delivery",
+          "Stakeholder coordination expertise",
+          "Real-time project tracking",
+          "Risk management and mitigation"
+        ],
+        "benefits": [
+          "Successful project completion",
+          "Cost control and optimization",
+          "Regulatory compliance assurance",
+          "Effective team coordination",
+          "Transparent progress reporting"
+        ],
+        "context": [
+          {
+            "heading": "Omani Market Knowledge",
+            "description": "Understanding of local business practices and conditions.",
+            "icon": "👥"
+          },
+          {
+            "heading": "Transparent Reporting",
+            "description": "Complete visibility into project status and progress.",
+            "icon": "📊"
+          },
+          {
+            "heading": "Proactive Management",
+            "description": "Anticipating and managing potential challenges.",
+            "icon": "🛡️"
+          }
+        ]
+      },
+      "transportation": {
+        "title": "Transportation",
+        "subtitle": "Logistics Solutions Across Oman",
+        "description": "Reliable transportation services connecting businesses across Oman. From Muscat to Salalah and all regions in between, our fleet delivers goods safely and on schedule.",
+        "icon": "🚚",
+        "image": "/assets/images/transportation.webp",
+        "features": [
+          "Comprehensive fleet for all Oman regions",
+          "GPS tracking for shipment visibility",
+          "Professional and courteous drivers",
+          "Flexible scheduling options",
+          "Secure and insured cargo handling"
+        ],
+        "benefits": [
+          "Coverage across all Omani regions",
+          "Reliable and timely delivery",
+          "Cost-effective logistics",
+          "Full cargo security",
+          "Support for business growth"
+        ],
+        "context": [
+          {
+            "heading": "Regional Coverage",
+            "description": "Extensive network covering Muscat and all regions.",
+            "icon": "🚛"
+          },
+          {
+            "heading": "Professional Team",
+            "description": "Experienced drivers familiar with Omani routes.",
+            "icon": "🚗"
+          },
+          {
+            "heading": "Nationwide Service",
+            "description": "Comprehensive logistics support for your needs.",
+            "icon": "🗺️"
+          }
+        ]
+      },
+      "corporate-services": {
+        "title": "Corporate Services",
+        "subtitle": "Business Support for Omani Organizations",
+        "description": "Comprehensive corporate solutions for Oman's business community. From strategic consulting to HR management, we support your organizational success and growth.",
+        "icon": "🏢",
+        "image": "/assets/images/corporate.webp",
+        "features": [
+          "Business consulting and strategy",
+          "HR and recruitment services",
+          "Administrative support",
+          "Compliance with Omani regulations",
+          "Financial advisory services"
+        ],
+        "benefits": [
+          "Strategic business guidance",
+          "Operational efficiency",
+          "Strong talent management",
+          "Regulatory compliance",
+          "Financial optimization"
+        ],
+        "context": [
+          {
+            "heading": "Omani Expertise",
+            "description": "Deep knowledge of local business environment.",
+            "icon": "💼"
+          },
+          {
+            "heading": "HR Solutions",
+            "description": "Comprehensive talent and HR management.",
+            "icon": "👔"
+          },
+          {
+            "heading": "Compliance",
+            "description": "Full adherence to Omani business regulations.",
+            "icon": "✅"
+          }
+        ]
+      },
+      "it-solutions": {
+        "title": "IT Solutions",
+        "subtitle": "Modern Technology for Omani Businesses",
+        "description": "Empower your Omani organization with modern IT infrastructure. Cloud solutions, cybersecurity, and custom development services designed for the Omani market.",
+        "icon": "💻",
+        "image": "/assets/images/it-solution.webp",
+        "features": [
+          "Cloud infrastructure and services",
+          "Cybersecurity and data protection",
+          "Custom software solutions",
+          "Network design and optimization",
+          "24/7 technical support"
+        ],
+        "benefits": [
+          "Secure IT infrastructure",
+          "Scalable cloud solutions",
+          "Reduced IT costs",
+          "Business continuity assurance",
+          "Digital transformation support"
+        ],
+        "context": [
+          {
+            "heading": "Cloud Services",
+            "description": "Secure and reliable cloud infrastructure.",
+            "icon": "☁️"
+          },
+          {
+            "heading": "Security Focus",
+            "description": "Advanced protection for your digital assets.",
+            "icon": "🔒"
+          },
+          {
+            "heading": "Always Available",
+            "description": "24/7 support for your technology needs.",
+            "icon": "🔧"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "+968 2455 5500",
+      "email": "info.om@alqasasgroup.com",
+      "address": "Muscat, Oman",
+      "hours": "Sun - Thu, 8:00 AM - 6:00 PM",
+      "description": "Al Qasas Group Oman provides innovative business solutions and support to organizations across the Sultanate."
+    },
+    "offices": [
+      {
+        "city": "Muscat",
+        "country": "Oman",
+        "address": "Al Khuwair, Building 456, Muscat",
+        "phone": "+968 2455 5500",
+        "email": "muscat@alqasasgroup.com",
+        "hours": "Sun - Thu, 8:00 AM - 6:00 PM"
+      }
+    ]
+  }
+}

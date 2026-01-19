@@ -4,37 +4,16 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import SubHeading from "@/app/components/subHeading";
 import Heading from "@/app/components/heading";
+import { useLocationStore } from "@/app/store/locationStore";
+import locationConfig from "@/app/utils/data/locationConfig.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const offices = [
-  {
-    city: "Doha",
-    country: "Qatar",
-    address: "Building 12, Industrial Area, Street 34",
-    phone: "+974 4420 5500",
-    email: "doha@alqasasgroup.com",
-    hours: "Sun - Thu, 8:00 AM - 6:00 PM",
-  },
-  {
-    city: "Riyadh",
-    country: "Saudi Arabia",
-    address: "Level 14, Olaya Towers, Olaya St.",
-    phone: "+966 11 305 5000",
-    email: "riyadh@alqasasgroup.com",
-    hours: "Sun - Thu, 9:00 AM - 6:00 PM",
-  },
-  // {
-  //   city: "Lusail",
-  //   country: "Qatar",
-  //   address: "Marina District, Tower 5",
-  //   phone: "+974 4420 5510",
-  //   email: "lusail@alqasasgroup.com",
-  //   hours: "Sun - Thu, 8:00 AM - 6:00 PM",
-  // },
-];
-
 const OfficesSection = () => {
+  const { selectedLocation } = useLocationStore();
+  const locationData = locationConfig[selectedLocation.code as keyof typeof locationConfig];
+  const offices = locationData?.offices || [];
+  
   const sectionRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);

@@ -1,18 +1,21 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useMemo } from "react";
 import gsap from "gsap";
+import { useLocationStore } from "@/app/store/locationStore";
+import locationConfig from "@/app/utils/data/locationConfig.json";
 
 gsap.registerPlugin();
 
-const slides = [
+const allSlides = [
   {
     video: "/assets/video/hero-1.mp4",
     heading: "AL QASAS Group of Companies: Qatar & Saudi Arabia",
     body: "Excellence in movable partitions, project support, transportation, corporate services, and IT solutions driving quality and innovation across the Gulf region.",
     ctaLabel: "View Services",
-    ctaHref: "/services",
-    locations: ["Qatar", "Saudi Arabia", "UAE"],
+    ctaPath: "/services",
+    serviceSlug: null,
+    locations: ["Qatar", "Saudi Arabia", "UAE", "Oman"],
   },
   {
     video: "/assets/video/hero-2.mp4",
@@ -20,16 +23,18 @@ const slides = [
       "Manpower & Project Support Services, Your Trusted Manpower Partner",
     body: "Oil & Gas ( Onshore & Project Support) | Construction & Infrastructure | Interior Fit-Out & Specialized Works",
     ctaLabel: "Know More",
-    ctaHref: "/services/project-support",
-    locations: ["Qatar", "Saudi Arabia", "UAE"],
+    ctaPath: "/services/project-support",
+    serviceSlug: "project-support",
+    locations: ["Qatar", "Saudi Arabia", "UAE", "Oman"],
   },
   {
     video: "/assets/video/hero-3.mp4",
     heading: "Trusted Across the Gulf Region for Project Excellence",
     body: "Serving Qatar and Saudi Arabia with reliable partnerships, certified teams, and resilient supply chain expertise.",
     ctaLabel: "Explore More",
-    ctaHref: "/services/corporate-services",
-    locations: ["Qatar", "Saudi Arabia"],
+    ctaPath: "/services/corporate-services",
+    serviceSlug: "corporate-services",
+    locations: ["Qatar", "Saudi Arabia", "Oman"],
   },
   {
     video: "/assets/video/hero-4.mp4",
@@ -37,8 +42,9 @@ const slides = [
       "Transported to Excellence: Leading Logistics Solutions in Qatar & Saudi Arabia",
     body: "Comprehensive logistics and transportation services tailored to meet the dynamic needs of businesses across Qatar and Saudi Arabia.",
     ctaLabel: "Know More",
-    ctaHref: "/services/transportation",
-    locations: ["Qatar", "Saudi Arabia"],
+    ctaPath: "/services/transportation",
+    serviceSlug: "transportation",
+    locations: ["Qatar", "Saudi Arabia", "Oman"],
   },
   {
     video: "/assets/video/hero-5.mp4",
@@ -46,8 +52,9 @@ const slides = [
       "Al Qasas Systems: Pioneering IT Solutions in Qatar & Saudi Arabia",
     body: "Delivering cutting-edge technology solutions tailored to empower businesses across Qatar and Saudi Arabia.",
     ctaLabel: "Explore More",
-    ctaHref: "/services/it-solutions",
-    locations: ["Qatar", "Saudi Arabia"],
+    ctaPath: "/services/it-solutions",
+    serviceSlug: "it-solutions",
+    locations: ["Qatar", "Saudi Arabia", "Oman"],
   },
   // {
   //   video: "/assets/video/hero-3.mp4",
@@ -61,6 +68,7 @@ const slides = [
 const SLIDE_DURATION_MS = 8000;
 
 const HeroSection = () => {
+  const { selectedLocation } = useLocationStore();
   const [current, setCurrent] = useState(0);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -70,6 +78,56 @@ const HeroSection = () => {
   const descriptionRef = useRef<HTMLParagraphElement>(null);
   const ctaBottomRef = useRef<HTMLDivElement>(null);
   const indicatorsRef = useRef<HTMLDivElement>(null);
+
+  // Filter slides based on selected country's available services
+  const slides = useMemo(() => {
+    const countryConfig = locationConfig[selectedLocation.code as keyof typeof locationConfig];
+    if (!countryConfig) return allSlides;
+
+    return allSlides.filter(slide => {
+      // Always show the general services slide
+      if (!slide.serviceSlug) return true;
+      // Check if service is available in selected country
+      return countryConfig.services.hasOwnProperty(slide.serviceSlug);
+    });
+  }, [selectedLocation.code]);
+
+  // Build location-aware CTA href
+  const getCtaHref = (ctaPath: string) => {
+    return `/${selectedLocation.code.toLowerCase()}${ctaPath}`;
+  };
+
+  // Compute available locations for each slide dynamically
+  const getAvailableLocations = (serviceSlug: string | null) => {
+    if (!serviceSlug) {
+      // General services slide - show all locations
+      return ["Saudi Arabia", "Qatar", "UAE", "Oman"];
+    }
+    
+    const availableIn: string[] = [];
+    const locationMap: Record<string, string> = {
+      SA: "Saudi Arabia",
+      QA: "Qatar",
+      AE: "UAE",
+      OM: "Oman"
+    };
+    
+    Object.entries(locationConfig).forEach(([code, config]) => {
+      if (config.services.hasOwnProperty(serviceSlug)) {
+        availableIn.push(locationMap[code] || code);
+      }
+    });
+    
+    return availableIn;
+  };
+
+  // Reset current index when slides change to prevent out of bounds
+  useEffect(() => {
+    if (current >= slides.length && slides.length > 0) {
+      setCurrent(0);
+    }
+  }, [slides.length, current]);
+
   const slide = slides[current];
 
   const resetTimer = () => {
@@ -84,6 +142,7 @@ const HeroSection = () => {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Initial load animations
@@ -184,6 +243,7 @@ const HeroSection = () => {
     return () => ctx.revert();
   }, [current]);
 
+   
   useEffect(() => {
     videoRefs.current.forEach((v, i) => {
       if (!v) return;
@@ -200,6 +260,11 @@ const HeroSection = () => {
       }
     });
   }, [current]);
+
+  // Return early if no slide available (after all hooks)
+  if (!slide) {
+    return null;
+  }
 
   return (
     <div className="relative h-dvh w-full overflow-hidden bg-white">
@@ -234,9 +299,12 @@ const HeroSection = () => {
           >
             <div className="w-2 h-2 bg-[#0D72B6] rounded-full animate-pulse" />
             <span className="text-white text-sm font-medium tracking-wide uppercase">
-              {slide.locations.length > 2
-                ? `${slide.locations.slice(0, -1).join(", ")} & ${slide.locations[slide.locations.length - 1]}`
-                : slide.locations.join(" & ")}
+              {(() => {
+                const availableLocations = getAvailableLocations(slide.serviceSlug);
+                return availableLocations.length > 2
+                  ? `${availableLocations.slice(0, -1).join(", ")} & ${availableLocations[availableLocations.length - 1]}`
+                  : availableLocations.join(" & ");
+              })()}
             </span>
           </div>
           <h1
@@ -252,7 +320,7 @@ const HeroSection = () => {
             className="flex flex-wrap gap-4 max-md:gap-3 max-lg:hidden"
           >
             <Link
-              href={slide.ctaHref}
+              href={getCtaHref(slide.ctaPath)}
               className="cursor-pointer group px-8 py-4 max-md:px-5 max-md:py-3 bg-white border border-white/90 text-black text-[15px] font-bold hover:bg-white/80 hover:border-white/20 transition-all duration-300"
             >
               <span className="flex items-center gap-2">
@@ -289,7 +357,7 @@ const HeroSection = () => {
               className="flex flex-wrap gap-4 max-md:gap-3 lg:hidden"
             >
               <Link
-                href={slide.ctaHref}
+                href={getCtaHref(slide.ctaPath)}
                 className="cursor-pointer group px-8 py-4 max-md:px-5 max-md:py-3 bg-white border border-white/90 text-black text-[15px] font-bold hover:bg-white/80 hover:border-white/20 transition-all duration-300"
               >
                 <span className="flex items-center gap-2">

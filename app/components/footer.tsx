@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import Logo from "./logo";
-import { navigationData } from "../utils/data/navigation";
+import Logo from "./logo"; 
+import { getNavigationData } from "../utils/data/navigation";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -156,7 +156,7 @@ const Footer = () => {
               Quick Links
             </h3>
             <ul className="space-y-3">
-              {navigationData.map((item) => (
+              {getNavigationData().map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}

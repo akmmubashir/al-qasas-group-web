@@ -1,8 +1,8 @@
-import React from "react";
-import Header from "../components/header";
-import BannerSection from "../components/bannerSection";
-import ServicesSection from "./components/servicesSection";
-import Footer from "../components/footer";
+import React from "react"; 
+import ServicesSection from "./components/servicesSection"; 
+import Header from "@/app/components/header";
+import BannerSection from "@/app/components/bannerSection";
+import Footer from "@/app/components/footer";
 // type Props = {}
 
 const page = () => {
