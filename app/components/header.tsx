@@ -121,22 +121,22 @@ const Header = () => {
         className={`fixed top-0 right-0 h-dvh w-full bg-white z-50 xl:hidden transform transition-transform duration-300 ease-in-out shadow-2xl ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex flex-col h-full p-8">
-          <div className="mb-10 flex justify-between">
-            <Image
-              src="/assets/common/logo-og.png"
-              alt="Logo"
-              width={80}
-              height={100}
-              // className="mb-10"
-            />
+          <Image
+            src="/assets/common/logo-og.png"
+            alt="Logo"
+            width={80}
+            height={100}
+            className="mb-10"
+          />
 
-            <LocationSelector />
-          </div>
           <Navigation
             type="mobile"
             onItemClick={() => setMobileMenuOpen(false)}
           />
           <div className="mt-auto">
+            <div className="mb-5">
+              <LocationSelector />
+            </div>
             <button
               onClick={() => setMobileMenuOpen(false)}
               className="cursor-pointer w-full group relative px-8 py-4 bg-linear-to-r from-[#515151] to-[#353535] text-white text-[16px] font-medium uppercase overflow-hidden hover:shadow-2xl hover:shadow-[#0D72B6]/40 transition-all duration-300"

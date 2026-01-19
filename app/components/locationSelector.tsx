@@ -50,7 +50,7 @@ const LocationSelector = () => {
   };
 
   return (
-    <div className="flex gap-2 bg-blue-100 p-2 max-md:p-1">
+    <div className={`flex gap-2 p-2 bg-blue-100 justify-between`}>
       {locationList.map((location) => (
         <button
           key={location.code}
