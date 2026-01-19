@@ -285,7 +285,7 @@ const Footer = () => {
                 <div>
                   <p className="text-slate-400 text-xs mb-1">Locations</p>
                   <p className="text-slate-300 text-[14px] font-light">
-                    Qatar | Saudi Arabia | UAE  
+                    Qatar | Saudi Arabia | UAE
                   </p>
                 </div>
               </li>
