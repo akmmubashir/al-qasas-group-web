@@ -18,11 +18,16 @@ interface ServicePageProps {
 const page = async ({ params }: ServicePageProps) => {
   const { service, location } = await params;
   const serviceSlug = decodeURIComponent(service);
-  const locationCode = location.toUpperCase() as keyof typeof locationConfig;
+  const locationCode = location?.toUpperCase() as keyof typeof locationConfig;
+
+  // Validate location code
+  if (!locationCode || !locationConfig[locationCode]) {
+    // Fallback to Saudi Arabia if invalid location
+    redirect(`/sa/services`);
+  }
 
   // Check if service is available in this location
-  const locationData =
-    locationConfig[locationCode as keyof typeof locationConfig];
+  const locationData = locationConfig[locationCode];
 
   if (!locationData) {
     redirect(`/${location}/services`);

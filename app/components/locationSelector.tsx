@@ -1,13 +1,10 @@
 "use client";
 import React, { useEffect } from "react";
 import Image from "next/image";
-import { useRouter, usePathname } from "next/navigation";
 import { useLocationStore } from "@/app/store/locationStore";
 import { locationList } from "../utils/data/locations";
 
 const LocationSelector = () => {
-  const router = useRouter();
-  const pathname = usePathname();
   const { selectedLocation, setSelectedLocation, initializeLocation } =
     useLocationStore();
 
@@ -23,23 +20,8 @@ const LocationSelector = () => {
   const handleLocationToggle = (location: (typeof locationList)[0]) => {
     setSelectedLocation(location);
 
-    // Update URL with new location only if we're on a location-based page
-    const currentPath = pathname || "/";
-    const pathParts = currentPath.split("/").filter(Boolean);
-
-    // Check if first part is a location code
-    const isLocationInPath = locationList.some(
-      (loc) => loc.code.toLowerCase() === pathParts[0]?.toLowerCase(),
-    );
-
-    // Only update URL if we're on a location-based route (contact or services)
-    if (isLocationInPath) {
-      // Replace existing location
-      pathParts[0] = location.code.toLowerCase();
-      const newPath = "/" + pathParts.join("/");
-      router.push(newPath);
-    }
-    // If we're not on a location-based page (home, about), just update the store
+    // Force full page reload to update all content
+    window.location.reload();
   };
 
   return (

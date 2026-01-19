@@ -31,6 +31,7 @@ export const useLocationStore = create<LocationStore>()(
         const currentLocation = get().selectedLocation;
         if (
           !currentLocation ||
+          !currentLocation.code ||
           currentLocation.code === DEFAULT_LOCATION.code
         ) {
           set({ selectedLocation: DEFAULT_LOCATION });

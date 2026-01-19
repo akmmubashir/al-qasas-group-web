@@ -13,7 +13,9 @@ const OfficesSection = () => {
   const { selectedLocation } = useLocationStore();
   const locationData =
     locationConfig[selectedLocation.code as keyof typeof locationConfig];
-  const offices = locationData?.offices || [];
+
+  // Fallback to Saudi Arabia offices if location not found
+  const offices = locationData?.offices || locationConfig.SA?.offices || [];
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);

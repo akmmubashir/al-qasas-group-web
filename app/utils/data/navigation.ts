@@ -25,10 +25,11 @@ export const buildLocationUrl = (
 };
 
 // Get navigation data based on location
-export const getNavigationData = (locationCode: string = "AE"): Props[] => {
+export const getNavigationData = (locationCode: string = "SA"): Props[] => {
   const services =
     locationServicesData[locationCode as keyof typeof locationServicesData] ||
-    locationServicesData.AE;
+    locationServicesData.SA || // Fallback to Saudi Arabia
+    [];
 
   return [
     { name: "Home", href: "/", useLocation: false },
@@ -37,11 +38,14 @@ export const getNavigationData = (locationCode: string = "AE"): Props[] => {
       name: "Services",
       href: "/services",
       useLocation: true,
-      dropMenu: services.map((service) => ({
-        name: service.name,
-        href: service.href,
-        useLocation: true,
-      })),
+      dropMenu:
+        services.length > 0
+          ? services.map((service) => ({
+              name: service.name,
+              href: service.href,
+              useLocation: true,
+            }))
+          : [],
     },
     { name: "Contact Us", href: "/contact", useLocation: true },
   ];

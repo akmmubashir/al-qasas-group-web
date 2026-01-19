@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import Link from "next/link";
 import React, { useEffect, useRef, useState, useMemo } from "react";
@@ -133,18 +134,20 @@ const HeroSection = () => {
 
   const resetTimer = () => {
     if (timerRef.current) clearInterval(timerRef.current);
+    if (slides.length === 0) return; // Prevent division by zero
     timerRef.current = setInterval(() => {
       setCurrent((i) => (i + 1) % slides.length);
     }, SLIDE_DURATION_MS);
   };
 
   useEffect(() => {
-    resetTimer();
+    if (slides.length > 0) {
+      resetTimer();
+    }
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [slides.length]); // Update timer when slides change
 
   // Initial load animations
   useEffect(() => {

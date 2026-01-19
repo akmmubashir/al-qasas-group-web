@@ -21,7 +21,21 @@ const ServicesSection = () => {
   const locationSpecificServices = useMemo(() => {
     const countryConfig =
       locationConfig[selectedLocation.code as keyof typeof locationConfig];
-    if (!countryConfig) return [];
+
+    // Fallback to Saudi Arabia config if country not found
+    if (!countryConfig) {
+      const fallbackConfig = locationConfig.SA;
+      return Object.entries(fallbackConfig.services).map(
+        ([slug, service], index) => ({
+          id: index + 1,
+          title: service.title,
+          description: service.subtitle,
+          icon: service.icon,
+          slug: slug,
+          img: service.image,
+        }),
+      );
+    }
 
     return Object.entries(countryConfig.services).map(
       ([slug, service], index) => ({
@@ -124,60 +138,68 @@ const ServicesSection = () => {
           ref={cardsRef}
           className="grid grid-cols-12 gap-10 max-lg:gap-[40px_0]"
         >
-          {locationSpecificServices.map((service) => (
-            <div
-              key={service.id}
-              className="col-span-4 max-xl:col-span-6 max-lg:col-span-12 service-card group relative overflow-hidden"
-            >
-              {/* Card wrapper */}
-              <div className="relative bg-white overflow-hidden border border-slate-200/50 group-hover:border-cyan-400/50 transition-all duration-500 h-full hover:shadow-2xl hover:shadow-cyan-500/10 flex flex-col">
-                {/* Image section */}
-                <div className="relative h-80 max-lg:h-56 w-full overflow-hidden bg-slate-100">
-                  <Image
-                    src={service.img}
-                    alt={service.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-b from-transparent to-white/40"></div>
-                </div>
+          {locationSpecificServices.length === 0 ? (
+            <div className="col-span-12 text-center py-20">
+              <p className="text-xl text-slate-600">
+                No services available for this location.
+              </p>
+            </div>
+          ) : (
+            locationSpecificServices.map((service) => (
+              <div
+                key={service.id}
+                className="col-span-4 max-xl:col-span-6 max-lg:col-span-12 service-card group relative overflow-hidden"
+              >
+                {/* Card wrapper */}
+                <div className="relative bg-white overflow-hidden border border-slate-200/50 group-hover:border-cyan-400/50 transition-all duration-500 h-full hover:shadow-2xl hover:shadow-cyan-500/10 flex flex-col">
+                  {/* Image section */}
+                  <div className="relative h-80 max-lg:h-56 w-full overflow-hidden bg-slate-100">
+                    <Image
+                      src={service.img}
+                      alt={service.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-b from-transparent to-white/40"></div>
+                  </div>
 
-                {/* Content section */}
-                <div className="relative flex-1 p-8 flex flex-col justify-between">
-                  <div>
-                    {/* <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {/* Content section */}
+                  <div className="relative flex-1 p-8 flex flex-col justify-between">
+                    <div>
+                      {/* <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                       {service.icon}
                     </div> */}
-                    <h3 className="text-lg font-semibold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    <p className="text-slate-600 leading-relaxed text-sm mb-6">
-                      {service.description}
-                    </p>
-                  </div>
-                  <Link
-                    href={`/${selectedLocation.code.toLowerCase()}/services/${service.slug}`}
-                    className="text-cyan-600 text-sm font-semibold flex items-center gap-2 group-hover:gap-3 transition-all duration-300 w-fit"
-                  >
-                    Learn More
-                    <svg
-                      className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                      <h3 className="text-lg font-semibold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-slate-600 leading-relaxed text-sm mb-6">
+                        {service.description}
+                      </p>
+                    </div>
+                    <Link
+                      href={`/${selectedLocation.code.toLowerCase()}/services/${service.slug}`}
+                      className="text-cyan-600 text-sm font-semibold flex items-center gap-2 group-hover:gap-3 transition-all duration-300 w-fit"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </Link>
+                      Learn More
+                      <svg
+                        className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
       </div>
     </div>

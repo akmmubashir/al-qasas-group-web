@@ -18,7 +18,20 @@ const ServicesSection = () => {
   const services = useMemo(() => {
     const countryConfig =
       locationConfig[selectedLocation.code as keyof typeof locationConfig];
-    if (!countryConfig) return [];
+
+    // Fallback to Saudi Arabia config if country not found
+    if (!countryConfig) {
+      const fallbackConfig = locationConfig.SA;
+      return Object.entries(fallbackConfig.services).map(
+        ([slug, service], index) => ({
+          id: index + 1,
+          title: service.title,
+          description: service.subtitle,
+          img: service.image,
+          slug: slug,
+        }),
+      );
+    }
 
     return Object.entries(countryConfig.services).map(
       ([slug, service], index) => ({
