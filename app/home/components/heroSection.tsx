@@ -40,8 +40,8 @@ const allSlides = [
   {
     video: "/assets/video/hero-4.mp4",
     heading:
-      "Transportation Solutions Tailored for Qatar & Saudi Arabia",
-    body: "",
+      "Transportation services tailored for Qatar & Saudi Arabia",
+    body: "Transportation services tailored for Qatar & Saudi Arabia's ensuring efficient and reliable delivery solutions.",
     ctaLabel: "Know More",
     ctaPath: "/services/transportation",
     serviceSlug: "transportation",
