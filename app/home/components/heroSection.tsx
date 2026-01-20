@@ -40,8 +40,8 @@ const allSlides = [
   {
     video: "/assets/video/hero-4.mp4",
     heading:
-      "Transported to Excellence: Leading Logistics Solutions in Qatar & Saudi Arabia",
-    body: "Comprehensive logistics and transportation services tailored to meet the dynamic needs of businesses across Qatar and Saudi Arabia.",
+      "Transportation Solutions Tailored for Qatar & Saudi Arabia",
+    body: "",
     ctaLabel: "Know More",
     ctaPath: "/services/transportation",
     serviceSlug: "transportation",
