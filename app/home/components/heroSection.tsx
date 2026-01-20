@@ -16,7 +16,7 @@ const allSlides = [
     ctaLabel: "View Services",
     ctaPath: "/services",
     serviceSlug: null,
-    locations: ["Qatar", "Saudi Arabia", "UAE", "Oman"],
+    locations: ["Qatar", "Saudi Arabia", "UAE"],
   },
   {
     video: "/assets/video/hero-2.mp4",
@@ -26,7 +26,7 @@ const allSlides = [
     ctaLabel: "Know More",
     ctaPath: "/services/project-support",
     serviceSlug: "project-support",
-    locations: ["Qatar", "Saudi Arabia", "UAE", "Oman"],
+    locations: ["Qatar", "Saudi Arabia", "UAE"],
   },
   {
     video: "/assets/video/hero-3.mp4",
@@ -35,7 +35,7 @@ const allSlides = [
     ctaLabel: "Explore More",
     ctaPath: "/services/corporate-services",
     serviceSlug: "corporate-services",
-    locations: ["Qatar", "Saudi Arabia", "Oman"],
+    locations: ["Qatar", "Saudi Arabia"],
   },
   {
     video: "/assets/video/hero-4.mp4",
@@ -45,7 +45,7 @@ const allSlides = [
     ctaLabel: "Know More",
     ctaPath: "/services/transportation",
     serviceSlug: "transportation",
-    locations: ["Qatar", "Saudi Arabia", "Oman"],
+    locations: ["Qatar", "Saudi Arabia"],
   },
   {
     video: "/assets/video/hero-5.mp4",
@@ -55,7 +55,7 @@ const allSlides = [
     ctaLabel: "Explore More",
     ctaPath: "/services/it-solutions",
     serviceSlug: "it-solutions",
-    locations: ["Qatar", "Saudi Arabia", "Oman"],
+    locations: ["Qatar", "Saudi Arabia"],
   },
   // {
   //   video: "/assets/video/hero-3.mp4",
@@ -103,7 +103,7 @@ const HeroSection = () => {
   const getAvailableLocations = (serviceSlug: string | null) => {
     if (!serviceSlug) {
       // General services slide - show all locations
-      return ["Saudi Arabia", "Qatar", "UAE", "Oman"];
+      return ["Saudi Arabia", "Qatar", "UAE"];
     }
 
     const availableIn: string[] = [];
@@ -111,7 +111,6 @@ const HeroSection = () => {
       SA: "Saudi Arabia",
       QA: "Qatar",
       AE: "UAE",
-      OM: "Oman",
     };
 
     Object.entries(locationConfig).forEach(([code, config]) => {
