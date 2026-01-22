@@ -12,49 +12,50 @@ const industries = [
     id: 1,
     name: "Real Estate & Construction",
     image: "/assets/projects/construction.webp",
-    description: "Build with confidence",
+    description:
+      "Skilled manpower and project support for construction, infrastructure, and real estate projects.",
   },
   {
     id: 2,
-    name: "Corporate Offices",
-    image: "/assets/projects/corporate.webp",
-    description: "Modern workspace solutions",
+    name: "Oil & Gas",
+    image: "/assets/projects/oil-gas.webp",
+    description:
+      "Certified workforce and project support staff for onshore and industrial oil & gas operations.",
   },
   {
     id: 3,
-    name: "Hospitality",
-    image: "/assets/projects/hospitality.webp",
-    description: "Premium guest experiences",
+    name: "Interior Fit-Out",
+    image: "/assets/projects/interior-fit-out.webp",
+    description:
+      "Experienced tradesmen and supervisors for interior fit-out and specialized works.",
   },
   {
     id: 4,
-    name: "Retail & Commercial",
-    image: "/assets/projects/retail.webp",
-    description: "Dynamic retail environments",
+    name: "Corporate Offices",
+    image: "/assets/projects/corporate.webp",
+    description:
+      "Reliable white-collar manpower solutions for corporate and commercial offices.",
   },
   {
     id: 5,
-    name: "Healthcare",
-    image: "/assets/projects/healthcare.webp",
-    description: "Caring for wellness",
+    name: "Hospitality",
+    image: "/assets/projects/hospitality.webp",
+    description:
+      "Trained staff for hotels, restaurants, and hospitality operations.",
   },
   {
     id: 6,
-    name: "Education",
-    image: "/assets/projects/education.webp",
-    description: "Learning spaces for all",
+    name: "Healthcare",
+    image: "/assets/projects/healthcare.webp",
+    description:
+      "Qualified healthcare and support professionals for medical facilities.",
   },
   {
     id: 7,
-    name: "Manufacturing",
-    image: "/assets/projects/manufacturing.webp",
-    description: "Industrial excellence",
-  },
-  {
-    id: 8,
-    name: "Government & Public Sector",
-    image: "/assets/projects/government.webp",
-    description: "Public service solutions",
+    name: "Transportation",
+    image: "/assets/projects/transportation.webp",
+    description:
+      "Drivers and transport-related manpower to support staff and project transportation needs.",
   },
 ];
 
@@ -148,8 +149,9 @@ const IndustriesSection = () => {
             ref={subtitleRef}
             className="text-slate-600 text-[18px] max-xl:text-[16px] max-md:text-[14px] max-w-2xl leading-relaxed mt-4"
           >
-            From construction to healthcare, we deliver tailored solutions
-            across every sector with proven excellence
+            We deliver reliable manpower and project support solutions across
+            industries, supplying skilled blue- and white-collar professionals
+            to ensure efficient project execution.
           </p>
         </div>
 
@@ -180,12 +182,12 @@ const IndustriesSection = () => {
                   {/* Bottom content */}
                   <div className="space-y-3">
                     <div>
-                      <p className="text-[14px] max-md:text-[12px] text-sky-200 uppercase tracking-widest font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 mb-2">
-                        {industry.description}
-                      </p>
                       <h3 className="text-[24px] max-xl:text-[20px] font-semibold text-white leading-tight group-hover:text-sky-100 transition-colors duration-300">
                         {industry.name}
                       </h3>
+                      <p className="text-[14px] max-md:text-[12px] text-sky-200 tracking-widest font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+                        {industry.description}
+                      </p>
                     </div>
                   </div>
                 </div>

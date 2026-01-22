@@ -37,7 +37,7 @@ const ServicesSection = () => {
       ([slug, service], index) => ({
         id: index + 1,
         title: service.title,
-        description: service.subtitle,
+        description: service.shortIntro,
         img: service.image,
         slug: slug,
       }),

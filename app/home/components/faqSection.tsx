@@ -11,13 +11,13 @@ const faqs = [
     id: 1,
     question: "What services does Al-Qasas Trading & Contracting provide?",
     answer:
-      "We offer comprehensive solutions including movable partition systems, ironmongeries, project support, transportation and logistics, corporate services, and IT solutions. Our services are tailored to meet the unique needs of businesses across Qatar and Saudi Arabia.",
+      "We specialize in manpower supply & project support, movable partition systems, transportation services, corporate support, and IT solutions for businesses across Qatar and Saudi Arabia.",
   },
   {
     id: 2,
     question: "In which regions do you operate?",
     answer:
-      "We primarily operate in Qatar and Saudi Arabia, serving major cities including Doha, Riyadh, Jeddah, and Dammam. Our extensive network allows us to deliver services efficiently across both countries.",
+      "We operate primarily in Qatar and Saudi Arabia, covering major cities and industrial zones, with regional support across the UAE.",
   },
   {
     id: 3,

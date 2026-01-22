@@ -21,30 +21,25 @@ const AboutSection = () => {
     {
       id: 1,
       title: "About",
-      content: `Al-Qasas Trading & Contracting operates across Qatar and Saudi Arabia, offering integrated services in movable partitions, project manpower, transportation, corporate setup, and IT solutions. We support companies by simplifying operations and delivering reliable, scalable, and compliant services tailored to their needs.
-<br/><br/>
-Our focus is on quality, professionalism, and efficient execution. Whether installing partition systems, providing trained workforce, managing transportation, or supporting business formation and digital infrastructure, we ensure each service meets industry standards and delivers long-term value to our clients.`,
+      content: `Al-Qasas Trading & Contracting operates across Qatar and Saudi Arabia, providing manpower supply & project support, movable partition systems, and staff & project transportation services. <br/><br/>
+We specialize in supplying qualified blue-collar trades, white-collar professionals, flexible architectural solutions, and reliable workforce transportation—ensuring projects run efficiently, safely, and on schedule.
+<br/><br/> Our services are designed to simplify operations, maintain compliance, and deliver long-term value for our clients.
+`,
     },
     {
       id: 2,
       title: "Our Foundation",
-      content: `Al-Qasas was established to provide dependable, multi-sector support under one platform—combining engineering assistance, manpower services, transportation, and corporate solutions. Our foundation is built on operational reliability, strong values, and a commitment to delivering services that simplify business processes.
-<br/><br/>
-With deep regional experience and a clear understanding of regulatory requirements in Qatar and Saudi Arabia, our foundation enables us to offer organized, compliant, and transparent services that clients can rely on. This strong base guides every decision and keeps our operations aligned with industry expectations.`,
+      content: `Strong operational expertise delivering compliant manpower, modern partition systems, and dependable transportation services for projects of all scales.`,
     },
     {
       id: 3,
       title: "Our Expertise",
-      content: `Our expertise spans movable partition systems, skilled manpower support, and transportation services designed for commercial, industrial, and project-based environments. We ensure professional installation, reliable workforce deployment, and safe mobility solutions for teams, sites, and daily operations.
-<br/><br/>
-We also specialize in corporate setup and IT infrastructure, helping businesses establish, license, and manage operations with compliance and clarity. Our IT solutions, including cloud and secure system services, enable organizations to scale efficiently and operate with confidence in a digital landscape.`,
+      content: `Specialists in project manpower deployment, movable partition installations, and staff & labor transportation supporting construction, Oil & Gas, and commercial sectors.`,
     },
     {
       id: 4,
       title: "Our Commitment",
-      content: `Al-Qasas is committed to delivering dependable, efficient, and high-quality services across every division. We focus on understanding client needs and providing practical solutions that enhance workflow and operational success.
-<br/><br/>
-Our commitment extends to safety, transparency, and continuous improvement. By maintaining compliance, upgrading processes, and using trained professionals, we ensure our clients receive consistent support and long-term value in every project.`,
+      content: `Timely mobilization, skilled resources, safety compliance, and consistent service quality across every project we support.`,
     },
   ];
 
@@ -183,9 +178,9 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
             ref={subtitleRef}
             className="max-w-3xl text-[18px] max-xl:text-[16px] max-md:text-[14px] sm:text-lg text-slate-600"
           >
-            Integrated trading, contracting, and business solutions tailored for
-            Qatar and Saudi Arabia, built on reliability and thoughtful
-            partnerships.
+            Integrated manpower supply, contracting, and project support
+            solutions built on reliability, compliance, and long-term
+            partnerships across Saudi Arabia and Qatar.
           </p>
         </div>
 
@@ -262,14 +257,15 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
               />
               <div className="absolute inset-0 bg-linear-to-tr from-slate-900/70 via-slate-900/30 to-transparent" />
 
-              <div className="absolute top-5 right-5 flex flex-col gap-3">
+              <div className="absolute top-5 right-5 flex flex-col gap-3 max-w-1/2 max-md:max-w-2/3">
                 <div className="bg-white/90 backdrop-blur-sm px-4 py-3 shadow-lg">
                   <div className="text-xs font-semibold uppercase tracking-wide text-slate-500">
                     Experience
                   </div>
                   <div className="text-3xl font-bold text-slate-900">15+</div>
                   <div className="text-sm text-slate-600">
-                    Years delivering across the Gulf
+                    Delivering skilled manpower, flexible space solutions, and
+                    transportation support across the Gulf.
                   </div>
                 </div>
                 {/* <div className="rounded-2xl bg-sky-600 text-white px-4 py-3 shadow-lg">
@@ -300,7 +296,8 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
                   10+
                 </div>
                 <p className="text-sm text-slate-600 mt-1">
-                  Construction, tech, services, logistics
+                  Construction, Oil & Gas, Interior Fit-Out, Logistics,
+                  Corporate & Infrastructure
                 </p>
               </div>
               <div className="stat-card bg-sky-50 border border-sky-100 p-4 shadow-sm">
@@ -311,7 +308,7 @@ Our commitment extends to safety, transparency, and continuous improvement. By m
                   4.9/5
                 </div>
                 <p className="text-sm text-slate-600 mt-1">
-                  Partner-rated support and delivery
+                  Partner-rated project delivery & manpower support
                 </p>
               </div>
             </div>

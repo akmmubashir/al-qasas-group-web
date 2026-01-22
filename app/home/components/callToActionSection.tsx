@@ -110,15 +110,15 @@ const CallToActionSection = () => {
       <div className="max-w-300 mx-auto p-[80px_0px] max-xl:p-[60px_40px] max-lg:p-[60px_20px] max-md:p-[40px_20px] relative z-10">
         <div className="text-center mb-12">
           <div ref={titleRef}>
-            <Heading title1="Ready to Transform Your" title2="Business?" />
+            <Heading title1="Ready to Support Your " title2="Project?" />
           </div>
           <p
             ref={descriptionRef}
             className="text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-lg:text-base text-slate-600 max-w-3xl mx-auto leading-relaxed"
           >
-            Partner with Al-Qasas – Trading & Contracting for innovative
-            solutions that drive growth, efficiency, and success. Let&apos;s
-            discuss how we can support your business objectives.
+            Partner with Al-Qasas Trading & Contracting for skilled manpower
+            supply, flexible space solutions, and reliable workforce
+            transportation that keep your projects moving forward.
           </p>
         </div>
 

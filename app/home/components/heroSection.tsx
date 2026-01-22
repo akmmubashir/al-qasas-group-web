@@ -12,7 +12,7 @@ const allSlides = [
   {
     video: "/assets/video/hero-1.mp4",
     heading: "AL QASAS Group of Companies: Qatar & Saudi Arabia",
-    body: "Excellence in movable partitions, project support, transportation, corporate services, and IT solutions driving quality and innovation across the Gulf region.",
+    body: "Comprehensive manpower supply, architectural partition systems, and workforce transportation services designed to meet the evolving demands of businesses operating across Saudi Arabia, Qatar, and the UAE.",
     ctaLabel: "View Services",
     ctaPath: "/services",
     serviceSlug: null,
@@ -39,8 +39,7 @@ const allSlides = [
   },
   {
     video: "/assets/video/hero-4.mp4",
-    heading:
-      "Transportation services tailored for Qatar & Saudi Arabia",
+    heading: "Transportation services tailored for Qatar & Saudi Arabia",
     body: "Transportation services tailored for Qatar & Saudi Arabia's ensuring efficient and reliable delivery solutions.",
     ctaLabel: "Know More",
     ctaPath: "/services/transportation",

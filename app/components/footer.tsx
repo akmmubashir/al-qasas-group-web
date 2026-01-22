@@ -103,9 +103,9 @@ const Footer = () => {
               <Logo color="white" />
             </div>
             <p className="text-slate-300 text-[15px] leading-[1.8] mb-6 font-light">
-              Excellence in movable partitions, project support, transportation,
-              corporate services, and IT solutions driving quality and
-              innovation across the Gulf region
+              Excellence in manpower supply, movable partition systems, and
+              project transportation services delivering quality, safety, and
+              efficiency across the Gulf region.
             </p>
 
             {/* Social Media */}

@@ -11,7 +11,7 @@ const reasons = [
     id: 1,
     title: "Proven Track Record",
     description:
-      "Over a decade of successful projects and satisfied clients across the Middle East region.",
+      "Over a decade of successful manpower deployments and project support services across the Middle East.",
     icon: (
       <svg
         className="w-10 h-10"
@@ -31,9 +31,9 @@ const reasons = [
   },
   {
     id: 2,
-    title: "Expert Team",
+    title: "Skilled & Trade-Specific Workforce",
     description:
-      "Highly skilled professionals with deep industry expertise and commitment to excellence.",
+      "Qualified blue-collar trades and experienced white-collar professionals",
     icon: (
       <svg
         className="w-10 h-10"
@@ -53,9 +53,9 @@ const reasons = [
   },
   {
     id: 3,
-    title: "Quality Assurance",
+    title: "Quality & Compliance",
     description:
-      "Stringent quality control processes ensure every project meets international standards.",
+      "Strict adherence to labor laws, HSE standards, and international quality benchmarks.",
     icon: (
       <svg
         className="w-10 h-10"
@@ -75,9 +75,9 @@ const reasons = [
   },
   {
     id: 4,
-    title: "Compliance & Safety",
+    title: "Fast Mobilization",
     description:
-      "Full adherence to local and international regulations with safety as top priority.",
+      "Quick deployment, replacement support, and project-ready teams.",
     icon: (
       <svg
         className="w-10 h-10"
@@ -97,9 +97,9 @@ const reasons = [
   },
   {
     id: 5,
-    title: "Customer-Centric",
+    title: "Customer-Centric Approach",
     description:
-      "Personalized solutions tailored to your specific business needs and objectives.",
+      "Flexible manpower, transportation, and partition solutions tailored to project needs.",
     icon: (
       <svg
         className="w-10 h-10"
@@ -121,7 +121,7 @@ const reasons = [
     id: 6,
     title: "Competitive Pricing",
     description:
-      "Best value for money without compromising on quality or service delivery.",
+      "Cost-effective project solutions without compromising quality or safety.",
     icon: (
       <svg
         className="w-10 h-10"

@@ -3,47 +3,10 @@
     "name": "Saudi Arabia",
     "code": "SA",
     "services": {
-      "movable-partitions": {
-        "title": "Movable Partitions & Ironmongeries",
-        "subtitle": "Flexible Architectural Solutions for Modern Saudi Workspaces",
-        "description": "Transform your Saudi Arabian workspace with our premium movable partition systems. We provide modular solutions designed specifically for the Middle Eastern business environment, combining functionality with elegant design. Our ironmongery solutions ensure durability in high-traffic office environments and seamlessly blend with contemporary Saudi design preferences.",
-        "icon": "🏗️",
-        "image": "/assets/images/movablePartition.jpeg",
-        "features": [
-          "Custom partition systems for Saudi office standards",
-          "Premium finishes matching local aesthetics",
-          "Soundproof options for open office environments",
-          "Quick installation with minimal disruption",
-          "Long-lasting materials suited for Middle Eastern climate"
-        ],
-        "benefits": [
-          "Optimize office space in Riyadh and major cities",
-          "Create flexible work environments for growing teams",
-          "Cost-effective solution for office renovation",
-          "Improved productivity with better acoustics",
-          "Professional appearance meeting corporate standards"
-        ],
-        "context": [
-          {
-            "heading": "Saudi Design Standards",
-            "description": "Partition systems designed to meet local building codes and aesthetic preferences.",
-            "icon": "🎨"
-          },
-          {
-            "heading": "Fast Installation",
-            "description": "Rapid deployment without affecting your business operations.",
-            "icon": "⚙️"
-          },
-          {
-            "heading": "Local Support",
-            "description": "Dedicated support team based in Riyadh for quick assistance.",
-            "icon": "🤝"
-          }
-        ]
-      },
       "project-support": {
-        "title": "Project Support",
-        "subtitle": "Expert Project Support for Saudi Construction & Business Initiatives",
+        "title": "Manpower Supply & Project Support",
+        "subtitle": "Your Trusted Manpower Partner",
+        "shortIntro": "We provide comprehensive manpower and project support services for Oil & Gas, Construction, and Interior Fit-Out projects.",
         "description": "Our project support services are tailored for Saudi Arabia's unique business landscape. We provide comprehensive project support expertise for construction projects, corporate initiatives, and operational setups. With deep knowledge of local regulations, market conditions, and business practices, we ensure your projects succeed.",
         "icon": "📋",
         "image": "/assets/images/project.webp",
@@ -79,9 +42,49 @@
           }
         ]
       },
+      "movable-partitions": {
+        "title": "Movable Partitions & Ironmongeries",
+        "shortIntro": "Design, supply, installation, and maintenance of premium movable partition systems for corporate, hospitality, and institutional environments",
+        "subtitle": "Flexible Architectural Solutions for Modern Workspaces",
+        "description": "Transform your Saudi Arabian workspace with our premium movable partition systems. We provide modular solutions designed specifically for the Middle Eastern business environment, combining functionality with elegant design. Our ironmongery solutions ensure durability in high-traffic office environments and seamlessly blend with contemporary Saudi design preferences.",
+        "icon": "🏗️",
+        "image": "/assets/images/movablePartition.jpeg",
+        "features": [
+          "Custom partition systems for Saudi office standards",
+          "Premium finishes matching local aesthetics",
+          "Soundproof options for open office environments",
+          "Quick installation with minimal disruption",
+          "Long-lasting materials suited for Middle Eastern climate"
+        ],
+        "benefits": [
+          "Optimize office space in Riyadh and major cities",
+          "Create flexible work environments for growing teams",
+          "Cost-effective solution for office renovation",
+          "Improved productivity with better acoustics",
+          "Professional appearance meeting corporate standards"
+        ],
+        "context": [
+          {
+            "heading": "Saudi Design Standards",
+            "description": "Partition systems designed to meet local building codes and aesthetic preferences.",
+            "icon": "🎨"
+          },
+          {
+            "heading": "Fast Installation",
+            "description": "Rapid deployment without affecting your business operations.",
+            "icon": "⚙️"
+          },
+          {
+            "heading": "Local Support",
+            "description": "Dedicated support team based in Riyadh for quick assistance.",
+            "icon": "🤝"
+          }
+        ]
+      },
       "transportation": {
-        "title": "Transportation",
-        "subtitle": "Reliable Logistics Solutions Across Saudi Arabia",
+        "title": "Transportation Services",
+        "subtitle": "Reliable Workforce & Project Transportation Solutions",
+        "shortIntro": "End-to-end transportation solutions for staff, labor, engineers, and project teams across Saudi Arabia and Qatar",
         "description": "Our transportation network covers the entire Kingdom of Saudi Arabia with modern vehicles and experienced drivers. We specialize in navigating Saudi Arabia's diverse geography from Riyadh to Jeddah, Eastern Province, and beyond, ensuring reliable delivery of goods and materials.",
         "icon": "🚚",
         "image": "/assets/images/transportation.webp",
@@ -119,7 +122,8 @@
       },
       "corporate-services": {
         "title": "Corporate Services",
-        "subtitle": "Business Support for Saudi Organizations",
+        "subtitle": "Business Support for Organizations",
+        "shortIntro": "Business support solutions enabling smooth operations, compliance, and scalability.",
         "description": "We provide comprehensive corporate services tailored to Saudi Arabia's business environment. From HR management to regulatory compliance, our team helps Saudi organizations navigate business challenges and achieve growth.",
         "icon": "🏢",
         "image": "/assets/images/corporate.webp",
@@ -155,9 +159,11 @@
           }
         ]
       },
+
       "it-solutions": {
         "title": "IT Solutions",
-        "subtitle": "Digital Transformation for Saudi Businesses",
+        "subtitle": "Digital Transformation for Businesses",
+        "shortIntro": "Digital infrastructure and IT services supporting modern business operations.",
         "description": "Modern IT infrastructure solutions designed for Saudi organizations. We help businesses embrace digital transformation while maintaining security and reliability in the local market context.",
         "icon": "💻",
         "image": "/assets/images/it-solution.webp",
@@ -216,47 +222,10 @@
     "name": "Qatar",
     "code": "QA",
     "services": {
-      "movable-partitions": {
-        "title": "Movable Partitions & Ironmongeries",
-        "subtitle": "Modern Office Solutions for Qatar's Growing Business Sector",
-        "description": "Discover our innovative movable partition solutions designed for Qatar's modern business environment. Perfect for Doha's dynamic corporate sector, our systems provide flexibility, elegance, and functionality for forward-thinking organizations.",
-        "icon": "🏗️",
-        "image": "/assets/images/movablePartition.jpeg",
-        "features": [
-          "State-of-the-art partition systems for Qatari offices",
-          "Premium materials and finishes",
-          "Acoustic solutions for multi-level buildings",
-          "Seamless installation and reconfiguration",
-          "Climate-controlled durability"
-        ],
-        "benefits": [
-          "Create flexible workspaces in Doha",
-          "Enhance employee productivity and comfort",
-          "Cost-effective office transformation",
-          "Professional aesthetics for corporate image",
-          "Sustainable and eco-friendly options"
-        ],
-        "context": [
-          {
-            "heading": "Qatar Innovation",
-            "description": "Modern designs aligned with Qatar's commitment to innovation.",
-            "icon": "🎨"
-          },
-          {
-            "heading": "Efficient Installation",
-            "description": "Fast setup with expert technical support.",
-            "icon": "⚙️"
-          },
-          {
-            "heading": "Premium Quality",
-            "description": "World-class materials and craftsmanship.",
-            "icon": "✨"
-          }
-        ]
-      },
       "project-support": {
-        "title": "Project Support",
-        "subtitle": "Comprehensive Project Support for Qatar's Development",
+        "title": "Manpower Supply & Project Support",
+        "subtitle": "Your Trusted Manpower Partner",
+        "shortIntro": "We provide comprehensive manpower and project support services for Oil & Gas, Construction, and Interior Fit-Out projects.",
         "description": "Partner with us for successful project execution across Qatar. Our team brings international expertise combined with local market knowledge to deliver outstanding results for mega-projects and corporate initiatives.",
         "icon": "📋",
         "image": "/assets/images/project.webp",
@@ -292,9 +261,50 @@
           }
         ]
       },
+      "movable-partitions": {
+        "title": "Movable Partitions & Ironmongeries",
+        "shortIntro": "Design, supply, installation, and maintenance of premium movable partition systems for corporate, hospitality, and institutional environments",
+        "subtitle": "Flexible Architectural Solutions for Modern Workspaces",
+        "description": "Discover our innovative movable partition solutions designed for Qatar's modern business environment. Perfect for Doha's dynamic corporate sector, our systems provide flexibility, elegance, and functionality for forward-thinking organizations.",
+        "icon": "🏗️",
+        "image": "/assets/images/movablePartition.jpeg",
+        "features": [
+          "State-of-the-art partition systems for Qatari offices",
+          "Premium materials and finishes",
+          "Acoustic solutions for multi-level buildings",
+          "Seamless installation and reconfiguration",
+          "Climate-controlled durability"
+        ],
+        "benefits": [
+          "Create flexible workspaces in Doha",
+          "Enhance employee productivity and comfort",
+          "Cost-effective office transformation",
+          "Professional aesthetics for corporate image",
+          "Sustainable and eco-friendly options"
+        ],
+        "context": [
+          {
+            "heading": "Qatar Innovation",
+            "description": "Modern designs aligned with Qatar's commitment to innovation.",
+            "icon": "🎨"
+          },
+          {
+            "heading": "Efficient Installation",
+            "description": "Fast setup with expert technical support.",
+            "icon": "⚙️"
+          },
+          {
+            "heading": "Premium Quality",
+            "description": "World-class materials and craftsmanship.",
+            "icon": "✨"
+          }
+        ]
+      },
+
       "transportation": {
-        "title": "Transportation",
-        "subtitle": "Premium Logistics Services for Qatar",
+        "title": "Transportation Services",
+        "subtitle": "Reliable Workforce & Project Transportation Solutions",
+        "shortIntro": "End-to-end transportation solutions for staff, labor, engineers, and project teams across Saudi Arabia and Qatar",
         "description": "Experience reliable and efficient transportation solutions throughout Qatar. Our modern fleet and professional team ensure safe, timely delivery of goods across all major Qatari cities and industrial zones.",
         "icon": "🚚",
         "image": "/assets/images/transportation.webp",
@@ -332,7 +342,8 @@
       },
       "corporate-services": {
         "title": "Corporate Services",
-        "subtitle": "Strategic Business Solutions for Qatar",
+        "subtitle": "Business Support for Organizations",
+        "shortIntro": "Business support solutions enabling smooth operations, compliance, and scalability.",
         "description": "Comprehensive corporate services designed for Qatar's dynamic business landscape. We support organizations with strategic planning, HR solutions, and operational excellence.",
         "icon": "🏢",
         "image": "/assets/images/corporate.webp",
@@ -370,7 +381,8 @@
       },
       "it-solutions": {
         "title": "IT Solutions",
-        "subtitle": "Digital Infrastructure for Qatar's Future",
+        "subtitle": "Digital Transformation for Businesses",
+        "shortIntro": "Digital infrastructure and IT services supporting modern business operations.",
         "description": "Transform your organization with cutting-edge IT solutions tailored for Qatar. From cloud services to cybersecurity, we provide the technology infrastructure for digital excellence.",
         "icon": "💻",
         "image": "/assets/images/it-solution.webp",
@@ -430,8 +442,9 @@
     "code": "AE",
     "services": {
       "project-support": {
-        "title": "Project Support",
-        "subtitle": "Expert Project Support for UAE Developments",
+        "title": "Manpower Supply & Project Support",
+        "subtitle": "Your Trusted Manpower Partner",
+        "shortIntro": "We provide comprehensive manpower and project support services for Oil & Gas, Construction, and Interior Fit-Out projects.",
         "description": "Al Qasas Group delivers specialized project support services for UAE's thriving construction and business sectors. With extensive experience in Dubai, Abu Dhabi, and across the Emirates, we ensure project success through expert management and local knowledge.",
         "icon": "📋",
         "image": "/assets/images/project.webp",
